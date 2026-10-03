@@ -16,21 +16,25 @@
     {
       "scene": 2,
       "type": "NumberCallout",
+      "startSec": 0.3,
       "text": "A default LLC pays self-employment tax, fifteen point three percent, on almost all of that profit. That's about twenty-five thousand dollars."
     },
     {
       "scene": 3,
       "type": "BarChart",
+      "startSec": 0.3,
       "text": "An S corp owner pays that same rate only on a reasonable salary. At sixty-eight thousand, that's about ten thousand dollars. The rest comes out as distributions."
     },
     {
       "scene": 4,
       "type": "BulletBuild",
+      "startSec": 0.3,
       "text": "The catch: your salary has to be reasonable for the work, and an S corp costs a few thousand a year to run. In this example, that still leaves about twelve thousand. But it's not for everyone."
     },
     {
       "scene": 5,
       "type": "ShortCTA",
+      "startSec": 0.3,
       "text": "The full breakdown, with the math and who it actually fits, is on the channel. Educational only, not tax advice, so check with a tax professional."
     }
   ]

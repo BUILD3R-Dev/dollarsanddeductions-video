@@ -1,0 +1,51 @@
+1
+00:00:00,200 --> 00:00:04,971
+Two business owners, same one hundred eighty thousand dollars in profit.
+
+2
+00:00:05,011 --> 00:00:10,785
+One pays about fifteen thousand dollars less tax every year, and it's completely legal.
+
+3
+00:00:10,825 --> 00:00:11,560
+Here's why.
+
+4
+00:00:12,467 --> 00:00:19,035
+A default LLC pays self-employment tax, fifteen point three percent, on almost all of that profit.
+
+5
+00:00:19,075 --> 00:00:21,727
+That's about twenty-five thousand dollars.
+
+6
+00:00:22,833 --> 00:00:27,044
+An S corp owner pays that same rate only on a reasonable salary.
+
+7
+00:00:27,084 --> 00:00:30,962
+At sixty-eight thousand, that's about ten thousand dollars.
+
+8
+00:00:31,002 --> 00:00:33,393
+The rest comes out as distributions.
+
+9
+00:00:34,566 --> 00:00:41,600
+The catch: your salary has to be reasonable for the work, and an S corp costs a few thousand a year to run.
+
+10
+00:00:41,640 --> 00:00:45,368
+In this example, that still leaves about twelve thousand.
+
+11
+00:00:45,408 --> 00:00:47,126
+But it's not for everyone.
+
+12
+00:00:50,300 --> 00:00:55,036
+The full breakdown, with the math and who it actually fits, is on the channel.
+
+13
+00:00:55,076 --> 00:00:59,180
+Educational only, not tax advice, so check with a tax professional.

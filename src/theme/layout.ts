@@ -1,3 +1,4 @@
+import {createContext, useContext} from 'react';
 import {useVideoConfig} from 'remotion';
 import {space} from './tokens';
 
@@ -40,8 +41,21 @@ export const layoutFor = (width: number, height: number): Layout => {
 /** CSS padding string for an inset box. */
 export const insetPadding = (i: Insets) => `${i.top}px ${i.right}px ${i.bottom}px ${i.left}px`;
 
+/**
+ * Extra bottom inset reserved for burned-in captions. SceneSequence provides it for
+ * scenes when a video has captions, so scene content lays out above the caption band.
+ */
+export const ReservedBottom = createContext(0);
+
+/** Caption band height (px) reserved above the bottom safe inset. */
+export const captionBand = (vertical: boolean) => (vertical ? 200 : 150);
+
 /** Current composition's layout. Every scene sizes itself from this, never from constants. */
 export const useLayout = (): Layout => {
   const {width, height} = useVideoConfig();
-  return layoutFor(width, height);
+  const reserved = useContext(ReservedBottom);
+  const base = layoutFor(width, height);
+  if (!reserved) return base;
+  const safe = {...base.safe, bottom: base.safe.bottom + reserved};
+  return {...base, safe, box: {...base.box, h: base.box.h - reserved}};
 };

@@ -23,6 +23,26 @@ const DEFAULT_FRAMES = Object.fromEntries([...registrySrc.matchAll(/(\w+): \{com
 const c = process.stdout.isTTY ? {red: (s) => `\x1b[31m${s}\x1b[0m`, yel: (s) => `\x1b[33m${s}\x1b[0m`, dim: (s) => `\x1b[2m${s}\x1b[0m`, grn: (s) => `\x1b[32m${s}\x1b[0m`} : {red: String, yel: String, dim: String, grn: String};
 const fmt = (n) => n.toLocaleString('en-US');
 
+const parseTime = (t) => {
+  const m = t.trim().match(/(?:(\d+):)?(\d+):(\d+)[.,](\d+)/);
+  if (!m) throw new Error(`bad timestamp "${t}"`);
+  return Number(m[1] ?? 0) * 3600 + Number(m[2]) * 60 + Number(m[3]) + Number(m[4].padEnd(3, '0').slice(0, 3)) / 1000;
+};
+/** Minimal SRT/VTT reader: [{start, end, text}] in seconds. */
+const parseSubs = (src) =>
+  src
+    .replace(/\r/g, '')
+    .split(/\n{2,}/)
+    .map((b) => b.split('\n').filter(Boolean))
+    .map((lines) => {
+      const i = lines.findIndex((l) => l.includes('-->'));
+      if (i < 0) return null;
+      const [a, b] = lines[i].split('-->');
+      return {start: parseTime(a), end: parseTime(b.trim().split(/\s+/)[0]), text: lines.slice(i + 1).join(' ').trim()};
+    })
+    .filter(Boolean);
+const norm = (t) => t.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+
 const readJson = (p, what) => {
   try {
     return JSON.parse(readFileSync(p, 'utf8'));
@@ -86,11 +106,72 @@ function validate(manifestPath) {
     if (extra.length) warnings.push(`public/audio/${slug}/ has mp3s with no segment: ${extra.join(', ')}`);
   }
 
+  // Spec timeline: where each segment's voice starts (scene start + startSec). After
+  // `npm run narration:fit` this is the exact render timeline.
+  const sceneStart = [];
+  scenes.reduce((at, sc) => (sceneStart.push(at), at + (sc.durationInFrames ?? DEFAULT_FRAMES[sc.type] ?? 0) / FPS), 0);
+  const videoEnd = scenes.reduce((n, sc) => n + (sc.durationInFrames ?? DEFAULT_FRAMES[sc.type] ?? 0) / FPS, 0);
+  const notes = [];
+  const unfitted = segs.filter((s) => s.startSec === undefined).length;
+  if (unfitted && rows.some((r) => r.audio)) warnings.push(`${unfitted} segment(s) have no explicit startSec: run \`npm run narration:fit -- ${slug}\` after the mp3s land`);
+
+  // Captions
+  if (spec.captions === false) notes.push('captions: off');
+  else if (!spec.captions?.src) warnings.push(`no "captions": {"src": "captions/${slug}.srt"} in the spec`);
+  else {
+    const capPath = join(ROOT, 'public', spec.captions.src);
+    if (!existsSync(capPath)) warnings.push(`captions file public/${spec.captions.src} not delivered yet`);
+    else if (/\.(srt|vtt)$/i.test(capPath)) {
+      const cues = parseSubs(readFileSync(capPath, 'utf8'));
+      if (!cues.length) errors.push(`captions file public/${spec.captions.src} has no cues`);
+      cues.forEach((c, i) => {
+        if (!(c.end > c.start)) errors.push(`captions cue ${i + 1} ends before it starts`);
+        if (!c.text) errors.push(`captions cue ${i + 1} has no text`);
+        if (i && c.start < cues[i - 1].end - 0.001) errors.push(`captions cue ${i + 1} overlaps cue ${i}`);
+      });
+      if (cues.length && cues[cues.length - 1].end > videoEnd + 0.05) errors.push(`captions run to ${cues[cues.length - 1].end.toFixed(2)}s but the video ends at ${videoEnd.toFixed(2)}s`);
+      // Sync: match cues to segments by text; each segment's first cue should start with its voice.
+      let ci = 0;
+      let checked = 0;
+      let worst = 0;
+      for (const seg of [...segs].sort((a, b) => a.scene - b.scene)) {
+        const text = norm(seg.text ?? '');
+        let pos = 0;
+        let first = null;
+        while (ci < cues.length) {
+          const k = text.indexOf(norm(cues[ci].text), pos);
+          if (k < 0) break;
+          if (first === null) first = cues[ci].start;
+          pos = k + norm(cues[ci].text).length;
+          ci++;
+        }
+        if (first === null) continue;
+        checked++;
+        const expect = sceneStart[seg.scene - 1] + (seg.startSec ?? DEFAULT_START_SEC);
+        const off = first - expect;
+        worst = Math.max(worst, Math.abs(off));
+        if (Math.abs(off) > 0.25) errors.push(`captions out of sync at scene ${seg.scene}: first caption at ${first.toFixed(2)}s, voice starts at ${expect.toFixed(2)}s (${off > 0 ? '+' : ''}${off.toFixed(2)}s). Re-time the SRT to the fitted spec`);
+      }
+      notes.push(`captions: ${cues.length} cues, ${checked}/${segs.length} segments matched by text, worst start offset ${worst.toFixed(2)}s`);
+      if (checked < segs.length) warnings.push(`captions text matches only ${checked}/${segs.length} segments; sync not checked for the rest`);
+    }
+  }
+
+  // Music
+  for (const key of ['voiceover', 'music']) {
+    const t = spec.audio?.[key];
+    if (!t?.src) continue;
+    const ok = /^https?:/.test(t.src) || existsSync(join(ROOT, 'public', t.src));
+    if (ok) notes.push(`${key}: public/${t.src} ✓`);
+    else warnings.push(`${key} file public/${t.src} not delivered yet (renders skip it with a warning)`);
+  }
+
   const chars = rows.reduce((n, r) => n + r.chars, 0);
   console.log(`\n${c.dim('narration/')}${slug}.json  →  ${c.dim(specPath.replace(ROOT + '/', ''))}  (${scenes.length} scenes)`);
   for (const r of rows.sort((a, b) => a.scene - b.scene)) {
     console.log(`  ${String(r.scene).padStart(2, '0')}  ${r.type.padEnd(14)} ${fmt(r.chars).padStart(5)} chars  ~${r.estSec.toFixed(1)}s / ${r.sceneSec.toFixed(1)}s scene  ${r.audio ? c.grn('mp3 ✓') : c.dim('mp3 missing')}`);
   }
+  notes.forEach((n) => console.log(`  ${c.dim(n)}`));
   console.log(`  Total: ${fmt(chars)} characters (${((100 * chars) / MONTHLY_QUOTA).toFixed(1)}% of the ${fmt(MONTHLY_QUOTA)}/mo ElevenLabs quota)`);
   warnings.forEach((w) => console.log(`  ${c.yel('warn')}  ${w}`));
   errors.forEach((e) => console.log(`  ${c.red('error')} ${e}`));

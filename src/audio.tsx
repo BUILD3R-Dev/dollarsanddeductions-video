@@ -39,13 +39,29 @@ export type CaptionsSpec = {
    */
   offset?: number;
   position?: 'lower' | 'middle' | 'upper';
-  /** Max words per caption when grouping word-level timestamps. Default 6. */
+  /** Max words on screen at once: groups word-level timestamps (default 6) and splits long SRT/VTT sentences (default 7). */
   maxWords?: number;
   /** Filled in at render time from `src`/`cues`; don't set by hand. */
   resolved?: FrameCue[];
 };
 
 export type AudioSpec = {voiceover?: AudioTrack; music?: MusicTrack};
+
+/** Drops audio tracks whose files haven't been delivered yet (with a warning) so previews still render. */
+export const resolveAudio = async (audio: AudioSpec | undefined): Promise<AudioSpec | undefined> => {
+  if (!audio) return audio;
+  const out: AudioSpec = {...audio};
+  for (const key of ['voiceover', 'music'] as const) {
+    const track = audio[key];
+    if (!track) continue;
+    const res = await fetch(assetSrc(track.src), {method: 'HEAD'});
+    if (!res.ok) {
+      console.warn(`Audio: ${key} file ${track.src} not found (HTTP ${res.status}); rendering without it.`);
+      delete out[key];
+    }
+  }
+  return out.voiceover || out.music ? out : undefined;
+};
 
 /** Loads and converts captions once, before rendering (called from calculateMetadata). */
 export const resolveCaptions = async (captions: CaptionsSpec | undefined, audio: AudioSpec | undefined, fps: number) => {

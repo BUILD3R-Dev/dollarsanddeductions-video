@@ -170,9 +170,30 @@ def build(slug, scenes, vertical):
         if 'startSec' in ex: seg['startSec'] = start
         seg['text'] = text
         segs.append(seg)
-    spec = {"narration": slug, "scenes": spec_scenes}
+    # Keep what later pipeline steps wrote: fitted scene lengths (narration-fit),
+    # explicit startSec, and the captions/music slots. Text edits still need new audio + refit + re-timed captions.
+    spec_path, man_path = ROOT / 'videos' / f'{slug}.json', ROOT / 'narration' / f'{slug}.json'
+    if spec_path.exists():
+        old = json.loads(spec_path.read_text())
+        for new_sc, old_sc in zip(spec_scenes, old.get('scenes', [])):
+            if old_sc.get('type') == new_sc['type']:
+                new_sc['durationInFrames'] = max(new_sc['durationInFrames'], old_sc.get('durationInFrames', 0))
+    if man_path.exists():
+        old_segs = {x['scene']: x for x in json.loads(man_path.read_text()).get('segments', [])}
+        for seg in segs:
+            if 'startSec' in old_segs.get(seg['scene'], {}) and 'startSec' not in seg:
+                seg['startSec'] = old_segs[seg['scene']]['startSec']
+            seg_order = ['scene', 'type', 'startSec', 'text']
+            seg_items = sorted(seg.items(), key=lambda kv: seg_order.index(kv[0]) if kv[0] in seg_order else 9)
+            seg.clear(); seg.update(seg_items)
+    spec = {
+        "narration": slug,
+        "captions": {"src": f"captions/{slug}.srt"},
+        "audio": {"music": {"src": f"audio/music/{slug}-bed.mp3", "volume": 0.22, "duckTo": 0.07}},
+        "scenes": spec_scenes,
+    }
     manifest = {"video": slug, "voice": VOICE, "segments": segs}
-    for path, obj in [(ROOT / 'videos' / f'{slug}.json', spec), (ROOT / 'narration' / f'{slug}.json', manifest)]:
+    for path, obj in [(spec_path, spec), (man_path, manifest)]:
         path.write_text(json.dumps(obj, indent=2, ensure_ascii=False) + '\n')
     return sum(len(s['text']) for s in segs), sum(s['durationInFrames'] for s in spec_scenes) / FPS
 

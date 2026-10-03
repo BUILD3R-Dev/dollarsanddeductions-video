@@ -1,9 +1,19 @@
 {
   "narration": "video-01-teaser",
+  "captions": {
+    "src": "captions/video-01-teaser.srt"
+  },
+  "audio": {
+    "music": {
+      "src": "audio/music/video-01-teaser-bed.mp3",
+      "volume": 0.22,
+      "duckTo": 0.07
+    }
+  },
   "scenes": [
     {
       "type": "HookCard",
-      "durationInFrames": 348,
+      "durationInFrames": 365,
       "props": {
         "sticker": "S corp vs LLC",
         "text": "Same profit. About *$15,000* less tax."
@@ -15,7 +25,7 @@
     },
     {
       "type": "NumberCallout",
-      "durationInFrames": 279,
+      "durationInFrames": 311,
       "props": {
         "kicker": "Default LLC: self-employment tax",
         "value": 25433,

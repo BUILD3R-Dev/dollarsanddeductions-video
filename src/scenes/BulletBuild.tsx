@@ -50,7 +50,9 @@ const Check: React.FC<{appear: number; tick: number; p: Palette}> = ({appear, ti
 
 export const BulletBuild: React.FC<BulletBuildProps> = ({durationInFrames, title, kicker, items, theme = 'light'}) => {
   const frame = useCurrentFrame();
-  const {safe, vertical} = useLayout();
+  const {safe, box, vertical} = useLayout();
+  // Tight space (captions reserve a band) or five or more items: tighter rows and type.
+  const dense = items.length >= 5 || box.h < (vertical ? 1100 : 820);
   const p = palette(theme);
   const LIST_START = 34;
   const stagger = Math.min(56, Math.floor((durationInFrames - LIST_START - 50) / items.length));
@@ -83,12 +85,12 @@ export const BulletBuild: React.FC<BulletBuildProps> = ({durationInFrames, title
             const text = progress(frame, t + 4, 26, ease.out);
             const tick = progress(frame, t + 16, 18, ease.inOut);
             return (
-              <div key={i} style={{display: 'flex', alignItems: 'flex-start', gap: space(4), padding: `${space(4)}px 0`, borderBottom: `2px solid ${p.faint}`, opacity: Math.min(1, appear * 2)}}>
+              <div key={i} style={{display: 'flex', alignItems: 'flex-start', gap: space(4), padding: `${space(dense ? 2.5 : 4)}px 0`, borderBottom: `2px solid ${p.faint}`, opacity: Math.min(1, appear * 2)}}>
                 <Check appear={appear} tick={tick} p={p} />
                 <div style={{opacity: text, transform: `translateX(${mix(text, -32, 0)}px)`, paddingTop: space(0.5)}}>
-                  <div style={{fontFamily: fonts.sans, fontWeight: 700, fontSize: typeScale.body, lineHeight: 1.1, color: p.fg}}>{item.text}</div>
+                  <div style={{fontFamily: fonts.sans, fontWeight: 700, fontSize: dense ? typeScale.bodySm : typeScale.body, lineHeight: 1.1, color: p.fg}}>{item.text}</div>
                   {item.detail ? (
-                    <div style={{fontFamily: fonts.sans, fontWeight: 400, fontSize: typeScale.label, lineHeight: 1.3, color: p.body, marginTop: space(1)}}>
+                    <div style={{fontFamily: fonts.sans, fontWeight: 400, fontSize: dense ? typeScale.label - 4 : typeScale.label, lineHeight: 1.3, color: p.body, marginTop: space(dense ? 0.5 : 1)}}>
                       {item.detail}
                     </div>
                   ) : null}

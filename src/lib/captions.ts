@@ -114,11 +114,47 @@ export const groupWords = (words: TimedWord[], maxWords = 6, pause = 0.45): Seco
   return cues.map((c, i) => ({...c, end: cues[i + 1] && cues[i + 1].start - c.end < 0.6 ? cues[i + 1].start : c.end + 0.25}));
 };
 
+/**
+ * Split long phrase-level cues (SRT/VTT sentences) into on-screen chunks of ≤ maxWords,
+ * preferring breaks after punctuation. Time is shared in proportion to characters.
+ * Only the burned-in captions are chunked; the subtitle file itself is untouched.
+ */
+export const splitLongCues = (cues: SecondsCue[], maxWords = 7): SecondsCue[] =>
+  cues.flatMap((c) => {
+    const words = c.text.split(/\s+/).filter(Boolean);
+    if (words.length <= maxWords) return [c];
+    const chunks: string[][] = [];
+    let cur: string[] = [];
+    words.forEach((w, i) => {
+      cur.push(w);
+      const left = words.length - i - 1;
+      const punct = /[,;:.?!—–]$/.test(w) && cur.length >= 3 && left >= 2;
+      if (cur.length >= maxWords || punct) {
+        chunks.push(cur);
+        cur = [];
+      }
+    });
+    if (cur.length) {
+      // Avoid a dangling 1–2 word tail: merge it back if the previous chunk has room.
+      if (cur.length <= 2 && chunks.length && chunks[chunks.length - 1].length + cur.length <= maxWords + 2) chunks[chunks.length - 1].push(...cur);
+      else chunks.push(cur);
+    }
+    const weights = chunks.map((ch) => ch.join(' ').length);
+    const total = weights.reduce((a, b) => a + b, 0);
+    let t = c.start;
+    return chunks.map((ch, i) => {
+      const end = i === chunks.length - 1 ? c.end : t + ((c.end - c.start) * weights[i]) / total;
+      const cue = {text: ch.join(' '), start: t, end};
+      t = end;
+      return cue;
+    });
+  });
+
 /** Detect the format from the file name (or content) and return cues in seconds. */
 export const parseCaptionFile = (name: string, src: string, maxWords?: number): SecondsCue[] => {
   const trimmed = src.trim();
   if (/\.json$/i.test(name) || trimmed.startsWith('[') || trimmed.startsWith('{')) return groupWords(parseWordJson(src), maxWords);
-  return parseSubtitles(src);
+  return splitLongCues(parseSubtitles(src), maxWords ?? 7);
 };
 
 export type FrameCue = {text: string; from: number; to: number; words?: {from: number; to: number}[]};

@@ -1,0 +1,447 @@
+1
+00:00:00,400 --> 00:00:01,638
+Two business owners.
+
+2
+00:00:01,678 --> 00:00:06,113
+Same kind of work, same one hundred eighty thousand dollars in profit.
+
+3
+00:00:06,153 --> 00:00:10,651
+One of them pays about fifteen thousand dollars more in tax every year.
+
+4
+00:00:10,691 --> 00:00:15,062
+Not because of a loophole, and not because anyone did anything shady.
+
+5
+00:00:15,102 --> 00:00:18,321
+The only difference is how their business is taxed.
+
+6
+00:00:18,361 --> 00:00:25,840
+In this video, we'll walk through the actual math, line by line, so you can see exactly where that number comes from.
+
+7
+00:00:30,200 --> 00:00:32,328
+This is Dollars and Deductions.
+
+8
+00:00:32,368 --> 00:00:39,671
+Today: S corp versus LLC, where that fifteen thousand dollars comes from, and who it actually applies to.
+
+9
+00:00:39,711 --> 00:00:41,419
+One note before we start.
+
+10
+00:00:41,459 --> 00:00:43,797
+This is education, not tax advice.
+
+11
+00:00:43,837 --> 00:00:51,320
+Your numbers will be different, so run your own situation by a tax professional before you change anything.
+
+12
+00:00:52,233 --> 00:00:55,577
+First, a mix-up that trips up a lot of people.
+
+13
+00:00:55,617 --> 00:00:59,992
+An LLC and an S corp are not two versions of the same thing.
+
+14
+00:01:00,032 --> 00:01:03,891
+An LLC is a legal structure you form under state law.
+
+15
+00:01:03,931 --> 00:01:06,466
+It's about ownership and liability.
+
+16
+00:01:06,506 --> 00:01:08,378
+An S corp is a tax status.
+
+17
+00:01:08,418 --> 00:01:16,324
+It's an election you make with the IRS that changes how the business's profit is taxed at the federal level.
+
+18
+00:01:16,364 --> 00:01:20,297
+That means an LLC can choose to be taxed as an S corp.
+
+19
+00:01:20,337 --> 00:01:23,901
+So the real question usually isn't LLC or S corp.
+
+20
+00:01:23,941 --> 00:01:29,753
+It's whether your LLC keeps its default tax treatment, or elects S corp status.
+
+21
+00:01:34,733 --> 00:01:36,580
+Let's start with the default.
+
+22
+00:01:36,620 --> 00:01:43,866
+If you're the only owner, the IRS treats a single-member LLC like a sole proprietorship for income tax purposes.
+
+23
+00:01:43,906 --> 00:01:47,119
+All of the profit flows onto your personal return.
+
+24
+00:01:47,159 --> 00:01:52,128
+You pay regular income tax on it, and you also pay self-employment tax on it.
+
+25
+00:01:52,168 --> 00:01:58,413
+Self-employment tax is how people who work for themselves pay into Social Security and Medicare.
+
+26
+00:02:00,833 --> 00:02:03,289
+The rate is fifteen point three percent.
+
+27
+00:02:03,329 --> 00:02:09,217
+Twelve point four percent goes to Social Security, and two point nine percent goes to Medicare.
+
+28
+00:02:09,257 --> 00:02:12,961
+If that sounds high, it's because you're paying both halves.
+
+29
+00:02:13,001 --> 00:02:19,077
+When you work for someone else, your employer pays half of those taxes and you pay the other half.
+
+30
+00:02:19,117 --> 00:02:22,673
+When you work for yourself, you're both, so you pay both.
+
+31
+00:02:26,933 --> 00:02:28,979
+Two details matter for the math.
+
+32
+00:02:29,019 --> 00:02:33,347
+First, self-employment tax isn't charged on every dollar of profit.
+
+33
+00:02:33,387 --> 00:02:37,128
+It's charged on ninety-two point three five percent of it.
+
+34
+00:02:37,168 --> 00:02:43,126
+That adjustment roughly mirrors the employer's share you'd be able to deduct as an employee.
+
+35
+00:02:43,166 --> 00:02:44,560
+Second, there's a cap.
+
+36
+00:02:44,600 --> 00:02:53,492
+The Social Security part only applies up to a yearly limit called the wage base, which the Social Security Administration sets each year.
+
+37
+00:02:53,532 --> 00:02:55,813
+Our example stays under that limit.
+
+38
+00:02:57,467 --> 00:02:58,393
+Now the S corp.
+
+39
+00:02:58,433 --> 00:03:05,094
+When your business is taxed as an S corp and you work in it, you become an employee of your own company.
+
+40
+00:03:05,134 --> 00:03:08,123
+The company runs payroll and pays you a salary.
+
+41
+00:03:08,163 --> 00:03:18,948
+That salary gets the same Social Security and Medicare taxes as any paycheck: fifteen point three percent in total, half paid by the company and half withheld from you.
+
+42
+00:03:18,988 --> 00:03:23,845
+Profit left over after your salary can be paid out to you as a distribution.
+
+43
+00:03:23,885 --> 00:03:28,267
+Distributions aren't wages, so they don't carry those payroll taxes.
+
+44
+00:03:33,967 --> 00:03:35,698
+Here's what doesn't change.
+
+45
+00:03:35,738 --> 00:03:41,077
+You still pay income tax on all of the business's profit, the salary and the rest.
+
+46
+00:03:41,117 --> 00:03:46,784
+An S corp passes its profit through to your personal return, just like the default LLC.
+
+47
+00:03:46,824 --> 00:03:50,392
+So the difference we're talking about isn't income tax.
+
+48
+00:03:50,432 --> 00:03:51,507
+It's payroll tax.
+
+49
+00:03:51,547 --> 00:04:00,207
+The S corp charges Social Security and Medicare only on the part you pay yourself as salary, instead of on nearly all of the profit.
+
+50
+00:04:04,067 --> 00:04:06,679
+And here's the catch everyone asks about.
+
+51
+00:04:06,719 --> 00:04:11,661
+Why not pay yourself a tiny salary and take everything else as distributions?
+
+52
+00:04:11,701 --> 00:04:18,520
+Because the IRS requires S corp owners who work in the business to pay themselves reasonable compensation.
+
+53
+00:04:18,560 --> 00:04:24,343
+That means roughly what the business would have to pay someone else to do the work you do.
+
+54
+00:04:24,383 --> 00:04:31,071
+The IRS looks at things like your role, your hours, your experience, and what comparable businesses pay.
+
+55
+00:04:31,111 --> 00:04:33,724
+There's no fixed percentage in the rules.
+
+56
+00:04:33,764 --> 00:04:43,987
+Underpaying yourself to avoid payroll taxes is exactly what the IRS watches for, and it can treat those distributions as wages, with back taxes and penalties.
+
+57
+00:04:46,967 --> 00:04:47,345
+Okay.
+
+58
+00:04:47,345 --> 00:04:51,015
+Let's do the math with one example, step by step.
+
+59
+00:04:51,055 --> 00:04:55,447
+Same business, same work, same profit, two tax treatments.
+
+60
+00:04:56,367 --> 00:05:01,277
+Our owner's business makes one hundred eighty thousand dollars in profit for the year.
+
+61
+00:05:01,317 --> 00:05:05,807
+That's after business expenses, and before the owner pays themselves anything.
+
+62
+00:05:07,267 --> 00:05:14,113
+Under the default LLC treatment, self-employment tax starts with ninety-two point three five percent of the profit.
+
+63
+00:05:14,153 --> 00:05:18,064
+That's one hundred sixty-six thousand, two hundred thirty dollars.
+
+64
+00:05:18,104 --> 00:05:26,527
+Multiply that by fifteen point three percent, and the self-employment tax comes to about twenty-five thousand, four hundred thirty-three dollars.
+
+65
+00:05:27,700 --> 00:05:29,144
+Now the S corp version.
+
+66
+00:05:29,184 --> 00:05:34,566
+Let's say a reasonable salary for this owner's role is sixty-eight thousand dollars.
+
+67
+00:05:34,606 --> 00:05:37,600
+We're using that number to illustrate the math.
+
+68
+00:05:37,640 --> 00:05:40,956
+A real reasonable salary depends on the actual work.
+
+69
+00:05:40,996 --> 00:05:46,378
+Payroll taxes on that salary, both halves together, are fifteen point three percent.
+
+70
+00:05:46,418 --> 00:05:49,411
+That's ten thousand, four hundred four dollars.
+
+71
+00:05:49,451 --> 00:05:56,100
+Most of the remaining profit comes out as distributions, with no Social Security or Medicare tax on it.
+
+72
+00:05:57,800 --> 00:05:59,057
+Put them side by side.
+
+73
+00:05:59,097 --> 00:06:03,009
+About twenty-five thousand, four hundred dollars under the default.
+
+74
+00:06:03,049 --> 00:06:05,958
+About ten thousand, four hundred under the S corp.
+
+75
+00:06:05,998 --> 00:06:08,848
+The gap is about fifteen thousand dollars a year.
+
+76
+00:06:08,888 --> 00:06:11,720
+That's where the number in the title comes from.
+
+77
+00:06:15,100 --> 00:06:16,477
+Now, the honest part.
+
+78
+00:06:16,517 --> 00:06:21,741
+That fifteen thousand is the payroll tax difference, not money in your pocket.
+
+79
+00:06:21,781 --> 00:06:23,765
+Running an S corp costs money.
+
+80
+00:06:23,805 --> 00:06:27,814
+You need payroll, with quarterly filings and year-end forms.
+
+81
+00:06:27,854 --> 00:06:34,495
+The business files its own tax return, Form eleven twenty S, which usually means paying a preparer.
+
+82
+00:06:34,535 --> 00:06:38,747
+Your salary also picks up federal and state unemployment taxes.
+
+83
+00:06:38,787 --> 00:06:42,661
+And some states charge their own fees or taxes on S corps.
+
+84
+00:06:42,701 --> 00:06:49,180
+Depending on where you live and who you hire, those costs can run a few thousand dollars a year.
+
+85
+00:06:52,000 --> 00:06:57,977
+If those costs come to about three thousand dollars, our owner keeps roughly twelve thousand.
+
+86
+00:06:58,017 --> 00:06:59,077
+Still real money.
+
+87
+00:06:59,117 --> 00:07:00,800
+Just not the full fifteen.
+
+88
+00:07:02,100 --> 00:07:05,058
+A few other things can push the result up or down.
+
+89
+00:07:05,098 --> 00:07:12,612
+Income tax can shift, because of how the qualified business income deduction works when part of your profit is paid as salary.
+
+90
+00:07:12,652 --> 00:07:16,030
+Some retirement plan contributions depend on your salary.
+
+91
+00:07:16,070 --> 00:07:24,784
+And at higher profit levels, the Social Security wage base caps the self-employment tax, so the gap stops growing the way it does in this example.
+
+92
+00:07:24,824 --> 00:07:31,060
+This comparison is payroll tax only, which is why the full picture is worth running with a professional.
+
+93
+00:07:37,000 --> 00:07:39,367
+So who does this tend to make sense for?
+
+94
+00:07:39,407 --> 00:07:45,024
+Generally, owners whose profit is well above what a reasonable salary for their role would be.
+
+95
+00:07:45,064 --> 00:07:48,995
+That gap between profit and salary is where the savings come from.
+
+96
+00:07:49,035 --> 00:08:03,960
+It also tends to fit owners whose profit is steady from year to year, who are willing to run payroll properly and keep the paperwork clean, and who plan to keep the business going long enough for the savings to outweigh the setup and running costs.
+
+97
+00:08:11,100 --> 00:08:13,067
+And who it usually doesn't fit.
+
+98
+00:08:13,107 --> 00:08:24,268
+If your profit is close to what a reasonable salary would be, there's not much left to take as distributions, so there's little to save, and the extra costs can wipe it out.
+
+99
+00:08:24,308 --> 00:08:32,361
+If your business is brand new, or your income swings a lot, you could be paying for payroll in years with very little profit.
+
+100
+00:08:32,401 --> 00:08:36,828
+A small side business with modest profit often won't clear the costs.
+
+101
+00:08:36,868 --> 00:08:41,660
+And if you value simplicity, the default setup means a lot less paperwork.
+
+102
+00:08:47,200 --> 00:08:50,599
+If you remember one thing from this video, make it this.
+
+103
+00:08:50,639 --> 00:08:54,651
+The S corp question isn't really about the label on your business.
+
+104
+00:08:54,691 --> 00:09:03,494
+It's about the gap between your profit and a reasonable salary for the work you do, and whether that gap is big enough to cover the extra costs.
+
+105
+00:09:03,534 --> 00:09:13,360
+And if an owner does decide to make the election, it's done on IRS Form twenty-five fifty-three, which has its own deadlines for when the election takes effect.
+
+106
+00:09:19,700 --> 00:09:25,902
+If you want to try this with your own numbers, there's a free calculator on dollarsanddeductions.com.
+
+107
+00:09:25,942 --> 00:09:30,538
+It runs this same comparison with your profit, your salary, and your costs.
+
+108
+00:09:30,578 --> 00:09:35,112
+And a reminder: everything in this video is for educational purposes only.
+
+109
+00:09:35,152 --> 00:09:37,646
+It's not tax, legal, or financial advice.
+
+110
+00:09:37,686 --> 00:09:44,980
+Tax rules change, and your situation is your own, so talk to a qualified tax professional before you make an election.
+
+111
+00:09:48,233 --> 00:09:50,508
+Thanks for watching Dollars and Deductions.
+
+112
+00:09:50,548 --> 00:09:53,993
+If this was useful, subscribe, and I'll see you in the next one.

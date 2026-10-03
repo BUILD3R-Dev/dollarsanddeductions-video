@@ -5,7 +5,7 @@ import {ShortCTA} from './ShortCTA';
 import {SceneShell} from '../components/SceneShell';
 import {WordReveal} from '../components/WordReveal';
 import {ease, mix, progress} from '../lib/motion';
-import {colors, fonts, palette, radius, space, typeScale, useLayout} from '../theme';
+import {colors, fonts, insetPadding, palette, radius, space, typeScale, useLayout} from '../theme';
 
 export type OutroCardProps = {
   durationInFrames: number;
@@ -15,6 +15,8 @@ export type OutroCardProps = {
   nextLabel?: string;
   url?: string;
   disclaimer?: string;
+  /** Upload cadence line under the subscribe button. */
+  schedule?: string;
 };
 
 const CARD_W = 720;
@@ -33,8 +35,10 @@ const OutroLandscape: React.FC<OutroCardProps> = ({
   nextLabel = 'Up next',
   url = 'dollarsanddeductions.com',
   disclaimer = 'Educational purposes only — not tax, legal, or financial advice.',
+  schedule = 'New episodes twice a week.',
 }) => {
   const frame = useCurrentFrame();
+  const {safe} = useLayout();
   const p = palette('dark');
 
   const btnIn = progress(frame, 30, 24, ease.back);
@@ -115,7 +119,7 @@ const OutroLandscape: React.FC<OutroCardProps> = ({
             {frame < CLICK + 40 ? <Cursor x={cursor.x} y={cursor.y} press={press} opacity={progress(frame, 44, 10, ease.out) * (1 - cursorOut)} /> : null}
           </div>
           <div style={{fontFamily: fonts.sans, fontSize: typeScale.label, color: p.muted, opacity: progress(frame, 50, 24, ease.out)}}>
-            New episodes every Tuesday.
+            {schedule}
           </div>
         </div>
       </AbsoluteFill>
@@ -172,7 +176,7 @@ const OutroLandscape: React.FC<OutroCardProps> = ({
       </div>
 
       {/* Footer */}
-      <AbsoluteFill style={{justifyContent: 'flex-end', padding: `${space(12)}px ${space(16)}px`}}>
+      <AbsoluteFill style={{justifyContent: 'flex-end', padding: insetPadding(safe)}}>
         <div style={{height: 2, background: p.faint, transform: `scaleX(${footer})`, transformOrigin: 'left', marginBottom: space(3)}} />
         <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', opacity: footer}}>
           <div style={{fontFamily: fonts.sans, fontWeight: 600, fontSize: typeScale.label + 4, color: colors.mint}}>{url}</div>

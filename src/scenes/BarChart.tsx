@@ -64,8 +64,10 @@ export const BarChart: React.FC<BarChartProps> = ({
   const showDiff = Boolean(difference) && n >= 2;
   const groupW = n * barW + (n - 1) * gap + (showDiff ? (vertical ? 320 : 400) : 0);
   const left0 = box.x + (box.w - groupW) / 2;
-  const BASELINE = vertical ? box.y + box.h - space(26) : 832;
-  const MAX_H = vertical ? 420 : 360;
+  const BASELINE = box.y + box.h - (vertical ? space(26) : space(19));
+  // Bars grow up toward the header; keep the tallest value label clear of it.
+  const HEADER = vertical ? 380 : 230;
+  const MAX_H = Math.min(vertical ? 420 : 360, BASELINE - (box.y + HEADER) - space(14));
   const max = Math.max(...bars.map((b) => b.value));
 
   const GROW_START = 24;

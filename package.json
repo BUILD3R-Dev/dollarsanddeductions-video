@@ -8,7 +8,8 @@
     "render:demo": "remotion render Demo out/demo.mp4",
     "typecheck": "tsc --noEmit",
     "brand": "remotion still LogoTagline brand/logo-horizontal.png && remotion still LogoTaglineLight brand/logo-horizontal-light.png && remotion still LogoHorizontal brand/logo-horizontal-compact.png && remotion still LogoHorizontalLight brand/logo-horizontal-compact-light.png && remotion still LogoStacked brand/logo-stacked.png && remotion still Avatar brand/youtube-avatar.png && remotion still Watermark brand/youtube-watermark.png && remotion still LogoSheet brand/logo-sheet.png",
-    "narration:check": "node scripts/validate-narration.mjs"
+    "narration:check": "node scripts/validate-narration.mjs",
+    "narration:fit": "node scripts/narration-fit.mjs"
   },
   "dependencies": {
     "@remotion/cli": "4.0.532",

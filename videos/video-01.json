@@ -1,5 +1,15 @@
 {
   "narration": "video-01",
+  "captions": {
+    "src": "captions/video-01.srt"
+  },
+  "audio": {
+    "music": {
+      "src": "audio/music/video-01-bed.mp3",
+      "volume": 0.22,
+      "duckTo": 0.07
+    }
+  },
   "scenes": [
     {
       "type": "KineticType",
@@ -17,7 +27,7 @@
     },
     {
       "type": "TitleCard",
-      "durationInFrames": 667,
+      "durationInFrames": 676,
       "props": {
         "kicker": "Episode 1 · S Corp vs LLC",
         "title": "S Corp vs LLC: The *$15,000* Tax Difference, Explained",
@@ -169,7 +179,7 @@
     },
     {
       "type": "KineticType",
-      "durationInFrames": 267,
+      "durationInFrames": 282,
       "props": {
         "lines": [
           "Let's run",
@@ -196,7 +206,7 @@
     },
     {
       "type": "KineticType",
-      "durationInFrames": 579,
+      "durationInFrames": 613,
       "props": {
         "kicker": "Default LLC",
         "lines": [

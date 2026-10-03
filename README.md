@@ -219,6 +219,7 @@ On the right is a 16:9 "Up next" placeholder (720×405) where you place YouTube'
 | `nextLabel` | string | | `'Up next'` |
 | `url` | string | | `'dollarsanddeductions.com'` |
 | `disclaimer` | string | | `'Educational purposes only — not tax, legal, or financial advice.'` (site wording) |
+| `schedule` | string | | `'New episodes twice a week.'` |
 
 YouTube end screens need at least 5s (150f) and at most 20s. Keep the OutroCard at 150f or longer.
 
@@ -316,24 +317,84 @@ Narration is generated per scene, so a script change only re-spends the characte
 | `segments[].type` | Optional; the scene's type. The validator checks it against the spec to catch misnumbering |
 | `segments[].note` | Optional direction for whoever generates the audio. Never spoken |
 
-### Workflow
+### Workflow (every video)
 
-1. **An agent writes** `videos/<slug>.json` (scenes, with `"narration": "<slug>"`) and `narration/<slug>.json` (one segment per scene).
-2. **Validate:** `npm run narration:check -- <slug>` (or `--all`).
+| Step | Who | Command / file |
+|---|---|---|
+| 1. Write the spec and manifest | agent | `videos/<slug>.json` with `"narration"`, `"captions"` and `"audio.music"` (see below); `narration/<slug>.json` |
+| 2. Validate | anyone | `npm run narration:check -- <slug>` |
+| 3. Generate the voice | Nyx, via the ElevenLabs API | `public/audio/<slug>/NN.mp3`, one per scene. Optionally `NN.json` timestamps |
+| 4. **Fit the timeline** | anyone | `npm run narration:fit -- <slug>` |
+| 5. Time the captions **to the fitted spec** | Nyx | `public/captions/<slug>.srt` |
+| 6. Deliver the music bed | Nyx / editor | `public/audio/music/<slug>-bed.mp3` |
+| 7. Validate again | anyone | `npm run narration:check -- <slug>`: every scene `mp3 ✓`, captions in sync, music ✓ |
+| 8. Render | anyone | `npx remotion render Episode out/<slug>.mp4 --props=videos/<slug>.json` (or `Short` for 9:16) |
+
+More detail on each step:
+
+1. **Write.** An agent writes `videos/<slug>.json` and `narration/<slug>.json`, one segment per scene.
+2. **Validate.**
    - Fails if a scene has no segment, a text is empty, a scene number or type doesn't match the spec, or `startSec` is past the scene's end.
-   - Warns about markup characters the voice would read aloud, and estimates which scenes the voice will run longer than.
-   - Prints each segment's character count and the total against the **90,000 characters/month** ElevenLabs quota.
-     Regenerating a segment spends its characters again.
-3. **Nyx generates the audio** on her side via the ElevenLabs API: one request per segment, using the manifest's `voice`.
-   She saves `NN.mp3`, plus the timestamps as `NN.json` if she uses the "with timestamps" endpoint.
-   **No API key ever lives in this repo.**
-4. **Files land** in `public/audio/<slug>/`. Re-run the validator: each scene should show `mp3 ✓`.
-5. **Render:** `npx remotion render Episode out/<slug>.mp4 --props=videos/<slug>.json` (or `Short` for 9:16).
+   - Warns about markup the voice would read aloud, and estimates where the voice will run long.
+   - Prints character counts against the monthly ElevenLabs quota. Regenerating a segment spends its characters again.
+3. **Generate the voice.** One request per segment, using the manifest's `voice`. **No API key ever lives in this repo**; `public/audio/` is gitignored.
+4. **Fit.** Measures every mp3, then:
+   - lengthens scenes that are too short for their voice (`startSec` + audio + 0.5s);
+   - writes an explicit `startSec` on every segment.
+
+   After this, the spec **is** the render timeline: nothing stretches at render, and a segment's voice starts at
+   `sum(earlier scenes' durationInFrames) / 30 + startSec` seconds. Captions must be timed from that.
+   The validator warns until this has run.
+5. **Captions.** Sentence-level SRT, timed to the fitted spec. The same file is uploaded to YouTube as the subtitle track, so it has to match the final video exactly.
+6. **Music.** See *Music beds* below.
+7. **Re-validate.** The validator matches caption text to segments and fails if any segment's first caption is more than 0.25s from its voice.
+8. **Render** both the main video and the teaser.
+
+### Captions (standard for every video)
+
+Every spec references its SRT the same way:
+
+```json
+"captions": {"src": "captions/<slug>.srt"}
+```
+
+- **Files** live in `public/captions/` and are committed, since they're also the YouTube subtitle tracks.
+- **Burned-in captions render for both formats:**
+  - Position `lower`, just above the bottom safe area (16:9) or above the platform UI (9:16).
+  - Public Sans 700 at 52px (16:9) or 64px (9:16), with the spoken word highlighted in mint.
+- **Long sentences:** SRT sentences are split on screen into phrases of at most 7 words (`captions.maxWords`), with time shared in proportion to length. The SRT file itself is never modified.
+- **Caption band:** while captions are on, scenes reserve a band at the bottom (150px in 16:9, 200px in 9:16) and lay out above it, so captions never cover content.
+- **Turning them off:** `"captions": false`. Word-level ElevenLabs timestamps (`NN.json` next to each mp3) also work, and are used automatically when there's no SRT.
+
+### Music beds (standard for every video)
+
+```json
+"audio": {"music": {"src": "audio/music/<slug>-bed.mp3", "volume": 0.22, "duckTo": 0.07}}
+```
+
+| | Main video | Teaser (9:16) |
+|---|---|---|
+| File | `public/audio/music/<slug>-bed.mp3` | `public/audio/music/<slug>-teaser-bed.mp3` |
+| Character | Calm, professional underscore | Same family, slightly more energy and pulse |
+| Vocals | **None.** Instrumental only | **None** |
+| Length | Any. Loops seamlessly if shorter than the video, so pick a bed that loops cleanly (no fade or swell at the loop point) | Ideally ≥ the teaser length, else loops |
+| Mix | 0.22 in gaps, ducked to 0.07 under the voice, 1s fade-in, 2s fade-out | Same |
+| Licensing | Must be licensed for YouTube/social. Music files stay out of git (`public/audio/` is ignored) | Same |
+
+Ducking is timed from the caption cues. Until a music file is delivered, renders skip it with a warning, so you can preview without it; the validator lists it as not delivered.
+
+### Audio-only checks
+
+To review the mix or check sync without rendering video:
+
+```bash
+npx remotion render Episode out/preview/<slug>.wav --codec=wav --config=remotion.audio.config.ts --props=videos/<slug>.json
+```
 
 ### What happens at render
 
 - Each `NN.mp3` plays at its scene's start + `startSec`.
-- **Scenes stretch to fit their narration.** If a segment (plus 0.5s of air) is longer than its scene, the scene gets longer, so the voice is never cut off or overlapping. The video length follows.
+- **Scenes stretch to fit their narration** if `narration:fit` hasn't been run (it should be, before captions are timed). If a segment (plus 0.5s of air) is longer than its scene, the scene gets longer, so the voice is never cut off or overlapping. The video length follows.
   Set `"narration": {"slug": "<slug>", "fit": false}` to keep scene lengths fixed (you get a warning instead).
 - Segments not delivered yet are skipped with a warning, so you can preview visuals before the audio arrives.
 - If `NN.json` timestamps are present, captions appear automatically and stay in sync. Set `"captions": false` to turn them off.
@@ -411,7 +472,7 @@ public/brand/           logo system SVGs (copied from the website repo)
 public/audio/           voiceover, music and caption timestamp files
 videos/                 video specs, one per video: videos/<slug>.json (pass with --props)
 narration/              narration manifests: narration/<slug>.json
-scripts/                validate-narration.mjs
+scripts/                validate-narration.mjs (npm run narration:check), narration-fit.mjs (npm run narration:fit)
 ```
 
 ## Design rules (keep them when extending)

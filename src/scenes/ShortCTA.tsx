@@ -47,7 +47,7 @@ export const ShortCTA: React.FC<ShortCTAProps> = ({
           alignItems: vertical ? 'center' : 'flex-start',
           justifyContent: 'center',
           textAlign: vertical ? 'center' : 'left',
-          gap: space(6),
+          gap: vertical ? space(4) : space(6),
         }}
       >
         {/* Tagline lock-up at full safe width keeps the tagline ≥ 26px; the stacked lock-up's spaced caps get too small on phones. */}
@@ -56,7 +56,7 @@ export const ShortCTA: React.FC<ShortCTAProps> = ({
           text={headline}
           start={8}
           accent={colors.mint}
-          style={{fontSize: vertical ? 96 : 104, fontWeight: 600, lineHeight: 1.06, letterSpacing: '-0.02em', color: p.fg, maxWidth: box.w, textWrap: 'balance'}}
+          style={{fontSize: vertical ? 88 : 104, fontWeight: 600, lineHeight: 1.06, letterSpacing: '-0.02em', color: p.fg, maxWidth: box.w, textWrap: 'balance'}}
         />
         <div
           style={{

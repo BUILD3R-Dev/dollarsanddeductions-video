@@ -1,13 +1,13 @@
 import React from 'react';
 import {AbsoluteFill, Audio, Sequence} from 'remotion';
 import {CornerBug, BugOptions} from './brand/CornerBug';
-import {assetSrc, AudioSpec, CaptionsSpec, resolveCaptions, Soundtrack} from './audio';
+import {assetSrc, AudioSpec, CaptionsSpec, resolveAudio, resolveCaptions, Soundtrack} from './audio';
 import {FrameCue, parseCaptionFile, toFrameCues} from './lib/captions';
 import {DEFAULT_START_SEC, narrationFile, narrationManifests, NarrationOptions, probeAudio, ResolvedNarration, TAIL_SEC} from './narration';
 import {SafeZoneGuides} from './components/SafeZoneGuides';
 import {CaptionTrack} from './scenes/CaptionTrack';
 import {sceneRegistry, ScenePropsOf, SceneType, TransitionProps} from './scenes';
-import {ThemeMode, useLayout} from './theme';
+import {captionBand, ReservedBottom, ThemeMode, useLayout} from './theme';
 
 export type TransitionSpec = Omit<TransitionProps, 'durationInFrames'> & {durationInFrames?: number};
 
@@ -102,6 +102,7 @@ const resolveNarration = async (props: VideoSpec, fps: number) => {
 /** Async prep for calculateMetadata: loads captions and sizes the video to its scenes. */
 export const prepareVideo = async (props: VideoSpec, fps: number) => {
   const narration = await resolveNarration(props, fps);
+  const audio = await resolveAudio(props.audio);
   let captions = props.captions === false ? undefined : await resolveCaptions(props.captions, props.audio, fps);
   if (props.captions !== false && !captions?.resolved?.length && narration.cues.length) captions = {...(captions ?? {}), resolved: narration.cues};
   const durationInFrames = Math.max(1, totalDuration(narration.scenes));
@@ -110,7 +111,7 @@ export const prepareVideo = async (props: VideoSpec, fps: number) => {
     console.warn(`Captions run to frame ${lastCue.to} but the scenes end at ${durationInFrames}: lengthen the scenes or the voiceover will be cut.`);
   }
   const outCaptions: VideoSpec['captions'] = props.captions === false ? false : captions;
-  const out: VideoSpec = {...props, scenes: narration.scenes, captions: outCaptions, narrationResolved: narration.resolved};
+  const out: VideoSpec = {...props, scenes: narration.scenes, audio, captions: outCaptions, narrationResolved: narration.resolved};
   return {durationInFrames, props: out};
 };
 
@@ -172,9 +173,12 @@ export const SceneSequence: React.FC<VideoSpec> = ({scenes, bug: bugProp, guides
 
   return (
     <AbsoluteFill style={{backgroundColor: '#041a14'}}>
-      {base}
-      {overlays}
-      {bugs}
+      {/* Scenes lay out above the caption band when captions are burned in. */}
+      <ReservedBottom.Provider value={captions?.resolved?.length ? captionBand(vertical) : 0}>
+        {base}
+        {overlays}
+        {bugs}
+      </ReservedBottom.Provider>
       {transitions}
       {captions?.resolved?.length ? <CaptionTrack durationInFrames={at} cues={captions.resolved} position={captions.position} /> : null}
       {narrationResolved?.map((n) => (

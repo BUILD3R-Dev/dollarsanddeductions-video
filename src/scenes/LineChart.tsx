@@ -42,7 +42,7 @@ export const LineChart: React.FC<LineChartProps> = ({
   const X0 = vertical ? box.x + 132 : 272;
   const X1 = vertical ? box.x + box.w - space(5) : 1616;
   const Y0 = vertical ? box.y + 500 : 400;
-  const Y1 = vertical ? box.y + box.h - space(12) : 856;
+  const Y1 = box.y + box.h - (vertical ? space(12) : space(16));
   const p = palette(theme);
   const ys = points.map((pt) => pt.value);
   const scale = niceScale(Math.max(...ys));
