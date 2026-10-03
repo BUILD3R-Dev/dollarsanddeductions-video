@@ -1,0 +1,118 @@
+{
+  "video": "video-04",
+  "voice": {
+    "provider": "elevenlabs",
+    "name": "Kallen",
+    "voiceId": "Pi2Zqk51cRysbs4RoCCF",
+    "model": "eleven_v4"
+  },
+  "segments": [
+    {
+      "scene": 1,
+      "type": "KineticType",
+      "startSec": 0.4,
+      "text": "Most small business owners meet their tax person once a year, in the spring, to report what already happened. By then, almost every decision that shaped the bill is locked in. That's compliance, and it matters. But there's a different kind of tax work that happens before the year ends, while those decisions can still change. That's what a tax strategist sells. The question is whether you actually need one."
+    },
+    {
+      "scene": 2,
+      "type": "TitleCard",
+      "startSec": 0.8,
+      "text": "This is Dollars and Deductions. Today: what a tax strategist actually does, how that's different from a preparer or a CPA, and when paying for one tends to make sense. As always, this is education, not tax advice. Your situation is your own, so use this to ask better questions, not to skip asking them."
+    },
+    {
+      "scene": 3,
+      "type": "KineticType",
+      "text": "Here's the split. Most tax work is compliance: accurately reporting decisions you already made. A preparer can only work with the year you give them. A strategist works on the other side. They try to shape the year before it ends, by working on the decisions that determine what the return will look like. Whether that's worth paying for depends on one thing: how many decisions in your business can actually still move."
+    },
+    {
+      "scene": 4,
+      "type": "BulletBuild",
+      "text": "So what do strategists typically work on? Entity and election timing: whether an S corp election makes sense, and when. How you pay yourself. Which retirement plan fits, and when to fund it. The timing of income and expenses across the year boundary, where the rules allow it. And estimated payments, set so you avoid penalties without overpaying. Good strategy also looks at the multi-year picture, because this year's decisions shape next year's options."
+    },
+    {
+      "scene": 5,
+      "type": "NumberCallout",
+      "text": "To see why these decisions matter, go back to our first episode. On one hundred eighty thousand dollars of profit, with an illustrative reasonable salary, the S corp election cut payroll taxes by about fifteen thousand dollars a year. After roughly three thousand dollars of running costs, that was still about twelve thousand. That's one decision, and it's exactly the kind a strategist works on, because it has deadlines and it has to be set up right."
+    },
+    {
+      "scene": 6,
+      "type": "NumberCallout",
+      "text": "Here's a smaller one. Say you put ten thousand dollars into a traditional retirement plan through your business, and you're in the twenty-two percent bracket. That's twenty-two hundred dollars less income tax this year, and the money is still yours. You'll pay tax when you withdraw it later. The planning question is which plan fits, how much to put in, and when."
+    },
+    {
+      "scene": 7,
+      "type": "KineticType",
+      "text": "And timing is the whole game. In the fall, there's still room. You can decide when to buy equipment, whether to pull an expense into this year, and how to true up your last estimated payment. By April, most of that is history. The preparer reports it. They can't go back and change it. That's the core of what you're paying a strategist for: being in the room while the year is still open."
+    },
+    {
+      "scene": 8,
+      "type": "KineticType",
+      "text": "There's one more thing good strategy does that a once-a-year filing can't. It looks past this year. Elect S corp status, and you're committing to running payroll every year after, not just once. Set up a retirement plan, and it comes with rules for how you fund it, and who it has to cover once you hire. A strategist should be thinking about next year, and the year after, not just the return in front of them."
+    },
+    {
+      "scene": 9,
+      "type": "BulletBuild",
+      "text": "Now, the labels, because they get mixed together. A tax preparer prepares and files returns. The focus is accuracy and deadlines. A CPA holds a state-issued license, which takes education, an exam, and experience. CPAs can do preparation, planning, or both, and the license doesn't tell you which. And tax strategist is a description, not a license. It signals a focus on planning, rather than just filing."
+    },
+    {
+      "scene": 10,
+      "type": "KineticType",
+      "text": "That matters, because anyone can call themselves a tax strategist. Some strategists are CPAs. Some are attorneys, or enrolled agents, which is a credential issued by the IRS. Some are experienced tax professionals without any of those. None of that makes them good or bad on its own, but you should know which one you're hiring. So ask about actual credentials, and check them."
+    },
+    {
+      "scene": 11,
+      "type": "KineticType",
+      "text": "Honestly, the label matters less than the engagement. The real question is what you're buying. A filed return in March, or decisions made all year? Plenty of firms that call themselves strategists mostly file returns, and plenty of preparers do real planning. Get the answer in writing before you pay, including what you'll actually receive: a plan, a set of meetings, or help putting it in place."
+    },
+    {
+      "scene": 12,
+      "type": "BulletBuild",
+      "text": "So when does it tend to pay off? First, when your business is profitable enough that entity, compensation, and retirement decisions move real dollars. Second, when you only meet your tax person once a year, at filing time, and nobody ever talks about the year ahead. And third, when something structural changes. A new entity, new partners, your first employees, or starting to do business in more than one state."
+    },
+    {
+      "scene": 13,
+      "type": "BulletBuild",
+      "text": "And when you probably don't, at least not yet. A simple Schedule C with clean books, in one state, often does fine with tax software, or a preparer, plus a periodic check-in. If your profit is modest and steady, and nothing structural is changing, there may not be many decisions left to move. And honest strategy work will tell you that. Nothing to optimize yet is a useful answer, and it should be a cheap one."
+    },
+    {
+      "scene": 14,
+      "type": "BulletBuild",
+      "text": "How do strategists charge? There's no standard credential, so there's no standard rate card either. You'll usually see one of three models. Project-based work, for a defined piece of planning. A monthly subscription, often bundled with bookkeeping and filing. Or a percentage of the savings they identify. That last one is less common, and worth a closer look."
+    },
+    {
+      "scene": 15,
+      "type": "KineticType",
+      "text": "Here's why. When the fee is a cut of the savings, the incentive is to find as much savings as possible, and to define savings as generously as possible. That can push toward aggressive positions. And if the IRS disagrees later, you're the one whose name is on the return. So if you see this model, ask exactly how savings are measured, and what happens to the fee if a position doesn't hold up."
+    },
+    {
+      "scene": 16,
+      "type": "KineticType",
+      "text": "Whichever model you're quoted, the test is the same. Planning pays for itself when the decisions it changes are worth more than the fee. For a reference point, our last episode's sources put a single planning session with a CPA firm at roughly five hundred to fifteen hundred dollars. Strategy engagements vary much more than that. Because there's no rate card, get written proposals from more than one provider, and compare what's actually included: how many planning sessions, help putting the plan in place, and whether the return is part of it."
+    },
+    {
+      "scene": 17,
+      "type": "BulletBuild",
+      "text": "Before you hire anyone, ask five questions. What are your actual credentials? Is the return included, or is this planning only? How is the fee structured, and what exactly does it cover? How many planning touchpoints happen during the year, and when? And can you describe a situation like mine where the planning paid for itself?"
+    },
+    {
+      "scene": 18,
+      "type": "KineticType",
+      "text": "That second question matters more than it sounds. Some strategy firms prepare the return as well. Others only plan, and coordinate with your existing preparer. Either can work. What you don't want is to find out in March that each one assumed the other was filing it."
+    },
+    {
+      "scene": 19,
+      "type": "KineticType",
+      "text": "If you remember one thing from this video, make it this. You don't need a tax strategist because of the title. You need planning when your business has decisions that can still move, and that move real money. Count those decisions. If there are several, planning during the year tends to pay. If there aren't, a good preparer and clean books may be all you need for now."
+    },
+    {
+      "scene": 20,
+      "type": "KineticType",
+      "text": "The full guide to what tax strategists do, and what to ask, is on dollarsanddeductions.com. And a reminder: everything in this video is for educational purposes only. It's not tax, legal, or financial advice. Your situation is your own, so talk to a qualified tax professional before you act on any of it."
+    },
+    {
+      "scene": 21,
+      "type": "OutroCard",
+      "text": "Thanks for watching Dollars and Deductions. Next time: the qualified business income deduction, a deduction worth up to twenty percent of your qualified business income. Subscribe so you don't miss it. Real business. Real answers."
+    }
+  ]
+}

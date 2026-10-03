@@ -1,0 +1,80 @@
+{
+  "composition": "Short",
+  "narration": "video-04-teaser",
+  "captions": {
+    "src": "captions/video-04-teaser.srt"
+  },
+  "audio": {
+    "music": {
+      "src": "audio/music/video-01-bed.loop.wav",
+      "volume": 0.22,
+      "duckTo": 0.07
+    }
+  },
+  "scenes": [
+    {
+      "type": "HookCard",
+      "durationInFrames": 360,
+      "props": {
+        "sticker": "Tax pros",
+        "text": "By April, your tax bill is mostly *decided*."
+      },
+      "transition": {
+        "style": "wipe",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 363,
+      "props": {
+        "lines": [
+          "Compliance",
+          "files the return.",
+          "Strategy decides",
+          "*what goes on it*."
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 20
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 327,
+      "props": {
+        "lines": [
+          "A *label*,",
+          "not a license."
+        ]
+      },
+      "transition": {
+        "style": "iris",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 352,
+      "props": {
+        "lines": [
+          "Planning pays",
+          "when it moves",
+          "*more* than it costs."
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 20
+      }
+    },
+    {
+      "type": "ShortCTA",
+      "durationInFrames": 267,
+      "props": {
+        "fullVideoTitle": "Do You Need a Tax Strategist?"
+      }
+    }
+  ]
+}

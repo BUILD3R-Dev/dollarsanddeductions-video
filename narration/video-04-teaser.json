@@ -1,0 +1,37 @@
+{
+  "video": "video-04-teaser",
+  "voice": {
+    "provider": "elevenlabs",
+    "name": "Kallen",
+    "voiceId": "Pi2Zqk51cRysbs4RoCCF",
+    "model": "eleven_v4"
+  },
+  "segments": [
+    {
+      "scene": 1,
+      "type": "HookCard",
+      "startSec": 0.2,
+      "text": "By the time you file in April, almost everything that shaped your tax bill is already decided. That's the difference between a tax preparer and a tax strategist."
+    },
+    {
+      "scene": 2,
+      "type": "KineticType",
+      "text": "A preparer reports the year you give them. A strategist works on the decisions while the year is still open: your entity, how you pay yourself, retirement, timing."
+    },
+    {
+      "scene": 3,
+      "type": "KineticType",
+      "text": "But tax strategist is a label, not a license. Some are CPAs, some are enrolled agents or attorneys, and some aren't any of those. Ask."
+    },
+    {
+      "scene": 4,
+      "type": "KineticType",
+      "text": "The test is simple. Planning pays when the decisions it changes are worth more than the fee. If nothing can move, you may not need one yet."
+    },
+    {
+      "scene": 5,
+      "type": "ShortCTA",
+      "text": "The full breakdown, with the questions to ask before you hire, is on the channel. Educational only, not tax advice."
+    }
+  ]
+}

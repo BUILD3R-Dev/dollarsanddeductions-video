@@ -1,0 +1,398 @@
+{
+  "composition": "Episode",
+  "narration": "video-04",
+  "captions": {
+    "src": "captions/video-04.srt"
+  },
+  "audio": {
+    "music": {
+      "src": "audio/music/video-01-bed.loop.wav",
+      "volume": 0.22,
+      "duckTo": 0.07
+    }
+  },
+  "scenes": [
+    {
+      "type": "KineticType",
+      "durationInFrames": 870,
+      "props": {
+        "lines": [
+          "Compliance files the return.",
+          "Strategy decides *what goes on it*."
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "TitleCard",
+      "durationInFrames": 703,
+      "props": {
+        "kicker": "Episode 4 · Tax pros",
+        "title": "Do You Need a Tax *Strategist*?",
+        "subtitle": "What they do, what the label means, and when it pays."
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 903,
+      "props": {
+        "kicker": "Compliance vs strategy",
+        "lines": [
+          "A preparer works with",
+          "the year you *give* them."
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 916,
+      "props": {
+        "kicker": "What a strategist works on",
+        "title": "Movable decisions",
+        "theme": "light",
+        "items": [
+          {
+            "text": "Entity and election timing",
+            "detail": "Whether, and when, to elect S corp"
+          },
+          {
+            "text": "How you pay yourself",
+            "detail": "Owner compensation structure"
+          },
+          {
+            "text": "Retirement plan choice",
+            "detail": "SEP, Solo 401(k), SIMPLE, and timing"
+          },
+          {
+            "text": "Income and expense timing",
+            "detail": "Across the year boundary"
+          },
+          {
+            "text": "Estimated payments",
+            "detail": "No penalties, no overpaying"
+          }
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "NumberCallout",
+      "durationInFrames": 952,
+      "props": {
+        "kicker": "Episode 1's example, after costs",
+        "value": 12000,
+        "prefix": "~",
+        "doubleRule": false,
+        "caption": "One movable decision: the S corp election"
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "NumberCallout",
+      "durationInFrames": 772,
+      "props": {
+        "kicker": "$10,000 retirement contribution, 22% bracket",
+        "value": 2200,
+        "doubleRule": false,
+        "caption": "Income tax deferred this year"
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 916,
+      "props": {
+        "lines": [
+          "December: still *movable*.",
+          "April: mostly history."
+        ]
+      },
+      "transition": {
+        "style": "iris"
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 952,
+      "props": {
+        "lines": [
+          "This year's decisions",
+          "shape *next year's* options."
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 832,
+      "props": {
+        "kicker": "Strategist vs preparer vs CPA",
+        "title": "What the labels mean",
+        "items": [
+          {
+            "text": "Tax preparer",
+            "detail": "Prepares and files returns"
+          },
+          {
+            "text": "CPA",
+            "detail": "A state license: education, exam, experience"
+          },
+          {
+            "text": "Tax strategist",
+            "detail": "A description, not a license"
+          }
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 796,
+      "props": {
+        "kicker": "So ask",
+        "lines": [
+          "A *label*,",
+          "not a license."
+        ],
+        "offsetY": -88
+      },
+      "transition": {
+        "style": "wipe"
+      },
+      "overlays": [
+        {
+          "type": "LowerThird",
+          "from": 90,
+          "durationInFrames": 270,
+          "props": {
+            "title": "Enrolled Agent",
+            "subtitle": "A tax credential issued by the IRS",
+            "tag": "Credential"
+          }
+        }
+      ]
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 832,
+      "props": {
+        "lines": [
+          "A filed return in March,",
+          "or decisions made *all year*?"
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 868,
+      "props": {
+        "kicker": "When it tends to pay off",
+        "title": "Signs you might",
+        "theme": "light",
+        "items": [
+          {
+            "text": "Profit where decisions move real dollars",
+            "detail": "Entity, pay, retirement"
+          },
+          {
+            "text": "One meeting a year, at filing time",
+            "detail": "Nobody plans the coming year"
+          },
+          {
+            "text": "A structural change",
+            "detail": "New entity, partners, hires, states"
+          }
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 939,
+      "props": {
+        "kicker": "Not every business, yet",
+        "title": "Signs you might not",
+        "items": [
+          {
+            "text": "A simple Schedule C",
+            "detail": "One state, clean books"
+          },
+          {
+            "text": "Few decisions that can move",
+            "detail": "Modest, steady profit"
+          },
+          {
+            "text": "Nothing structural changing",
+            "detail": "Same setup as last year"
+          }
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 723,
+      "props": {
+        "kicker": "How strategists charge",
+        "title": "Three fee models",
+        "theme": "light",
+        "items": [
+          {
+            "text": "Project-based",
+            "detail": "A defined piece of planning work"
+          },
+          {
+            "text": "Monthly subscription",
+            "detail": "Ongoing, often bundled with filing"
+          },
+          {
+            "text": "A percentage of savings",
+            "detail": "Less common; worth scrutinizing"
+          }
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 916,
+      "props": {
+        "kicker": "A percentage of savings",
+        "lines": [
+          "Who decides",
+          "what counts as *savings*?"
+        ]
+      },
+      "transition": {
+        "style": "iris"
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 1131,
+      "props": {
+        "lines": [
+          "The fee should be smaller",
+          "than the decisions it *moves*."
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 699,
+      "props": {
+        "kicker": "Before you hire anyone",
+        "title": "Five questions to ask",
+        "items": [
+          {
+            "text": "What are your credentials?",
+            "detail": "CPA, attorney, enrolled agent?"
+          },
+          {
+            "text": "Is the return included?",
+            "detail": "Or is this planning only?"
+          },
+          {
+            "text": "How is the fee structured?",
+            "detail": "And what exactly does it cover?"
+          },
+          {
+            "text": "When do we meet?",
+            "detail": "How many touchpoints, and when"
+          },
+          {
+            "text": "A situation like mine?",
+            "detail": "Where planning paid for itself"
+          }
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 592,
+      "props": {
+        "lines": [
+          "Who is actually",
+          "*filing* the return?"
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 843,
+      "props": {
+        "kicker": "If you remember one thing",
+        "lines": [
+          "Count your",
+          "*movable* decisions."
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 663,
+      "props": {
+        "kicker": "The full guide",
+        "lines": [
+          "dollarsanddeductions.com"
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "OutroCard",
+      "durationInFrames": 447,
+      "props": {
+        "nextTitle": "The QBI Deduction, Explained"
+      }
+    }
+  ]
+}
