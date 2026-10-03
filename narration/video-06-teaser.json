@@ -1,0 +1,37 @@
+{
+  "video": "video-06-teaser",
+  "voice": {
+    "provider": "elevenlabs",
+    "name": "Kallen",
+    "voiceId": "Pi2Zqk51cRysbs4RoCCF",
+    "model": "eleven_v4"
+  },
+  "segments": [
+    {
+      "scene": 1,
+      "type": "HookCard",
+      "startSec": 0.2,
+      "text": "If you work for yourself, nobody withholds tax from your profit. If you expect to owe a thousand dollars or more, the IRS expects you to pay during the year."
+    },
+    {
+      "scene": 2,
+      "type": "BulletBuild",
+      "text": "That's four estimated payments: April fifteenth, June fifteenth, September fifteenth, and January fifteenth of the next year."
+    },
+    {
+      "scene": 3,
+      "type": "KineticType",
+      "text": "The easy way to avoid the penalty: pay at least one hundred percent of last year's total tax, split across those four payments. It's one hundred ten percent if last year's income was over one hundred fifty thousand."
+    },
+    {
+      "scene": 4,
+      "type": "KineticType",
+      "text": "But that only stops the penalty. If you earned more this year, the rest is still due in April, so set it aside as you go."
+    },
+    {
+      "scene": 5,
+      "type": "ShortCTA",
+      "text": "The full walkthrough, with the math, is on the channel. Educational only, not tax advice."
+    }
+  ]
+}

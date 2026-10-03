@@ -1,0 +1,409 @@
+{
+  "composition": "Episode",
+  "narration": "video-06",
+  "captions": {
+    "src": "captions/video-06.srt"
+  },
+  "audio": {
+    "music": {
+      "src": "audio/music/video-01-bed.loop.wav",
+      "volume": 0.22,
+      "duckTo": 0.07
+    }
+  },
+  "scenes": [
+    {
+      "type": "KineticType",
+      "durationInFrames": 906,
+      "props": {
+        "lines": [
+          "Nobody withholds",
+          "from your *profit*."
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "TitleCard",
+      "durationInFrames": 703,
+      "props": {
+        "kicker": "Episode 6 · Estimated taxes",
+        "title": "Quarterly Estimated Taxes: The *Complete* Walkthrough",
+        "subtitle": "Who pays, when, how much, and how to stay penalty-free."
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 772,
+      "props": {
+        "kicker": "The basic rule",
+        "lines": [
+          "The tax system is",
+          "*pay as you go*."
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "NumberCallout",
+      "durationInFrames": 748,
+      "props": {
+        "kicker": "If you expect to owe",
+        "value": 1000,
+        "doubleRule": false,
+        "caption": "or more, after withholding and credits"
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 832,
+      "props": {
+        "kicker": "What the payments cover",
+        "title": "It's more than income tax",
+        "theme": "light",
+        "items": [
+          {
+            "text": "Income tax",
+            "detail": "On your business profit and other income"
+          },
+          {
+            "text": "Self-employment tax",
+            "detail": "Social Security and Medicare, 15.3%"
+          },
+          {
+            "text": "Minus withholding and credits",
+            "detail": "Anything already paid in"
+          }
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 772,
+      "props": {
+        "kicker": "For the 2026 tax year",
+        "title": "The four due dates",
+        "items": [
+          {
+            "text": "April 15, 2026",
+            "detail": "Income from January through March"
+          },
+          {
+            "text": "June 15, 2026",
+            "detail": "April and May"
+          },
+          {
+            "text": "September 15, 2026",
+            "detail": "June through August"
+          },
+          {
+            "text": "January 15, 2027",
+            "detail": "September through December"
+          }
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 603,
+      "props": {
+        "lines": [
+          "Two months.",
+          "Four months.",
+          "*Not* really quarterly."
+        ]
+      },
+      "transition": {
+        "style": "iris"
+      }
+    },
+    {
+      "type": "NumberCallout",
+      "durationInFrames": 459,
+      "props": {
+        "kicker": "Expected 2026 profit",
+        "value": 80000,
+        "doubleRule": false,
+        "caption": "A single filer, no other income"
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 652,
+      "props": {
+        "kicker": "Estimated federal tax for the year",
+        "lines": [
+          "SE tax ≈ $11,304",
+          "+ income tax ≈ $5,344",
+          "= $16,648"
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "NumberCallout",
+      "durationInFrames": 699,
+      "props": {
+        "kicker": "$16,648 ÷ 4 payments",
+        "value": 4162,
+        "doubleRule": false,
+        "caption": "Each of the four payments"
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 879,
+      "props": {
+        "kicker": "Avoiding the penalty",
+        "title": "The safe harbors",
+        "theme": "light",
+        "items": [
+          {
+            "text": "90% of this year's tax",
+            "detail": "Paid on time, in installments"
+          },
+          {
+            "text": "Or 100% of last year's tax",
+            "detail": "From last year's return"
+          },
+          {
+            "text": "110% above $150,000 of AGI",
+            "detail": "Last year's AGI; $75,000 if filing separately"
+          }
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 879,
+      "props": {
+        "kicker": "Using last year's number",
+        "lines": [
+          "Last year's tax: $12,000",
+          "÷ 4 = $3,000 a payment."
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "NumberCallout",
+      "durationInFrames": 652,
+      "props": {
+        "kicker": "Still due in April",
+        "value": 4648,
+        "caption": "$16,648 − $12,000 paid during the year"
+      },
+      "transition": {
+        "style": "iris"
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 856,
+      "props": {
+        "kicker": "If you underpay",
+        "lines": [
+          "The penalty works",
+          "like *interest*."
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 1107,
+      "props": {
+        "kicker": "If your income is uneven",
+        "title": "Two useful tools",
+        "items": [
+          {
+            "text": "The annualized income method",
+            "detail": "Pay as the income actually arrives"
+          },
+          {
+            "text": "Withholding counts as paid evenly",
+            "detail": "From a job, or a spouse's job"
+          }
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 868,
+      "props": {
+        "kicker": "How to pay",
+        "title": "Four ways to send it",
+        "theme": "light",
+        "items": [
+          {
+            "text": "IRS Direct Pay",
+            "detail": "From a bank account, free"
+          },
+          {
+            "text": "Your IRS online account",
+            "detail": "Pay and see payment history"
+          },
+          {
+            "text": "EFTPS",
+            "detail": "The Treasury's payment system, free"
+          },
+          {
+            "text": "Card or check",
+            "detail": "Card processors charge a fee"
+          }
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 556,
+      "props": {
+        "lines": [
+          "Don't forget",
+          "your *state*."
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 759,
+      "props": {
+        "kicker": "If you're an S corp owner",
+        "lines": [
+          "Your paycheck",
+          "can do the *work*."
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 879,
+      "props": {
+        "kicker": "For brand-new owners",
+        "lines": [
+          "Owed nothing last year?",
+          "No penalty *this* year."
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 987,
+      "props": {
+        "kicker": "A simple system",
+        "title": "Make it automatic",
+        "items": [
+          {
+            "text": "Set aside a share of every payment",
+            "detail": "In a separate savings account"
+          },
+          {
+            "text": "Put the four dates on your calendar",
+            "detail": "Plus a reminder a week before"
+          },
+          {
+            "text": "Recheck each quarter",
+            "detail": "Is profit running ahead of plan?"
+          },
+          {
+            "text": "True up the January payment",
+            "detail": "Once the year is nearly done"
+          }
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 712,
+      "props": {
+        "kicker": "If you remember one thing",
+        "lines": [
+          "Four dates.",
+          "One *safe harbor*."
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 663,
+      "props": {
+        "kicker": "Dates and deadlines",
+        "lines": [
+          "dollarsanddeductions.com"
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "OutroCard",
+      "durationInFrames": 412,
+      "props": {
+        "nextTitle": "SEP IRA vs Solo 401(k): Which Saves You More?"
+      }
+    }
+  ]
+}

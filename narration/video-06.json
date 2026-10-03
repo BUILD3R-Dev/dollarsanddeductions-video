@@ -1,0 +1,128 @@
+{
+  "video": "video-06",
+  "voice": {
+    "provider": "elevenlabs",
+    "name": "Kallen",
+    "voiceId": "Pi2Zqk51cRysbs4RoCCF",
+    "model": "eleven_v4"
+  },
+  "segments": [
+    {
+      "scene": 1,
+      "type": "KineticType",
+      "startSec": 0.4,
+      "text": "When you had a regular job, taxes came out of every paycheck, and you barely had to think about it. Then you started a business, and nobody withholds anything from your profit. A lot of new owners don't find that out until April, when they owe the whole year's tax at once, plus a penalty for paying late. Quarterly estimated taxes are how you avoid that. Here's the whole system, start to finish."
+    },
+    {
+      "scene": 2,
+      "type": "TitleCard",
+      "startSec": 0.8,
+      "text": "This is Dollars and Deductions. Today: who has to pay estimated taxes, the four due dates, how to figure the amount, the safe harbor rules that protect you from penalties, and how to actually pay. As always, this is education, not tax advice. Your numbers are your own, so check them with a tax professional."
+    },
+    {
+      "scene": 3,
+      "type": "KineticType",
+      "text": "Start with the basic rule. The federal tax system is pay as you go. The IRS expects to receive your tax during the year, as you earn the income, not all at once when you file. For employees, withholding takes care of it. When you work for yourself, you're expected to send it in yourself, in four installments called estimated tax payments."
+    },
+    {
+      "scene": 4,
+      "type": "NumberCallout",
+      "text": "So who has to pay? Generally, anyone who expects to owe one thousand dollars or more in federal tax for the year, after subtracting withholding and credits. The payments are made using Form ten forty E S. If you're a sole proprietor, a single-member LLC, a partner, or an S corp owner taking distributions, there's a good chance that's you."
+    },
+    {
+      "scene": 5,
+      "type": "BulletBuild",
+      "text": "And here's what catches people: estimated payments cover more than income tax. They also cover self-employment tax, the fifteen point three percent for Social Security and Medicare that we walked through in episode one. For a lot of small business owners, the self-employment tax is the bigger of the two. From that total, you subtract any withholding, from a job or a spouse's job, and any credits."
+    },
+    {
+      "scene": 6,
+      "type": "BulletBuild",
+      "text": "Here are the four due dates for the twenty twenty-six tax year. April fifteenth, June fifteenth, and September fifteenth, twenty twenty-six. And the last one, January fifteenth, twenty twenty-seven. When a date falls on a weekend or a legal holiday, it moves to the next business day. If you're watching this in the fall, that January payment is the next one up."
+    },
+    {
+      "scene": 7,
+      "type": "KineticType",
+      "text": "And notice something odd. The periods aren't equal. The June payment covers just two months, April and May. The January payment covers four, September through December. So quarterly estimated taxes aren't really quarterly. If your income is seasonal, that uneven calendar matters, and we'll come back to it."
+    },
+    {
+      "scene": 8,
+      "type": "NumberCallout",
+      "text": "Now let's figure an amount. Same owner as our QBI episode: a single filer with a sole proprietorship that expects to net eighty thousand dollars in twenty twenty-six, with no other income and the standard deduction."
+    },
+    {
+      "scene": 9,
+      "type": "KineticType",
+      "text": "Self-employment tax on eighty thousand dollars is about eleven thousand three hundred four. Income tax, after the deduction for half of the self-employment tax, the standard deduction, and the QBI deduction, comes to about fifty-three hundred forty-four. Together, that's about sixteen thousand, six hundred forty-eight dollars of federal tax for the year."
+    },
+    {
+      "scene": 10,
+      "type": "NumberCallout",
+      "text": "Divide that by four, and the payment is about four thousand, one hundred sixty-two dollars each time. That's the straightforward method: estimate the year, and pay a quarter of it on each date. The catch, of course, is that it's an estimate. If your profit comes in higher than you expected, your estimate was too low."
+    },
+    {
+      "scene": 11,
+      "type": "BulletBuild",
+      "text": "That's where the safe harbors come in. You generally avoid the underpayment penalty if your withholding and on-time estimated payments add up to at least ninety percent of this year's tax. Or one hundred percent of last year's tax, as long as last year was a full twelve-month tax year. That second one becomes one hundred ten percent if last year's adjusted gross income was over one hundred fifty thousand dollars."
+    },
+    {
+      "scene": 12,
+      "type": "KineticType",
+      "text": "The prior-year safe harbor is the easy one, because the number is already on last year's return. Say our owner's total tax last year was twelve thousand dollars, and their income was under the one hundred fifty thousand dollar line. Four payments of three thousand dollars covers one hundred percent of it. Even if this year's tax turns out to be sixteen thousand, six hundred forty-eight, there's generally no underpayment penalty."
+    },
+    {
+      "scene": 13,
+      "type": "NumberCallout",
+      "text": "But safe from penalties doesn't mean nothing is owed. The difference, about forty-six hundred forty-eight dollars, is still due when you file in April. The safe harbor protects you from the penalty, not from the bill. So if you use it in a growing year, set the extra aside as you go."
+    },
+    {
+      "scene": 14,
+      "type": "KineticType",
+      "text": "And if you do miss? The underpayment penalty works like interest. It's figured on how much you were short for each payment period, and for how long, at an IRS rate that resets every quarter. Because it's calculated payment by payment, a big catch-up payment in January doesn't erase the penalty that built up on the earlier quarters. Paying on time, each time, is what keeps it at zero."
+    },
+    {
+      "scene": 15,
+      "type": "BulletBuild",
+      "text": "Now, back to seasonal income. If most of your profit lands late in the year, the annualized income installment method lets your required payments follow when the income actually came in, instead of four equal amounts. It's figured on Form twenty-two ten, Schedule A I. And if you, or a spouse filing jointly, also have a W-2 job, there's a useful rule. Withholding is generally treated as paid evenly through the year, even if it's withheld late. So raising withholding in the fall can cover a shortfall from earlier quarters."
+    },
+    {
+      "scene": 16,
+      "type": "BulletBuild",
+      "text": "Paying is the easy part. IRS Direct Pay takes payments straight from a bank account, for free. Your IRS online account lets you pay and see every payment you've made. EFTPS, the Treasury's electronic payment system, is free too, and lets you schedule payments ahead. You can also pay by card through an approved processor, for a fee, or mail a check with the Form ten forty E S voucher."
+    },
+    {
+      "scene": 17,
+      "type": "KineticType",
+      "text": "And don't forget your state. Most states with an income tax have their own estimated payment rules, with their own thresholds and their own dates, which don't always match the federal ones. Everything in this video is federal, so check your state's rules separately."
+    },
+    {
+      "scene": 18,
+      "type": "KineticType",
+      "text": "If you're an S corp owner, you have an extra option. Your salary runs through payroll, so you can have income tax withheld from it, and that withholding counts toward the safe harbors. Your distributions don't have anything withheld, though. So depending on how much comes out as distributions, you may still need estimated payments, or more withholding on your salary."
+    },
+    {
+      "scene": 19,
+      "type": "KineticType",
+      "text": "One more rule that helps brand-new owners. If you owed no federal tax at all last year, and you were a U.S. citizen or resident for the whole year, you generally can't be charged an underpayment penalty this year. That doesn't make the tax go away. It's all still due in April. But your first profitable year is the classic surprise, so start setting money aside from your very first invoice."
+    },
+    {
+      "scene": 20,
+      "type": "BulletBuild",
+      "text": "Here's a simple way to run it. Set aside a share of every payment you receive in a separate savings account, so the tax money is never in your spending money. Put the four dates on your calendar, with a reminder a week ahead. Recheck your numbers each quarter, especially if profit is running ahead of plan. And true up the January payment once the year is nearly done, so you're neither penalized, nor giving the government an interest-free loan."
+    },
+    {
+      "scene": 21,
+      "type": "KineticType",
+      "text": "If you remember one thing from this video, make it this. Know the four dates, and pick a safe harbor. Paying one hundred percent of last year's tax, or one hundred ten percent at higher incomes, in four on-time payments, is the simplest way to stay penalty-free. Then set aside enough to cover the rest in April."
+    },
+    {
+      "scene": 22,
+      "type": "KineticType",
+      "text": "The deductions checklist on dollarsanddeductions.com has these dates, along with the other filing deadlines to keep on your calendar. And a reminder: everything in this video is for educational purposes only. It's not tax, legal, or financial advice. Your situation is your own, so work out your payments with a qualified tax professional."
+    },
+    {
+      "scene": 23,
+      "type": "OutroCard",
+      "text": "Thanks for watching Dollars and Deductions. Next time: SEP IRA versus solo four oh one k, and which one saves you more. Subscribe so you don't miss it. Real business. Real answers."
+    }
+  ]
+}

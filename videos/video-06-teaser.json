@@ -1,0 +1,94 @@
+{
+  "composition": "Short",
+  "narration": "video-06-teaser",
+  "captions": {
+    "src": "captions/video-06-teaser.srt"
+  },
+  "audio": {
+    "music": {
+      "src": "audio/music/video-01-bed.loop.wav",
+      "volume": 0.22,
+      "duckTo": 0.07
+    }
+  },
+  "scenes": [
+    {
+      "type": "HookCard",
+      "durationInFrames": 384,
+      "props": {
+        "sticker": "Estimated taxes",
+        "text": "Self-employed? Nobody withholds from your *profit*."
+      },
+      "transition": {
+        "style": "wipe",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 231,
+      "props": {
+        "kicker": "2026 tax year",
+        "title": "Four due dates",
+        "items": [
+          {
+            "text": "April 15",
+            "detail": "2026"
+          },
+          {
+            "text": "June 15",
+            "detail": "2026"
+          },
+          {
+            "text": "September 15",
+            "detail": "2026"
+          },
+          {
+            "text": "January 15",
+            "detail": "2027"
+          }
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 20
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 484,
+      "props": {
+        "lines": [
+          "Pay 100% of",
+          "*last year's* tax.",
+          "No penalty."
+        ]
+      },
+      "transition": {
+        "style": "iris",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 339,
+      "props": {
+        "lines": [
+          "No penalty",
+          "isn't *no bill*."
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 20
+      }
+    },
+    {
+      "type": "ShortCTA",
+      "durationInFrames": 207,
+      "props": {
+        "fullVideoTitle": "Quarterly Estimated Taxes: The Complete Walkthrough"
+      }
+    }
+  ]
+}
