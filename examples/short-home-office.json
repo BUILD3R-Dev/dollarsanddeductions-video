@@ -1,0 +1,83 @@
+{
+  "scenes": [
+    {
+      "type": "HookCard",
+      "durationInFrames": 75,
+      "props": {
+        "sticker": "Tax tip #15",
+        "text": "Working from home? You may be skipping *$1,500* a year."
+      },
+      "transition": {
+        "style": "wipe",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "NumberCallout",
+      "durationInFrames": 150,
+      "props": {
+        "kicker": "Simplified home-office deduction",
+        "value": 1500,
+        "doubleRule": false
+      },
+      "overlays": [
+        {
+          "type": "CaptionTrack",
+          "from": 0,
+          "durationInFrames": 150,
+          "props": {
+            "cues": [
+              {
+                "text": "$5 per square foot",
+                "from": 40,
+                "to": 80
+              },
+              {
+                "text": "up to *300* square feet",
+                "from": 80,
+                "to": 140
+              }
+            ]
+          }
+        }
+      ],
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 20
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 180,
+      "props": {
+        "kicker": "To qualify",
+        "title": "The space must be",
+        "items": [
+          {
+            "text": "Used regularly",
+            "detail": "Not just once in a while"
+          },
+          {
+            "text": "Used only for business",
+            "detail": "No guest room double duty"
+          },
+          {
+            "text": "Your main place of business",
+            "detail": "Or where you meet clients"
+          }
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 20
+      }
+    },
+    {
+      "type": "ShortCTA",
+      "durationInFrames": 120,
+      "props": {
+        "fullVideoTitle": "The Home Office Deduction, Done Right"
+      }
+    }
+  ]
+}

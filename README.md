@@ -1,1 +1,405 @@
-# Dollars & Deductions Video Kit
+# Dollars & Deductions — Remotion scene kit
+
+A motion-graphics template library for the **Dollars & Deductions** YouTube channel
+(small-business taxes & finance). Everything is procedural (CSS/SVG). There's no stock footage
+and no web images. Output is 1920×1080 @ 30 fps.
+
+- **Brand:** matches the website (dollarsanddeductions repo): deep pine `#07352a`, pine `#0b5d45`, mint `#cfe6da`, mist `#eef4f0`, ink `#15211c`, red `#c3283a` for totals
+- **Type:** Newsreader (headlines, numbers) + Public Sans (body, labels), the site's faces, loaded via `@remotion/google-fonts`
+- **Motion:** all movement uses the eased curves in `src/lib/motion.ts`. Nothing moves linearly.
+
+**Design rules live in [DESIGN.md](DESIGN.md)**, the source of truth for color, type, spacing, motion and logo usage.
+
+> **Logo:** the final logo system lives in `public/brand/` (masters in the website repo) and is wired up in
+> `src/brand/config.ts`. See DESIGN.md §7 for files and usage rules.
+
+## Quick start
+
+```bash
+npm install
+npx remotion studio                         # browse every scene + the demo
+npx remotion render Demo out/demo.mp4       # 60s sizzle reel (16:9)
+npx remotion render DemoShort out/short.mp4 # 28s Short / Reel (9:16)
+```
+
+Render a new video from a JSON spec (no code changes needed):
+
+```bash
+npx remotion render Episode out/home-office.mp4 --props=examples/episode-home-office.json   # 16:9, 1920×1080
+npx remotion render Short out/home-office-short.mp4 --props=examples/short-home-office.json # 9:16, 1080×1920
+```
+
+`Episode` and `Short` take the same JSON format, and every scene adapts to the frame.
+The same spec renders in either format, which is useful for cutting a Short from a long-form episode.
+Short-form specs should still be written for the format: a hook first, fewer words, and 15–45s total.
+
+Render one scene for review:
+
+```bash
+npx remotion still BarChart out/bar.png --frame=150
+```
+
+Export logo files (SVG marks, PNG lock-ups, YouTube avatar and watermark) to `/brand`:
+
+```bash
+npm run brand
+```
+
+Font loading needs network access the first time (Google Fonts).
+
+## How a video is described
+
+A video is an ordered list of `SceneSpec`s (`src/SceneSequence.tsx`). An agent only has to write this JSON:
+
+```ts
+type SceneSpec = {
+  type: 'TitleCard' | 'KineticType' | 'BarChart' | 'LineChart' | 'NumberCallout'
+      | 'BulletBuild' | 'LowerThird' | 'Transition' | 'OutroCard';
+  durationInFrames?: number;      // defaults to the scene's defaultDuration; 30 frames = 1s
+  props: { ... };                 // the scene's props, minus durationInFrames
+  transition?: {                  // branded transition into the NEXT scene, centred on the cut
+    style?: 'wipe' | 'iris' | 'fade';
+    direction?: 'right' | 'left';
+    durationInFrames?: number;    // default 30
+    showMark?: boolean;           // flash the logo mark mid-transition (default true)
+  };
+  overlays?: Array<{              // layered on top of this scene (typically LowerThird)
+    type: SceneType; from: number; durationInFrames: number; props: { ... };
+  }>;
+  bug?: boolean;                  // force the corner logo bug on/off for this scene
+};
+
+type VideoSpec = {
+  scenes: SceneSpec[];
+  bug?: false | {                 // corner logo bug; on by default in 16:9 (hidden on Title/Outro), off in 9:16
+    position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
+    size?: number;                // default 64
+    opacity?: number;             // default 0.85
+  };
+};
+```
+
+- The `Episode` composition sums the scene durations, so total length is automatic.
+- Transitions overlap the cut and don't add time.
+- `SceneSequence` injects `durationInFrames` into every scene, and each scene times its entrance and exit from it.
+- In code, import `SceneSequence` and pass `scenes={...}`. `src/Demo.tsx` is the reference example.
+
+### Text conventions (all text props)
+
+| Syntax | Effect |
+|---|---|
+| `*word*` or `*several words*` | Italic serif emphasis in the accent colour |
+| `$16,955` (KineticType only) | Auto-detected: accent colour, counts up from $0, underline draws in |
+
+### Common props
+
+| Prop | Values | Notes |
+|---|---|---|
+| `theme` | `'dark'` (deep pine, default) / `'light'` (mist) | Alternate between them to vary the rhythm. BulletBuild defaults to light. |
+| `format` | `'currency'` / `'percent'` / `'number'` | Numeric scenes. Default `'currency'`. |
+| `decimals` | number | Default `0`. |
+| `kicker` | string | Sentence-case accent label with a drawn rule. |
+
+## Scene catalog
+
+Durations are at 30 fps. "Default" is used when a spec omits `durationInFrames`.
+
+### TitleCard — default 165f
+Brand lock-up draws in. The kicker rule extends, then the title rises word by word out of masks.
+The subtitle and footer URL follow. Ledger rules drift in the background.
+
+| Prop | Type | Req | Example |
+|---|---|---|---|
+| `title` | string | ✓ | `'S-Corp vs. LLC: Which One *Actually* Saves You More?'` |
+| `kicker` | string | | `'Episode 14 · The S-Corp Series'` |
+| `subtitle` | string | | `'The real numbers on $120,000 of small-business profit.'` |
+| `url` | string | | default `'dollarsanddeductions.com'` |
+| `showLogo` | boolean | | default `true` (horizontal lock-up, top-left) |
+| `theme` | `'dark' \| 'light'` | | |
+
+Titles over 48 characters drop from 144px to 112px automatically.
+
+### KineticType — default 180f
+Full-screen kinetic typography. Lines arrive on beats. Each word lifts out of a blur, and dollar figures count up in the accent colour.
+
+| Prop | Type | Req | Notes |
+|---|---|---|---|
+| `lines` | `(string \| {text, at?, size?})[]` | ✓ | `at` = entry frame; `size` = `'xl' \| 'lg' \| 'md'` (auto by length) |
+| `mode` | `'stack' \| 'replace'` | | `stack` accumulates lines; `replace` shows one line at a time |
+| `align` | `'center' \| 'left'` | | |
+| `kicker` | string | | |
+| `beat` | number | | Frames between auto-timed lines (default spreads lines across the scene) |
+| `offsetY` | number | | Shift the text block, e.g. `-88` to clear a LowerThird |
+
+```json
+{"type": "KineticType", "props": {"lines": ["You cleared $120,000 in profit.", "Self-employment tax takes $16,955", "before *income tax* even starts."]}}
+```
+
+### BarChart — default 240f
+Vertical bars grow in a stagger with values riding their tops. An optional bracket measures the gap between the tallest and shortest bar.
+
+| Prop | Type | Req | Notes |
+|---|---|---|---|
+| `title` | string | ✓ | Keep it to one line (about 40 characters) |
+| `bars` | `{label, value, caption?, tone?}[]` | ✓ | 1–5 bars. `tone`: `'saving' \| 'cost' \| 'neutral'` (old `gold`/`loss`/`cream` still accepted) |
+| `subtitle`, `kicker` | string | | |
+| `difference` | `{label: string}` | | e.g. `{label: 'You keep'}`. Shows max − min with a counting value and the red double rule |
+| `format`, `decimals`, `theme` | | | |
+
+### LineChart — default 240f
+Gridlines draw in, then a monotone curve with an accent area fill sweeps left to right. A glowing head carries a live value pill.
+When the line lands, the pill pops and reveals `endLabel`.
+
+| Prop | Type | Req | Notes |
+|---|---|---|---|
+| `title` | string | ✓ | |
+| `points` | `{label, value}[]` | ✓ | 2–16 evenly spaced points. The y-axis auto-scales to friendly ticks |
+| `endLabel` | string | | e.g. `'after 10 years'` |
+| `subtitle`, `kicker`, `format`, `decimals`, `theme` | | | |
+
+### NumberCallout — default 150f
+A giant count-up figure inside orbiting rings. A pulse and scale pop mark the landing, the red double rule draws under it, then the caption rises.
+
+| Prop | Type | Req | Notes |
+|---|---|---|---|
+| `value` | number | ✓ | |
+| `format` | `'currency' \| 'percent' \| 'number'` | | `20` + `'percent'` → `20%` |
+| `prefix`, `suffix`, `decimals` | | | e.g. `suffix: '/yr'` |
+| `kicker`, `caption` | string | | Caption is 56px, about 2 lines max |
+| `doubleRule` | boolean | | default `true`. Set `false` when the figure isn't a final total (e.g. a percentage) |
+| `theme` | | | |
+
+The figure auto-shrinks for long values.
+
+### BulletBuild — default 270f
+Two-column checklist. The title sits on the left with a live "3 of 4 covered" counter. Items slide in on the right, and their boxes fill with pine/mint as checks draw (styled like the site's checklist).
+
+| Prop | Type | Req | Notes |
+|---|---|---|---|
+| `title` | string | ✓ | |
+| `items` | `{text, detail?}[]` | ✓ | 2–5 items, spread evenly across the scene |
+| `kicker` | string | | |
+| `theme` | | | default `'light'` |
+
+### LowerThird — default 120f (overlay)
+A transparent overlay: mint bar, then a deep-pine panel wipes open, then the title and definition slide in. It reverses out in its last 18 frames.
+Use it in a scene's `overlays`, or on its own as a scene.
+
+| Prop | Type | Req | Example |
+|---|---|---|---|
+| `title` | string | ✓ | `'QBI Deduction'` |
+| `subtitle` | string | | `'20% pass-through deduction under §199A'` |
+| `tag` | string | | default `'Concept'` |
+| `align` | `'left' \| 'right'` | | |
+
+```json
+{"type": "KineticType", "props": {"lines": ["..."], "offsetY": -88},
+ "overlays": [{"type": "LowerThird", "from": 60, "durationInFrames": 110,
+               "props": {"title": "Reasonable Compensation", "subtitle": "Salary must match fair market pay"}}]}
+```
+
+### Transition — default 30f
+Branded full-frame transition that fully covers the frame at its midpoint, with an optional logo flash.
+Usually set via `transition` on a SceneSpec.
+
+| Prop | Type | Notes |
+|---|---|---|
+| `style` | `'wipe' \| 'iris' \| 'fade'` | wipe = skewed deep-pine panel with a white double-rule edge; iris = mint-ringed circle out, then in; fade = dip to deep pine with a mint hairline |
+| `direction` | `'right' \| 'left'` | wipe only |
+| `showMark` | boolean | default `true` |
+
+### OutroCard — default 240f
+End screen. The headline reveals and a procedural cursor clicks **Subscribe**, flipping it to *Subscribed ✓*.
+On the right is a 16:9 "Up next" placeholder (720×405) where you place YouTube's end-screen element. The URL and disclaimer sit in the footer.
+
+| Prop | Type | Req | Default |
+|---|---|---|---|
+| `nextTitle` | string | ✓ | |
+| `headline` | string | | `'Keep more of *what you earn.*'` |
+| `nextLabel` | string | | `'Up next'` |
+| `url` | string | | `'dollarsanddeductions.com'` |
+| `disclaimer` | string | | `'Educational purposes only — not tax, legal, or financial advice.'` (site wording) |
+
+YouTube end screens need at least 5s (150f) and at most 20s. Keep the OutroCard at 150f or longer.
+
+## Short-form: Shorts, Reels, TikTok (9:16)
+
+Render with the `Short` composition (1080×1920, 30fps). See DESIGN.md §10 for the full rules.
+
+- **Safe zone:** scenes keep content inside the area all three platforms leave clear of UI:
+  - 240px top
+  - 144px right (like/comment column)
+  - 480px bottom (caption, audio and nav)
+  - 72px left
+  To check a spec, add `"guides": true`: it shades the UI zones red and outlines the safe box. Remove it before the final render.
+- **Adapts automatically:** every existing scene reflows for vertical. BulletBuild stacks, charts re-scale, and the type steps down.
+  `OutroCard` becomes `ShortCTA`, because Shorts have no end screens.
+- **Corner logo:** off by default in 9:16, because platform UI covers the corners and the channel name is already shown.
+  Set `"bug": {}` on the spec to force it on.
+
+### HookCard: default 75f (2.5s)
+The opener. It must land within about 1s: words pop in on a 2-frame stagger, then the block drifts slightly closer, so the frame is never static.
+
+| Prop | Type | Req | Notes |
+|---|---|---|---|
+| `text` | string | ✓ | One sentence. `*word*` = emphasis; `$7,775` counts up |
+| `sticker` | string | | Tilted label above, e.g. `'Tax tip #14'` |
+| `showLogo` | boolean | | default `true` |
+| `theme` | | | |
+
+### CaptionTrack: default 150f (overlay)
+Burned-in, word-by-word captions for voiced Shorts (most people watch muted).
+The spoken word gets a mint highlight, spoken words are white, and upcoming words are dimmed.
+
+| Prop | Type | Req | Notes |
+|---|---|---|---|
+| `cues` | `{text, from, to}[]` | ✓ | Frames relative to the overlay. ≤ ~7 words per cue. Words are spread evenly across `from`→`to` |
+| `position` | `'lower' \| 'middle' \| 'upper'` | | default `'lower'` (just above the platform UI) |
+
+Use it as an overlay on the scene it narrates:
+
+```json
+{"type": "NumberCallout", "props": {"value": 7775},
+ "overlays": [{"type": "CaptionTrack", "from": 0, "durationInFrames": 135,
+               "props": {"cues": [{"text": "That's money you *keep*", "from": 48, "to": 88}]}}]}
+```
+
+Cue timings normally come from the voiceover's word timestamps (TTS output or a transcription), grouped into short phrases.
+Don't caption over the lower part of charts; captions belong on scenes with a clear lower band (callouts, kinetic type, hooks).
+
+### ShortCTA: default 120f
+The end card: the logo with tagline, a follow prompt, a "Full breakdown on YouTube" card, the URL and the disclaimer.
+
+| Prop | Type | Req | Default |
+|---|---|---|---|
+| `headline` | string | | `'Follow for plain-English *tax wins.*'` |
+| `action` | string | | `'Follow'` |
+| `fullVideoTitle` | string | | Shows the long-form card when set |
+| `url`, `disclaimer` | string | | site URL / site disclaimer wording |
+
+## Voiceover, music & captions
+
+Drop the files in `public/audio/` and reference them from the spec (paths are relative to `public/`):
+
+```json
+{
+  "scenes": [ ... ],
+  "audio": {
+    "voiceover": {"src": "audio/ep15-vo.mp3", "startAt": 0.5},
+    "music":     {"src": "audio/bed-calm.mp3", "volume": 0.22, "duckTo": 0.07}
+  },
+  "captions": {"src": "audio/ep15-vo.words.json"}
+}
+```
+
+| Field | Default | Notes |
+|---|---|---|
+| `voiceover.src` | | mp3 / wav / m4a in `public/`, or an https URL |
+| `voiceover.startAt` | `0` | Seconds into the video where the voice begins |
+| `voiceover.trimStart` | `0` | Seconds to skip at the head of the file |
+| `voiceover.volume` | `1` | |
+| `music.volume` | `0.22` | Level when nobody is speaking |
+| `music.duckTo` | `0.07` | Level under the voice. Ducking is timed from the caption word timestamps |
+| `music.loop` | `true` | Loops seamlessly if the track is shorter than the video |
+| `music.fadeIn` / `fadeOut` | `1` / `2` | Seconds |
+| `captions.src` | | Timestamp file (formats below) |
+| `captions.cues` | | Or inline: `[{"text", "start", "end"}]` in seconds |
+| `captions.offset` | voiceover `startAt − trimStart` | Timestamps are relative to the voiceover file, so they stay in sync automatically |
+| `captions.position` | `'lower'` | `'lower' \| 'middle' \| 'upper'` |
+| `captions.maxWords` | `6` | Words per caption when grouping word-level timestamps |
+
+**Caption timestamp formats** (detected automatically):
+- **Word-level JSON** (best: exact per-word highlight, and tight music ducking):
+  - Whisper / OpenAI (`segments[].words[]`)
+  - ElevenLabs speech-to-text (`words[]`) and text-to-speech "with timestamps" (`alignment.characters`)
+  - AssemblyAI (`words[]`, milliseconds)
+  - Deepgram
+  - a plain `[{"text","start","end"}]` list
+  Words are grouped into captions at sentence ends, pauses, commas, or `maxWords`.
+- **SRT / WebVTT:** phrase-level; words inside each cue are spread evenly.
+
+Captions from `captions` run across the whole video, on top of scenes and transitions.
+A scene-level `CaptionTrack` overlay is still available for one-off captions.
+
+**Check the length:** scene durations decide the video length. If the captions run past the last scene, the render logs
+`Captions run to frame … but the scenes end at …`. Lengthen the scenes so the voiceover isn't cut.
+
+Measured on a test render: voiced words land within 5ms of their timestamps (one frame is 33ms), and the music ducks to about 40% under speech.
+
+## Project layout
+
+```
+src/
+  index.ts              registerRoot
+  Root.tsx              compositions: Demo, Episode (JSON-driven), Scenes/* previews
+  Demo.tsx              60s sizzle reel (reference SceneSpec[])
+  DemoShort.tsx         28s vertical Short (reference SceneSpec[])
+  SceneSequence.tsx     SceneSpec types + the sequencer
+  scenes/               the 9 templates + index.ts registry
+  components/           Background, SceneShell, CountUp, DoubleRule, WordReveal, Kicker, ChartHeader
+  lib/                  motion (easing), format (currency/percent), rich (*emphasis*, $money), curve (monotone + nice ticks)
+  theme/                tokens (colours, space(), type scale, palettes), fonts, layout (useLayout: format + safe zones)
+  brand/                Logo / LogoMark / CornerBug, geometry (fallback mark), config.ts (logo file slots), asset comps
+brand/                  exported logo files (npm run brand)
+public/brand/           logo system SVGs (copied from the website repo)
+public/audio/           voiceover, music and caption timestamp files
+examples/               JSON episode specs for `--props`
+```
+
+## Design rules (keep them when extending)
+
+- **Spacing:** use `space(n)` (n × 8px) for every margin, gap and offset. Title-safe margins are `SAFE` (128 × 96).
+- **Type:** body copy ≥ `typeScale.body` (56) or `bodySm` (48). Labels ≥ `typeScale.label` (40). Only micro tags and footers use 32.
+- **Colour:** take colours from `palette(theme)`, never hard-coded hex. Use `accentText` for accent *text*, and `p.cost` (not raw red) for red on dark.
+- **Motion:** use `progress(frame, start, duration, ease.out)` and `mix()` with the `dur` / `stagger` tokens. Use `ease.out` for entrances, `ease.inOut` for draws and wipes, `ease.in` for exits, and `ease.back` for small landings.
+  Never call `interpolate` without an easing.
+- **Numbers:** always render with `<CountUp>`. It reserves the final width, so the layout doesn't jitter, and uses tabular figures.
+- **Grain** is static on purpose. Animated noise costs YouTube bitrate and smears.
+
+## Adding a new scene
+
+1. Create `src/scenes/MyScene.tsx`:
+
+   ```tsx
+   import React from 'react';
+   import {useCurrentFrame} from 'remotion';
+   import {SceneShell} from '../components/SceneShell';
+   import {ease, mix, progress} from '../lib/motion';
+   import {fonts, palette, ThemeMode, typeScale} from '../theme';
+
+   export type MySceneProps = {durationInFrames: number; headline: string; theme?: ThemeMode};
+
+   export const MyScene: React.FC<MySceneProps> = ({durationInFrames, headline, theme = 'dark'}) => {
+     const frame = useCurrentFrame();
+     const p = palette(theme);
+     const t = progress(frame, 8, 30, ease.out);
+     return (
+       <SceneShell durationInFrames={durationInFrames} theme={theme}>
+         <div style={{fontFamily: fonts.serif, fontSize: typeScale.h1, color: p.fg,
+                      opacity: t, transform: `translateY(${mix(t, 32, 0)}px)`}}>
+           {headline}
+         </div>
+       </SceneShell>
+     );
+   };
+   ```
+
+   The props type must include `durationInFrames: number`. `SceneShell` gives you the background, safe padding and an exit fade.
+   Size and position things from `useLayout()` (`box`, `safe`, `vertical`), never from fixed 1920×1080 numbers, so the scene works in both formats.
+   Check it in both the `Scenes` and `Scenes-Vertical` studio folders.
+
+2. Register it in `src/scenes/index.ts`: add `export * from './MyScene'` and an entry in `sceneRegistry`:
+   `MyScene: {component: MyScene, defaultDuration: 150}`.
+
+3. That's it. `SceneSpec` types, the `Episode` JSON renderer and a studio preview under **Scenes/** pick it up automatically.
+   For a nicer preview, add default props to `extraPreviews` in `Root.tsx`, or use it in `Demo.tsx`.
+4. Run `npx tsc --noEmit`, then check a few frames with `npx remotion still MyScene out/x.png --frame=N`.
+
+## Content note
+
+The demo figures are illustrative 2026 federal numbers for a single owner with $120,000 net profit:
+- SE tax = 15.3% × 92.35% × $120,000 = **$16,955**
+- S-corp FICA on a $60,000 salary = **$9,180**
+- Difference = **$7,775**
+
+They ignore state tax, payroll costs and the SE-tax deduction. Have every episode script reviewed by a tax professional.

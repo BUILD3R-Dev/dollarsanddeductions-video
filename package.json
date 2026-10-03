@@ -1,0 +1,23 @@
+{
+  "name": "dollars-video",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dollars & Deductions \u2014 Remotion scene-template library",
+  "scripts": {
+    "studio": "remotion studio",
+    "render:demo": "remotion render Demo out/demo.mp4",
+    "typecheck": "tsc --noEmit",
+    "brand": "remotion still LogoTagline brand/logo-horizontal.png && remotion still LogoTaglineLight brand/logo-horizontal-light.png && remotion still LogoHorizontal brand/logo-horizontal-compact.png && remotion still LogoHorizontalLight brand/logo-horizontal-compact-light.png && remotion still LogoStacked brand/logo-stacked.png && remotion still Avatar brand/youtube-avatar.png && remotion still Watermark brand/youtube-watermark.png && remotion still LogoSheet brand/logo-sheet.png"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.532",
+    "@remotion/google-fonts": "4.0.532",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "remotion": "4.0.532"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.0",
+    "typescript": "5.8.3"
+  }
+}

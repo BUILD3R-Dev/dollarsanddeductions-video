@@ -1,0 +1,6 @@
+node_modules
+out
+.DS_Store
+# Voiceovers and licensed music stay out of the (public) repo; keep the folder.
+public/audio/*
+!public/audio/.gitkeep
