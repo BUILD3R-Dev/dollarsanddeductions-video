@@ -6,6 +6,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 VOICE = {"provider": "elevenlabs", "name": "Justin Time - Elearning Narration", "voiceId": "uFIXVu9mmnDZ7dTKCBTX", "model": "eleven_multilingual_v2"}
 FPS = 30
+MUSIC_BED = 'audio/music/video-01-bed.loop.wav'
 WPS = 2.5
 
 # (label, scene type, props, narration, extras)
@@ -189,7 +190,9 @@ def build(slug, scenes, vertical):
     spec = {
         "narration": slug,
         "captions": {"src": f"captions/{slug}.srt"},
-        "audio": {"music": {"src": f"audio/music/{slug}-bed.mp3", "volume": 0.22, "duckTo": 0.07}},
+        # Bed: Dustin's Suno phrase (video-01-bed.wav, 13s), made seamless and bar-aligned by
+        # scripts/loop-music.py into video-01-bed.loop.wav (600s). The teaser reuses it.
+        "audio": {"music": {"src": MUSIC_BED, "volume": 0.22, "duckTo": 0.07}},
         "scenes": spec_scenes,
     }
     manifest = {"video": slug, "voice": VOICE, "segments": segs}

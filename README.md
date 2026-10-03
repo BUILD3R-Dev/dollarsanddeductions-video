@@ -381,6 +381,16 @@ Every spec references its SRT the same way:
 | Mix | 0.22 in gaps, ducked to 0.07 under the voice, 1s fade-in, 2s fade-out | Same |
 | Licensing | Must be licensed for YouTube/social. Music files stay out of git (`public/audio/` is ignored) | Same |
 
+**Short clips (e.g. a 13s Suno phrase): make them seamless first.**
+
+```bash
+python3 scripts/loop-music.py public/audio/music/<slug>-bed.wav public/audio/music/<slug>-bed.loop.wav --seconds 620
+```
+
+It measures the bar length and repeats the phrase every 4 bars, not every file length, so downbeats stay on time across seams. Each repeat's tail fades under the next one's start, so there are no clicks. Point the spec at the `.loop.wav`.
+
+Generated clips usually end with a decaying last bar, so expect a gentle "phrase breath" at each repeat. For long videos, a longer bed (1–3 minutes) repeats less and sounds less looped.
+
 Ducking is timed from the caption cues. Until a music file is delivered, renders skip it with a warning, so you can preview without it; the validator lists it as not delivered.
 
 ### Audio-only checks

@@ -5,7 +5,7 @@
   },
   "audio": {
     "music": {
-      "src": "audio/music/video-01-teaser-bed.mp3",
+      "src": "audio/music/video-01-bed.loop.wav",
       "volume": 0.22,
       "duckTo": 0.07
     }
