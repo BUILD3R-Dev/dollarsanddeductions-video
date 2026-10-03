@@ -1,0 +1,123 @@
+{
+  "video": "video-02",
+  "voice": {
+    "provider": "elevenlabs",
+    "name": "Kallen",
+    "voiceId": "Pi2Zqk51cRysbs4RoCCF",
+    "model": "eleven_v4"
+  },
+  "segments": [
+    {
+      "scene": 1,
+      "type": "KineticType",
+      "startSec": 0.4,
+      "text": "You've probably heard someone say, don't worry, it's a write-off. As if spending a thousand dollars on the business makes that thousand dollars free. It doesn't. A deduction lowers the income you're taxed on, not the tax itself. So a thousand-dollar deduction saves you a slice of that thousand, not the whole thing. Deductions still matter a lot, though. Today we'll go through the ones that matter most."
+    },
+    {
+      "scene": 2,
+      "type": "TitleCard",
+      "startSec": 0.8,
+      "text": "This is Dollars and Deductions. Today: seven deduction categories that move the needle for small businesses, how each one works, and what makes it hold up if the IRS ever asks. A quick note before we start. This is education, not tax advice. Check anything you act on with a tax professional."
+    },
+    {
+      "scene": 3,
+      "type": "KineticType",
+      "text": "First, the basics. A deduction and a credit are not the same thing. A deduction reduces the income your tax is calculated on. A credit reduces the tax itself, dollar for dollar. Credits are worth more per dollar, but for a business, deductions are far more common."
+    },
+    {
+      "scene": 4,
+      "type": "NumberCallout",
+      "text": "Here's the math. Say you're in the twenty-two percent tax bracket. A one thousand dollar deduction saves you one thousand times twenty-two percent. That's two hundred twenty dollars of income tax. A one thousand dollar credit would save you the full thousand. The higher your bracket, the more each deduction saves."
+    },
+    {
+      "scene": 5,
+      "type": "KineticType",
+      "text": "Every deduction in this video comes from one principle. The IRS lets a business deduct expenses that are ordinary and necessary. Ordinary means common in your trade. Necessary means helpful and appropriate for your business. A simple pattern to remember: if it's genuinely for the business, documented, and not personal, it's usually deductible. The fights almost always come down to records, and where business ends and personal begins."
+    },
+    {
+      "scene": 6,
+      "type": "BulletBuild",
+      "text": "Number one, the home office. If you use part of your home regularly and exclusively for business, you can deduct it. A guest room that doubles as an office fails the test. There are two methods. The simplified method uses a flat rate per square foot, up to three hundred square feet, with very little paperwork. The regular method deducts the business share of your actual home costs, like rent or mortgage interest, utilities, insurance, and repairs. It takes more record keeping, but it's often a bigger deduction."
+    },
+    {
+      "scene": 7,
+      "type": "NumberCallout",
+      "text": "Here's the simplified method at its maximum. The rate is five dollars per square foot, and it caps at three hundred square feet. Three hundred times five is fifteen hundred dollars. In the twenty-two percent bracket, that deduction is worth about three hundred thirty dollars of income tax."
+    },
+    {
+      "scene": 8,
+      "type": "BulletBuild",
+      "text": "Number two, your vehicle. Driving for business is deductible. Commuting from home to a regular workplace is not. Again, there are two methods. The standard mileage rate is a per-mile rate the IRS publishes each year. You multiply it by your business miles. Or you can deduct actual expenses, like gas, maintenance, insurance, and depreciation, multiplied by the share of your driving that's for business. Either way, you need a mileage log. An app that tracks trips as you drive beats a notebook you fill in from memory."
+    },
+    {
+      "scene": 9,
+      "type": "BulletBuild",
+      "text": "Number three, retirement contributions. This is often the largest deduction available to a profitable small business, and one of the most underused. A SEP IRA is simple to set up, and the contribution limits scale with your income. A solo four oh one k is for businesses with no employees besides the owner, and possibly a spouse. It allows contributions as both the employer and the employee, which usually means the highest limits. And a SIMPLE IRA is a middle ground when you have a few employees. Limits change every year, so check the current numbers."
+    },
+    {
+      "scene": 10,
+      "type": "KineticType",
+      "text": "And here's what makes retirement different from almost every other deduction. Most deductions mean spending money on something. With a retirement contribution, the money doesn't leave. It moves from your business into an account in your name, and you still get the deduction. Traditional contributions are taxed when you withdraw them in retirement, so it's a deferral, not a disappearing act."
+    },
+    {
+      "scene": 11,
+      "type": "BulletBuild",
+      "text": "Number four, health insurance. If you're self-employed, you can generally deduct the health insurance premiums you pay for yourself, your spouse, and your dependents. It has its own line on your return, so you don't have to itemize to get it. Two details matter. It generally isn't available for any month you were eligible for a subsidized health plan through an employer, including your spouse's. And if you own more than two percent of an S corp, there are specific rules, and the premiums run through payroll. It's also easy to miss when nothing changed from last year."
+    },
+    {
+      "scene": 12,
+      "type": "NumberCallout",
+      "text": "Number five, business meals. They're generally fifty percent deductible when there's a clear business purpose, like a meal with a client, or a meal while you're traveling for business. Entertainment, like tickets to a game, generally isn't deductible at all. And the documentation matters. Write down who you were with, where, why, and how much."
+    },
+    {
+      "scene": 13,
+      "type": "KineticType",
+      "text": "Number six, startup costs. You can generally deduct up to five thousand dollars of startup costs in your first year, plus up to five thousand dollars of organizational costs, like forming the entity. Those amounts phase out once your total costs pass fifty thousand dollars, and whatever you can't deduct right away is spread out over fifteen years. What counts as a startup cost has specific rules, so this one is worth a conversation with a professional."
+    },
+    {
+      "scene": 14,
+      "type": "KineticType",
+      "text": "Number seven, Section one seventy-nine. Normally, equipment like a computer, machinery, or furniture is depreciated. You deduct its cost a piece at a time, over several years. Section one seventy-nine lets you deduct the cost of qualifying equipment in the year you put it into service. The limits are set each year, so check the current figures. Timing matters too. Equipment placed in service in December counts for this year. Buy it in January, and it lands on next year's return."
+    },
+    {
+      "scene": 15,
+      "type": "BulletBuild",
+      "text": "One detail that ties back to our last episode. If you're a sole proprietor or a single-member LLC, the business expenses on your Schedule C, like the home office, the vehicle, meals, and equipment, lower your profit. That lowers your income tax and your self-employment tax. A few deductions work differently. Your health insurance and your own retirement contributions are taken on your personal return, so they lower income tax, but not self-employment tax."
+    },
+    {
+      "scene": 16,
+      "type": "BulletBuild",
+      "text": "Now, what makes a deduction survive scrutiny? Three things. First, a business purpose, written down at the time. Lunch with a client to discuss a contract beats a receipt on its own. Second, separation. A dedicated business bank account and card turn the question, was this a business expense, from an argument into a statement. Third, consistency. Deductions claimed the same way every year look like a system. A pile of new ones in a high-income year looks like a strategy, and it draws more attention."
+    },
+    {
+      "scene": 17,
+      "type": "KineticType",
+      "text": "The IRS standard is called adequate records. For most expenses, that means receipts, or bank and card records, that show the amount, the date, the place, and the business purpose. A good test: could a stranger look at your records and reconstruct what happened, and why it was business? Records made at the time beat records rebuilt later, every time."
+    },
+    {
+      "scene": 18,
+      "type": "BulletBuild",
+      "text": "The deduction you forget in April is decided by the records you keep all year. Keep business money separate, with its own checking account and card. Photograph receipts when you buy, because thermal paper fades and phone photos don't. Log mileage as you go. Reconcile your books once a month. Thirty minutes a month beats thirty hours in March. And collect a W-9 when you hire a contractor, not in January when the 1099s are due."
+    },
+    {
+      "scene": 19,
+      "type": "BulletBuild",
+      "text": "And if you're watching this in the fall, October through early December is the practical window for year-end moves. A few are worth discussing with your tax professional: retirement contributions, the timing of equipment purchases, making sure the health insurance deduction is captured, and truing up your fourth-quarter estimated payment, so you're not penalized, or giving the government an interest-free loan. They interact with your entity type, so treat them as planning conversations, not do-it-yourself decisions."
+    },
+    {
+      "scene": 20,
+      "type": "KineticType",
+      "text": "If you remember one thing from this video, make it this. A deduction isn't free money. It's worth the expense times your tax rate, so spend because the business needs it, not for the write-off. And a deduction is only as good as the records behind it. Ordinary and necessary, documented at the time, and kept separate from personal spending."
+    },
+    {
+      "scene": 21,
+      "type": "KineticType",
+      "text": "The full guide and the deductions checklist, with the key filing deadlines, are on dollarsanddeductions.com. And a reminder: everything in this video is for educational purposes only. It's not tax, legal, or financial advice. Rules change, and your situation is your own, so talk to a qualified tax professional before you claim a deduction you're not sure about."
+    },
+    {
+      "scene": 22,
+      "type": "OutroCard",
+      "text": "Thanks for watching Dollars and Deductions. Next time: what a CPA actually costs a small business. Subscribe so you don't miss it. Real business. Real answers."
+    }
+  ]
+}

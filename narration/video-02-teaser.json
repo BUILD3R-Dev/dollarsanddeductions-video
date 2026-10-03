@@ -1,0 +1,37 @@
+{
+  "video": "video-02-teaser",
+  "voice": {
+    "provider": "elevenlabs",
+    "name": "Kallen",
+    "voiceId": "Pi2Zqk51cRysbs4RoCCF",
+    "model": "eleven_v4"
+  },
+  "segments": [
+    {
+      "scene": 1,
+      "type": "HookCard",
+      "startSec": 0.2,
+      "text": "A one thousand dollar write-off does not save you one thousand dollars. Here's what it actually saves, and the deductions that really move the needle."
+    },
+    {
+      "scene": 2,
+      "type": "NumberCallout",
+      "text": "A deduction lowers the income you're taxed on, not the tax itself. In the twenty-two percent bracket, a thousand-dollar deduction saves two hundred twenty dollars of income tax. So spend because the business needs it, not for the write-off."
+    },
+    {
+      "scene": 3,
+      "type": "BulletBuild",
+      "text": "The deductions that matter are things like the home office, your vehicle, self-employed health insurance, and retirement contributions, often the biggest of all, because the money stays yours."
+    },
+    {
+      "scene": 4,
+      "type": "KineticType",
+      "text": "And every one of them depends on records. The amount, the date, and the business purpose, written down at the time."
+    },
+    {
+      "scene": 5,
+      "type": "ShortCTA",
+      "text": "All seven, with the math, are in the full video on the channel. Educational only, not tax advice, so check with a tax professional."
+    }
+  ]
+}

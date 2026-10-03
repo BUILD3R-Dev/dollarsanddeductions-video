@@ -1,0 +1,93 @@
+{
+  "composition": "Short",
+  "narration": "video-02-teaser",
+  "captions": {
+    "src": "captions/video-02-teaser.srt"
+  },
+  "audio": {
+    "music": {
+      "src": "audio/music/video-01-bed.loop.wav",
+      "volume": 0.22,
+      "duckTo": 0.07
+    }
+  },
+  "scenes": [
+    {
+      "type": "HookCard",
+      "durationInFrames": 324,
+      "props": {
+        "sticker": "Tax deductions",
+        "text": "A $1,000 write-off doesn't save you *$1,000*."
+      },
+      "transition": {
+        "style": "wipe",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "NumberCallout",
+      "durationInFrames": 495,
+      "props": {
+        "kicker": "$1,000 deduction, 22% bracket",
+        "value": 220,
+        "doubleRule": false,
+        "caption": "Saved in income tax"
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 20
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 363,
+      "props": {
+        "kicker": "The ones that matter",
+        "title": "The big ones",
+        "items": [
+          {
+            "text": "Home office",
+            "detail": "Regular, exclusive use"
+          },
+          {
+            "text": "Your vehicle",
+            "detail": "With a mileage log"
+          },
+          {
+            "text": "Health insurance",
+            "detail": "If you're self-employed"
+          },
+          {
+            "text": "Retirement",
+            "detail": "Often the biggest of all"
+          }
+        ]
+      },
+      "transition": {
+        "style": "iris",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 279,
+      "props": {
+        "lines": [
+          "No records,",
+          "no *deduction*."
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 20
+      }
+    },
+    {
+      "type": "ShortCTA",
+      "durationInFrames": 315,
+      "props": {
+        "fullVideoTitle": "Small Business Tax Deductions: The 7 That Matter"
+      }
+    }
+  ]
+}

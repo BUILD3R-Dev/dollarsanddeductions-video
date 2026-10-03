@@ -1,0 +1,450 @@
+{
+  "composition": "Episode",
+  "narration": "video-02",
+  "captions": {
+    "src": "captions/video-02.srt"
+  },
+  "audio": {
+    "music": {
+      "src": "audio/music/video-01-bed.loop.wav",
+      "volume": 0.22,
+      "duckTo": 0.07
+    }
+  },
+  "scenes": [
+    {
+      "type": "KineticType",
+      "durationInFrames": 846,
+      "props": {
+        "lines": [
+          "A $1,000 write-off",
+          "doesn't save you *$1,000*."
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "TitleCard",
+      "durationInFrames": 667,
+      "props": {
+        "kicker": "Episode 2 · Tax deductions",
+        "title": "Small Business Tax Deductions: The *7* That Matter",
+        "subtitle": "How each one works, and what makes it hold up."
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 592,
+      "props": {
+        "kicker": "First, the basics",
+        "lines": [
+          "Deduction: lowers your *taxable income*.",
+          "Credit: lowers the tax itself."
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "NumberCallout",
+      "durationInFrames": 639,
+      "props": {
+        "kicker": "A $1,000 deduction at a 22% rate",
+        "value": 220,
+        "doubleRule": false,
+        "caption": "What it saves: the deduction × your tax rate"
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 843,
+      "props": {
+        "kicker": "The rule behind all of them",
+        "lines": [
+          "Ordinary",
+          "and *necessary*."
+        ],
+        "offsetY": -88
+      },
+      "transition": {
+        "style": "iris"
+      },
+      "overlays": [
+        {
+          "type": "LowerThird",
+          "from": 90,
+          "durationInFrames": 300,
+          "props": {
+            "title": "Ordinary and Necessary",
+            "subtitle": "Common in your trade, helpful for your business"
+          }
+        }
+      ]
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 1083,
+      "props": {
+        "kicker": "Number one",
+        "title": "The home office",
+        "theme": "light",
+        "items": [
+          {
+            "text": "Regular and exclusive use",
+            "detail": "A guest room that doubles as an office fails"
+          },
+          {
+            "text": "Simplified method",
+            "detail": "A flat rate per square foot, up to 300"
+          },
+          {
+            "text": "Regular method",
+            "detail": "The business share of actual home costs"
+          }
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "NumberCallout",
+      "durationInFrames": 603,
+      "props": {
+        "kicker": "Simplified method, at the maximum",
+        "value": 1500,
+        "doubleRule": false,
+        "caption": "300 sq ft × $5 per sq ft"
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 1083,
+      "props": {
+        "kicker": "Number two",
+        "title": "Your vehicle",
+        "items": [
+          {
+            "text": "Business driving counts",
+            "detail": "Commuting to a regular workplace doesn't"
+          },
+          {
+            "text": "Standard mileage rate",
+            "detail": "An IRS rate per business mile, set yearly"
+          },
+          {
+            "text": "Or actual expenses",
+            "detail": "Gas, upkeep, insurance, depreciation"
+          },
+          {
+            "text": "A mileage log",
+            "detail": "Kept as you go, not rebuilt in April"
+          }
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 1179,
+      "props": {
+        "kicker": "Number three",
+        "title": "Retirement contributions",
+        "theme": "light",
+        "items": [
+          {
+            "text": "SEP IRA",
+            "detail": "Simple to set up; limits scale with income"
+          },
+          {
+            "text": "Solo 401(k)",
+            "detail": "Owner-only businesses; usually the highest limits"
+          },
+          {
+            "text": "SIMPLE IRA",
+            "detail": "A middle ground with a few employees"
+          }
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 759,
+      "props": {
+        "lines": [
+          "A deduction where",
+          "the money stays *yours*."
+        ]
+      },
+      "transition": {
+        "style": "iris"
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 1203,
+      "props": {
+        "kicker": "Number four",
+        "title": "Self-employed health insurance",
+        "items": [
+          {
+            "text": "You, your spouse, your dependents",
+            "detail": "Premiums you pay"
+          },
+          {
+            "text": "Its own line on your return",
+            "detail": "No need to itemize"
+          },
+          {
+            "text": "Not with a subsidized employer plan",
+            "detail": "Including through a spouse's job"
+          },
+          {
+            "text": "S corp owners: a different setup",
+            "detail": "Premiums run through payroll"
+          }
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "NumberCallout",
+      "durationInFrames": 688,
+      "props": {
+        "kicker": "Number five: business meals",
+        "value": 50,
+        "format": "percent",
+        "doubleRule": false,
+        "caption": "With a clear business purpose, and documented"
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 952,
+      "props": {
+        "kicker": "Number six: startup costs",
+        "lines": [
+          "Up to $5,000 in year one,",
+          "plus $5,000 of *organizational* costs."
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 999,
+      "props": {
+        "kicker": "Number seven: Section 179",
+        "lines": [
+          "Deduct equipment *now*,",
+          "instead of over years."
+        ]
+      },
+      "transition": {
+        "style": "iris"
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 916,
+      "props": {
+        "kicker": "If you file a Schedule C",
+        "title": "Which taxes it lowers",
+        "theme": "light",
+        "items": [
+          {
+            "text": "Business expenses",
+            "detail": "Lower income tax and self-employment tax"
+          },
+          {
+            "text": "Health insurance, retirement",
+            "detail": "Lower income tax only"
+          }
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 1059,
+      "props": {
+        "kicker": "What makes it hold up",
+        "title": "Deductions that survive scrutiny",
+        "items": [
+          {
+            "text": "A business purpose, written down",
+            "detail": "At the time, not in April"
+          },
+          {
+            "text": "Separate accounts",
+            "detail": "Business money stays business money"
+          },
+          {
+            "text": "Consistency",
+            "detail": "Claimed the same way every year"
+          }
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 748,
+      "props": {
+        "kicker": "The IRS standard",
+        "lines": [
+          "Adequate",
+          "*records*."
+        ],
+        "offsetY": -88
+      },
+      "transition": {
+        "style": "wipe"
+      },
+      "overlays": [
+        {
+          "type": "LowerThird",
+          "from": 75,
+          "durationInFrames": 270,
+          "props": {
+            "title": "Adequate Records",
+            "subtitle": "Amount, date, place, business purpose"
+          }
+        }
+      ]
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 939,
+      "props": {
+        "kicker": "Year-round habits",
+        "title": "The checklist",
+        "theme": "light",
+        "items": [
+          {
+            "text": "Separate the money",
+            "detail": "Business checking and card"
+          },
+          {
+            "text": "Photograph receipts",
+            "detail": "Thermal paper fades; photos don't"
+          },
+          {
+            "text": "Log mileage as you go",
+            "detail": "An app beats a notebook"
+          },
+          {
+            "text": "Reconcile monthly",
+            "detail": "Thirty minutes a month"
+          },
+          {
+            "text": "Collect W-9s up front",
+            "detail": "Before 1099s are due in January"
+          }
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 939,
+      "props": {
+        "kicker": "October to early December",
+        "title": "Year-end moves to discuss",
+        "items": [
+          {
+            "text": "Retirement contributions",
+            "detail": "Limits and deadlines are year-specific"
+          },
+          {
+            "text": "Equipment timing",
+            "detail": "December or January changes the year"
+          },
+          {
+            "text": "Health insurance premiums",
+            "detail": "Make sure the deduction is captured"
+          },
+          {
+            "text": "Fourth-quarter estimates",
+            "detail": "True them up"
+          }
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 748,
+      "props": {
+        "kicker": "If you remember one thing",
+        "lines": [
+          "A deduction is worth *your rate*.",
+          "Records make it real."
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 723,
+      "props": {
+        "kicker": "The full checklist",
+        "lines": [
+          "dollarsanddeductions.com"
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "OutroCard",
+      "durationInFrames": 339,
+      "props": {
+        "nextTitle": "How Much Does a CPA Cost for a Small Business?"
+      }
+    }
+  ]
+}
