@@ -1,0 +1,89 @@
+{
+  "composition": "Short",
+  "narration": "video-03-teaser",
+  "captions": {
+    "src": "captions/video-03-teaser.srt"
+  },
+  "audio": {
+    "music": {
+      "src": "audio/music/video-01-bed.loop.wav",
+      "volume": 0.22,
+      "duckTo": 0.07
+    }
+  },
+  "scenes": [
+    {
+      "type": "HookCard",
+      "durationInFrames": 324,
+      "props": {
+        "sticker": "CPA costs",
+        "text": "Your tax return is the *smallest* part of the bill."
+      },
+      "transition": {
+        "style": "wipe",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "NumberCallout",
+      "durationInFrames": 243,
+      "props": {
+        "kicker": "A sole proprietor's return",
+        "value": 1000,
+        "doubleRule": false,
+        "caption": "Roughly $500 to $1,500"
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 20
+      }
+    },
+    {
+      "type": "BarChart",
+      "durationInFrames": 459,
+      "props": {
+        "kicker": "An illustrative year",
+        "title": "The *whole* bill",
+        "bars": [
+          {
+            "label": "Return",
+            "caption": "Schedule C",
+            "value": 1000,
+            "tone": "neutral"
+          },
+          {
+            "label": "Full year",
+            "caption": "+ books, planning",
+            "value": 7800,
+            "tone": "cost"
+          }
+        ]
+      },
+      "transition": {
+        "style": "iris",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 303,
+      "props": {
+        "lines": [
+          "Clean books,",
+          "clean *quote*."
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 20
+      }
+    },
+    {
+      "type": "ShortCTA",
+      "durationInFrames": 363,
+      "props": {
+        "fullVideoTitle": "How Much Does a CPA Cost for a Small Business?"
+      }
+    }
+  ]
+}

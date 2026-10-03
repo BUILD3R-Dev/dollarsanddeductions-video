@@ -1,0 +1,410 @@
+{
+  "composition": "Episode",
+  "narration": "video-03",
+  "captions": {
+    "src": "captions/video-03.srt"
+  },
+  "audio": {
+    "music": {
+      "src": "audio/music/video-01-bed.loop.wav",
+      "volume": 0.22,
+      "duckTo": 0.07
+    }
+  },
+  "scenes": [
+    {
+      "type": "KineticType",
+      "durationInFrames": 966,
+      "props": {
+        "lines": [
+          "The tax return",
+          "is the *smallest* part of the bill."
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "TitleCard",
+      "durationInFrames": 727,
+      "props": {
+        "kicker": "Episode 3 · CPA costs",
+        "title": "How Much Does a *CPA* Cost for a Small Business?",
+        "subtitle": "Three bills, real ranges, and how to compare quotes."
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 952,
+      "props": {
+        "lines": [
+          "The price of a CPA",
+          "is the price of your *complexity*."
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 1143,
+      "props": {
+        "kicker": "How CPAs charge",
+        "title": "Three pricing models",
+        "theme": "light",
+        "items": [
+          {
+            "text": "Hourly",
+            "detail": "Roughly $100 to $400+ an hour"
+          },
+          {
+            "text": "Flat fee per return",
+            "detail": "Now the most common for tax prep"
+          },
+          {
+            "text": "Monthly subscription",
+            "detail": "Roughly $200 to $1,000+ a month"
+          }
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 699,
+      "props": {
+        "kicker": "If it's hourly",
+        "lines": [
+          "Ask *whose* hours."
+        ]
+      },
+      "transition": {
+        "style": "iris"
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 999,
+      "props": {
+        "kicker": "Common 2026 ranges",
+        "title": "What a business return costs",
+        "items": [
+          {
+            "text": "Schedule C",
+            "detail": "Sole proprietor: about $500 to $1,500"
+          },
+          {
+            "text": "Partnership or LLC, Form 1065",
+            "detail": "About $1,000 to $2,500"
+          },
+          {
+            "text": "S corp, Form 1120-S",
+            "detail": "About $1,200 to $2,500+"
+          },
+          {
+            "text": "C corp, Form 1120",
+            "detail": "About $1,500 to $3,000+"
+          }
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 652,
+      "props": {
+        "kicker": "One 2025 pricing survey",
+        "lines": [
+          "Most common band:",
+          "$1,000 to $1,499."
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 843,
+      "props": {
+        "kicker": "For a small business",
+        "title": "Three bills, not one",
+        "theme": "light",
+        "items": [
+          {
+            "text": "The return",
+            "detail": "Once a year"
+          },
+          {
+            "text": "Bookkeeping",
+            "detail": "About $200 to $1,000 a month"
+          },
+          {
+            "text": "Planning and advisory",
+            "detail": "Often $500 to $1,500 a session"
+          }
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 568,
+      "props": {
+        "kicker": "Bookkeeping, over a full year",
+        "lines": [
+          "$200 to $1,000 a month",
+          "= $2,400 to $12,000 a year."
+        ]
+      },
+      "transition": {
+        "style": "iris"
+      }
+    },
+    {
+      "type": "BarChart",
+      "durationInFrames": 819,
+      "props": {
+        "kicker": "An illustrative year, à la carte",
+        "title": "Where the money goes",
+        "bars": [
+          {
+            "label": "Return only",
+            "caption": "Schedule C",
+            "value": 1000,
+            "tone": "neutral"
+          },
+          {
+            "label": "+ Bookkeeping",
+            "caption": "$400 a month",
+            "value": 5800,
+            "tone": "neutral"
+          },
+          {
+            "label": "+ Planning",
+            "caption": "Two sessions",
+            "value": 7800,
+            "tone": "cost"
+          }
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 783,
+      "props": {
+        "kicker": "The bundled model",
+        "lines": [
+          "$750 a month",
+          "= $9,000 a year."
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 808,
+      "props": {
+        "kicker": "Bundle or à la carte?",
+        "title": "It depends on your books",
+        "items": [
+          {
+            "text": "Clean books, just need a return",
+            "detail": "À la carte is usually cheaper"
+          },
+          {
+            "text": "Every April starts with cleanup",
+            "detail": "The bundle is usually the lower total"
+          }
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 819,
+      "props": {
+        "kicker": "What moves your quote",
+        "title": "Four price levers",
+        "theme": "light",
+        "items": [
+          {
+            "text": "Book condition",
+            "detail": "Messy books can double a quote"
+          },
+          {
+            "text": "Entity type",
+            "detail": "More complex entity, pricier return"
+          },
+          {
+            "text": "States",
+            "detail": "Each extra state filing adds cost"
+          },
+          {
+            "text": "Add-ons",
+            "detail": "Planning, payroll, advisory"
+          }
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 519,
+      "props": {
+        "lines": [
+          "Clean books,",
+          "clean *quote*."
+        ]
+      },
+      "transition": {
+        "style": "iris"
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 736,
+      "props": {
+        "kicker": "Online and virtual firms",
+        "lines": [
+          "Commonly reported:",
+          "20 to 50% *less*."
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 856,
+      "props": {
+        "kicker": "The do-it-yourself breakpoint",
+        "lines": [
+          "Software files the return.",
+          "It can't make the *decisions*."
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 879,
+      "props": {
+        "kicker": "A common middle ground",
+        "lines": [
+          "Software for the books,",
+          "a pro for the *decisions*."
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 856,
+      "props": {
+        "kicker": "Before you hire",
+        "title": "Get quotes you can compare",
+        "items": [
+          {
+            "text": "Describe the same scope",
+            "detail": "Entity, states, revenue, transactions, books"
+          },
+          {
+            "text": "Ask what's included",
+            "detail": "Forms, states, sessions, extra fees"
+          },
+          {
+            "text": "Ask the engagement model",
+            "detail": "Once a year, or year-round?"
+          },
+          {
+            "text": "Get it in writing",
+            "detail": "Verbal quotes evaporate in April"
+          }
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 435,
+      "props": {
+        "lines": [
+          "The cheapest quote",
+          "isn't the lowest *total cost*."
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 699,
+      "props": {
+        "kicker": "If you remember one thing",
+        "lines": [
+          "Price the *whole year*,",
+          "not just the return."
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 616,
+      "props": {
+        "kicker": "The full pricing guide",
+        "lines": [
+          "dollarsanddeductions.com"
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "OutroCard",
+      "durationInFrames": 375,
+      "props": {
+        "nextTitle": "Do You Need a Tax Strategist?"
+      }
+    }
+  ]
+}

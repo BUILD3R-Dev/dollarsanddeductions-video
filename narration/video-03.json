@@ -1,0 +1,123 @@
+{
+  "video": "video-03",
+  "voice": {
+    "provider": "elevenlabs",
+    "name": "Kallen",
+    "voiceId": "Pi2Zqk51cRysbs4RoCCF",
+    "model": "eleven_v4"
+  },
+  "segments": [
+    {
+      "scene": 1,
+      "type": "KineticType",
+      "startSec": 0.4,
+      "text": "Ask a small business owner what their CPA costs, and they'll usually quote the price of their tax return. But for most small businesses, the return is the smallest part of the bill. The real cost is spread across the whole year, and most of it is in places owners don't think to price. So let's put actual numbers on it, and look at what moves them, so you know what you're paying for before you sign anything."
+    },
+    {
+      "scene": 2,
+      "type": "TitleCard",
+      "startSec": 0.8,
+      "text": "This is Dollars and Deductions. Today: what a CPA commonly costs a small business, the three separate bills you might be paying, and how to get quotes you can actually compare. One note first. The prices in this video are commonly reported ranges, not quotes. Your price depends on your situation, so always get it in writing."
+    },
+    {
+      "scene": 3,
+      "type": "KineticType",
+      "text": "Here's the idea that explains almost every number in this video. The price of a CPA is the price of your complexity. What kind of entity you have, how many states you file in, how many transactions you run, and above all, the condition of your books. Two businesses with the same revenue can get very different quotes. Market and seniority matter too, but complexity is the big one, and part of it is under your control."
+    },
+    {
+      "scene": 4,
+      "type": "BulletBuild",
+      "text": "First, how CPAs charge. There are three common models. Hourly, commonly reported at around one hundred to four hundred dollars an hour or more, depending on seniority and market. Flat fee per return, which is now the most common model for tax preparation. You know the price up front. And monthly subscriptions, commonly two hundred to a thousand dollars a month or more, which bundle bookkeeping with tax, and sometimes planning. Subscriptions are getting more popular, because the firm has a reason to keep your books clean all year, not just in March."
+    },
+    {
+      "scene": 5,
+      "type": "KineticType",
+      "text": "If you're quoted hourly, ask whose hours. Partner time can cost several times what staff time costs. Hourly billing still shows up for advisory work, cleanup, and unusual projects. For routine tax preparation, though, a flat fee usually works better for you. The price is known up front, and the firm isn't rewarded for being slow."
+    },
+    {
+      "scene": 6,
+      "type": "BulletBuild",
+      "text": "So what does a business return cost? Here are commonly reported ranges for twenty twenty-six. A sole proprietor's Schedule C, roughly five hundred to fifteen hundred dollars. A partnership or multi-member LLC return, about one thousand to twenty-five hundred. An S corp return, about twelve hundred to twenty-five hundred or more. And a C corp return, about fifteen hundred to three thousand or more. Business returns cost more than personal ones, because someone is checking entity compliance, not just the math."
+    },
+    {
+      "scene": 7,
+      "type": "KineticType",
+      "text": "One industry pricing survey from twenty twenty-five put the most common price band for a small business return at one thousand to fourteen ninety-nine. Treat all of these as orientation, not quotes. Your entity type, your state filings, and the shape your books are in can move the real price a lot."
+    },
+    {
+      "scene": 8,
+      "type": "BulletBuild",
+      "text": "Now the bigger picture. A small business doesn't really buy a CPA. It buys up to three things, often from different providers. The return itself. Bookkeeping, commonly two hundred to a thousand dollars a month for a typical small business, depending on how many transactions you have. And planning, often five hundred to fifteen hundred dollars per session. Of the three, bookkeeping is the one owners underestimate most."
+    },
+    {
+      "scene": 9,
+      "type": "KineticType",
+      "text": "Here's why. A monthly bill looks small. But two hundred dollars a month is twenty-four hundred dollars a year. And a thousand dollars a month is twelve thousand a year. For a lot of businesses, the bookkeeping costs more than the return, several times over."
+    },
+    {
+      "scene": 10,
+      "type": "BarChart",
+      "text": "Let's build one illustrative year. These numbers are examples, picked from inside the ranges. A Schedule C return at one thousand dollars. Add bookkeeping at four hundred dollars a month, which is forty-eight hundred a year, and you're at fifty-eight hundred. Add two planning sessions at a thousand dollars each, and the year comes to seventy-eight hundred dollars. The return is about an eighth of it."
+    },
+    {
+      "scene": 11,
+      "type": "KineticType",
+      "text": "More firms now sell a single monthly package instead: bookkeeping, tax filing, payroll coordination, and planning, all in one. Full-service bundles commonly start around seven hundred fifty dollars a month. That's nine thousand dollars a year. The pitch is that when the same firm keeps your books all year, there's no cleanup surprise in March, and planning happens while decisions can still change."
+    },
+    {
+      "scene": 12,
+      "type": "BulletBuild",
+      "text": "So which is cheaper? It depends on your discipline. In our example, the bundle at nine thousand costs more than seventy-eight hundred à la carte. If your books are clean and you only need a return filed, unbundled usually wins. But if every April starts with a cleanup project, the bundle is usually the lower total cost, because you're paying for that cleanup either way."
+    },
+    {
+      "scene": 13,
+      "type": "BulletBuild",
+      "text": "Four things move your quote the most. Book condition. Clean, reconciled books versus a year of uncategorized transactions can double a quote. Entity type, because more complex entities mean more expensive returns. States, since each extra state filing adds cost, and activity in several states compounds it. And add-ons. Planning sessions, payroll, and advisory are usually separate line items, so ask what's included before you compare."
+    },
+    {
+      "scene": 14,
+      "type": "KineticType",
+      "text": "Of those four, book condition is the one you control. A clean, reconciled bookkeeping file and a shoebox of receipts get very different quotes for the same business. Messy books are the most expensive option, no matter who does the return."
+    },
+    {
+      "scene": 15,
+      "type": "KineticType",
+      "text": "What about online and virtual firms? They're commonly reported as twenty to fifty percent cheaper than traditional local firms, because they carry less overhead. For straightforward, single-state situations, the savings are real. The tradeoff is relationship depth, and local knowledge. If you have activity in several states, or an unusual situation, a local specialist can be worth the premium."
+    },
+    {
+      "scene": 16,
+      "type": "KineticType",
+      "text": "And can you skip the professional entirely? For simple situations, often yes. A single-member LLC with clean books in one state can usually be handled by tax software, with business tiers commonly under two hundred dollars. The breakpoint is decisions. Entity choice, how you pay yourself, activity in multiple states, and significant retirement contributions. That's where professional input tends to pay for itself, in the decisions, not the filing."
+    },
+    {
+      "scene": 17,
+      "type": "KineticType",
+      "text": "Plenty of owners land in the middle. They use software to keep their own books, and pay a professional for the return and for planning. That can work well, as long as the books really are kept up. Remember, the cheapest sticker price is doing it all yourself. But the cheapest total cost is usually clean books, plus the right level of professional help for how complicated your business actually is."
+    },
+    {
+      "scene": 18,
+      "type": "BulletBuild",
+      "text": "When you shop around, make the quotes comparable. Describe the same scope to every firm: your entity type, your states, your revenue, your transaction volume, and the condition of your books. Ask exactly what's included, which forms, how many states, any planning sessions, and what triggers extra fees. Ask whether it's a once-a-year filing or a year-round relationship. And get it in writing, because verbal quotes evaporate in April."
+    },
+    {
+      "scene": 19,
+      "type": "KineticType",
+      "text": "Because here's the trap. The cheapest quote and the lowest total cost are rarely the same thing. Cleanup fees, and planning opportunities nobody raised in time, can easily dwarf the difference between two quotes."
+    },
+    {
+      "scene": 20,
+      "type": "KineticType",
+      "text": "If you remember one thing from this video, make it this. When you price a CPA, price the whole year, not just the return. Add up the return, the bookkeeping, and any planning, match the level of help to how complex your business actually is, and keep your books clean, because that's the lever you control."
+    },
+    {
+      "scene": 21,
+      "type": "KineticType",
+      "text": "The full CPA pricing guides are on dollarsanddeductions.com. And a reminder: everything in this video is for educational purposes only. It's not tax, legal, or financial advice. The prices here are commonly reported ranges, not quotes, and your situation is your own, so get written proposals before you decide."
+    },
+    {
+      "scene": 22,
+      "type": "OutroCard",
+      "text": "Thanks for watching Dollars and Deductions. Next time: what a tax strategist actually does, and whether you need one. Subscribe so you don't miss it. Real business. Real answers."
+    }
+  ]
+}

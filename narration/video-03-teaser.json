@@ -1,0 +1,37 @@
+{
+  "video": "video-03-teaser",
+  "voice": {
+    "provider": "elevenlabs",
+    "name": "Kallen",
+    "voiceId": "Pi2Zqk51cRysbs4RoCCF",
+    "model": "eleven_v4"
+  },
+  "segments": [
+    {
+      "scene": 1,
+      "type": "HookCard",
+      "startSec": 0.2,
+      "text": "If you think your CPA costs what your tax return costs, you're probably only counting the smallest part of the bill. Here's the whole thing."
+    },
+    {
+      "scene": 2,
+      "type": "NumberCallout",
+      "text": "A sole proprietor's return is commonly reported at roughly five hundred to fifteen hundred dollars. Say a thousand."
+    },
+    {
+      "scene": 3,
+      "type": "BarChart",
+      "text": "Now add bookkeeping at four hundred a month, that's forty-eight hundred a year, and two planning sessions at a thousand each. The year comes to seventy-eight hundred dollars. The return is about an eighth of it."
+    },
+    {
+      "scene": 4,
+      "type": "KineticType",
+      "text": "The biggest lever you control is the condition of your books. Clean, reconciled books versus a shoebox of receipts can double a quote."
+    },
+    {
+      "scene": 5,
+      "type": "ShortCTA",
+      "text": "The full breakdown, with real ranges and how to compare quotes, is on the channel. Educational only, and these are ranges, not quotes, so get yours in writing."
+    }
+  ]
+}
