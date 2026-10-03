@@ -298,8 +298,8 @@ The video kit uses copies in `public/brand/`, wired up in `src/brand/config.ts`.
 | `icon-on-dark.svg` | Icon on deep pine: white tile, deep-pine lines, mint-ink fold. Video: corner bug, transitions, avatar, watermark. |
 | `icon-single-white.svg` / `icon-single-ink.svg` | Single-color uses (merch, embossing, photos) |
 | `favicon.svg` | Browser favicon (same geometry as the icon) |
-| `horizontal-dark.svg` / `horizontal-light.svg` | Compact lock-up, 871×120 (7.26:1); wordmark 1.35× and centered on the icon. Only where the tagline would render under ~18px (video) or ~11px (web): site header, HookCard, small placements |
-| `horizontal-tagline-dark.svg` / `horizontal-tagline-light.svg` | **Primary lock-up**, same 760×120 artboard. Video: title card and outro (native 760×120), Short end card (856 wide). Web: desktop header ≥ 1100px (62px tall) and footer (80px tall). |
+| `horizontal-dark.svg` / `horizontal-light.svg` | Compact lock-up, 871×120 (7.26:1); wordmark 1.35× and centered on the icon. **Not used in videos**; the kit defaults to the tagline lock-up everywhere. Web: mobile header only (below 1100px). |
+| `horizontal-tagline-dark.svg` / `horizontal-tagline-light.svg` | **Primary lock-up**, same 760×120 artboard. Video: title card and outro (native 760×120), Short end card (792 wide). Web: desktop header ≥ 1100px (62px tall) and footer (80px tall). |
 | `stacked-dark.svg` / `stacked-light.svg` | Icon over wordmark + tagline. Square formats, intros. 588×256. |
 | `master-brand-sheet.svg` | Reference sheet only. Not used in the kit |
 
@@ -390,9 +390,9 @@ The kit renders every scene in 1080×1920 via `useLayout()`. These rules apply o
 | Top | 240 | Status bar, "Shorts"/"Reels" header, search and camera icons |
 | Right | 144 | Like / comment / share / remix column |
 | Bottom | 480 | Channel name, caption text, audio ticker, follow button, nav bar |
-| Left | 72 | Margin |
+| Left | 144 | Mirrors the right inset, so centered content is truly centered |
 
-This leaves an **856×1200 content box**. It's the union of the three platforms' UI, so one export works everywhere.
+This leaves a **792×1200 content box**, centered horizontally: the left inset mirrors the right one, so centered elements sit on the frame's center line. It's the union of the three platforms' UI, so one export works everywhere.
 Backgrounds and transitions still fill the full frame.
 
 ### 10.2 Type (vertical sizes)
@@ -405,7 +405,7 @@ Backgrounds and transitions still fill the full frame.
 | Checklist title | 88 |
 | Captions | Public Sans 700, 64 |
 | Bar labels | 44 |
-| Hero figures | auto-fit to 856px |
+| Hero figures | auto-fit to 792px |
 
 Minimums stay the same as §3.3; a phone screen is about as wide as the 1080px frame.
 
@@ -421,7 +421,7 @@ Minimums stay the same as §3.3; a phone screen is about as wide as the 1080px f
 
 ### 10.4 Brand in vertical
 
-- **Logo:** the horizontal tagline lock-up at full safe width (856px, so the tagline is about 26px) on the hook and end card.
+- **Logo:** the horizontal tagline lock-up at full safe width (792px, so the tagline is about 24px) on the hook card, title card and end card.
   The stacked lock-up's spaced-caps tagline is too small on phones, so don't use it in video.
 - **Corner logo:** off by default (platform UI covers the corners, and the channel name is already shown).
 - **Double rule, ledger rules, palette and fonts:** unchanged. A Short must look like a clip from the long-form channel.

@@ -37,7 +37,7 @@ export const HookCard: React.FC<HookCardProps> = ({durationInFrames, text, stick
     <SceneShell durationInFrames={durationInFrames} theme={theme} exit={6} background={{glow: {x: 50, y: 40}}}>
       {showLogo ? (
         <div style={{display: 'flex', justifyContent: vertical ? 'center' : 'flex-start'}}>
-          <Logo variant="horizontal" size={vertical ? 72 : 80} start={0} theme={theme} />
+          <Logo variant="horizontal" tagline size={vertical ? (box.w / 760) * 120 : 120} start={0} theme={theme} />
         </div>
       ) : null}
       <AbsoluteFill style={{padding: insetPadding(safe), justifyContent: 'center', alignItems: vertical ? 'center' : 'flex-start'}}>

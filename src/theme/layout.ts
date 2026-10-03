@@ -22,9 +22,10 @@ export const SAFE_LANDSCAPE: Insets = {top: space(12), right: space(16), bottom:
  * - top 240: status bar, "Shorts"/"Reels" header, search and camera icons
  * - right 144: like / comment / share / remix column
  * - bottom 480: channel name, caption, audio ticker, subscribe/follow, nav bar
- * - left 72: comfortable margin
+ * - left 144: mirrors the right inset so centred content is centred on the frame
+ *   (an asymmetric box shifts every centred element sideways; see DESIGN.md §10.1)
  */
-export const SAFE_VERTICAL: Insets = {top: space(30), right: space(18), bottom: space(60), left: space(9)};
+export const SAFE_VERTICAL: Insets = {top: space(30), right: space(18), bottom: space(60), left: space(18)};
 
 export const layoutFor = (width: number, height: number): Layout => {
   const vertical = height > width;

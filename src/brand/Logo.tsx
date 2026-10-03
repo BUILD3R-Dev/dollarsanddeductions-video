@@ -72,12 +72,15 @@ export type LogoProps = LogoMarkProps & {
   variant?: 'horizontal' | 'stacked' | 'mark';
   /** Wordmark font-size px. The mark scales from it unless `size` is given. */
   textSize?: number;
-  /** Horizontal only: use the lock-up with the tagline under the wordmark. Needs ≥ 600px width to stay readable. */
+  /**
+   * Horizontal only: the lock-up with the tagline under the wordmark. Default true: the tagline
+   * lock-up is the channel's logo. Pass `tagline={false}` only for the compact export.
+   */
   tagline?: boolean;
 };
 
 /** Lock-ups. Wordmark = Newsreader 600, as in the site header. */
-export const Logo: React.FC<LogoProps> = ({variant = 'horizontal', textSize = 48, size, start = 0, theme = 'dark', tagline = false, ...rest}) => {
+export const Logo: React.FC<LogoProps> = ({variant = 'horizontal', textSize = 48, size, start = 0, theme = 'dark', tagline = true, ...rest}) => {
   const frame = useCurrentFrame();
   const t0 = start ?? 0;
   const word = start === null ? 1 : progress(frame, t0 + 16, 30, ease.out);
@@ -89,12 +92,15 @@ export const Logo: React.FC<LogoProps> = ({variant = 'horizontal', textSize = 48
   if (variant === 'horizontal' && lockup) {
     // Wordmark cap-height in the art is ~43% of its height; this keeps it matching `textSize`.
     const h = size ?? textSize * 2.3;
+    const useTag = tagline && Boolean(withTag);
+    const aspect = useTag ? BRAND_ASSETS.lockupTaglineAspect : BRAND_ASSETS.lockupAspect;
+    const [x0, y0, x1, y1] = useTag ? BRAND_ASSETS.lockupTaglineInk : BRAND_ASSETS.lockupInk;
+    const k = h / 120;
+    // Crop to the visible ink so alignment (left or centred) uses what the eye sees.
     return (
-      <Img
-        src={staticFile(lockup)}
-        // The art has a 14/120 inset; pull it out so the icon's ink sits on the layout edge.
-        style={{height: h, width: h * (tagline && withTag ? BRAND_ASSETS.lockupTaglineAspect : BRAND_ASSETS.lockupAspect), margin: `${(-h * 14) / 120}px 0 0 ${(-h * 14) / 120}px`, objectFit: 'contain', objectPosition: 'left center', opacity: word, transform: `translateX(${mix(word, -space(3), 0)}px)`}}
-      />
+      <div style={{width: (x1 - x0) * k, height: (y1 - y0) * k, overflow: 'hidden', flexShrink: 0, opacity: word, transform: `translateX(${mix(word, -space(3), 0)}px)`}}>
+        <Img src={staticFile(lockup)} style={{display: 'block', height: h, width: h * aspect, marginLeft: -x0 * k, marginTop: -y0 * k}} />
+      </div>
     );
   }
 

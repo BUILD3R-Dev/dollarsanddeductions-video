@@ -58,11 +58,11 @@ export const BarChart: React.FC<BarChartProps> = ({
   const p = palette(theme);
   const n = bars.length;
   // Landscape: wide bars, difference callout to the right. Vertical: narrower bars so the
-  // callout still fits beside them inside the 856px safe width.
-  const barW = vertical ? (n <= 2 ? 200 : n <= 3 ? 168 : 128) : n <= 2 ? 288 : n <= 3 ? 240 : 184;
+  // callout still fits beside them inside the 792px safe width.
+  const barW = vertical ? (n <= 2 ? 184 : n <= 3 ? 152 : 120) : n <= 2 ? 288 : n <= 3 ? 240 : 184;
   const gap = vertical ? (n <= 2 ? 96 : 64) : n <= 2 ? 224 : n <= 3 ? 152 : 96;
   const showDiff = Boolean(difference) && n >= 2;
-  const groupW = n * barW + (n - 1) * gap + (showDiff ? (vertical ? 320 : 400) : 0);
+  const groupW = n * barW + (n - 1) * gap + (showDiff ? (vertical ? 300 : 400) : 0);
   const left0 = box.x + (box.w - groupW) / 2;
   const BASELINE = box.y + box.h - (vertical ? space(26) : space(19));
   // Bars grow up toward the header; keep the tallest value label clear of it.

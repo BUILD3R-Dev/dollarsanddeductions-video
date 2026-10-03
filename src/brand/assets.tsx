@@ -7,7 +7,7 @@ import {Logo, LogoMark} from './Logo';
 
 export const LogoHorizontalAsset: React.FC<{theme?: 'dark' | 'light'}> = ({theme = 'dark'}) => (
   <AbsoluteFill style={{alignItems: 'center', justifyContent: 'center'}}>
-    <Logo variant="horizontal" textSize={88} start={null} theme={theme} />
+    <Logo variant="horizontal" tagline={false} textSize={88} start={null} theme={theme} />
   </AbsoluteFill>
 );
 

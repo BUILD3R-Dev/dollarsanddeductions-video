@@ -114,7 +114,7 @@ The subtitle and footer URL follow. Ledger rules drift in the background.
 | `kicker` | string | | `'Episode 14 · The S-Corp Series'` |
 | `subtitle` | string | | `'The real numbers on $120,000 of small-business profit.'` |
 | `url` | string | | default `'dollarsanddeductions.com'` |
-| `showLogo` | boolean | | default `true` (horizontal lock-up, top-left) |
+| `showLogo` | boolean | | default `true` (horizontal lock-up with tagline, top-left) |
 | `theme` | `'dark' \| 'light'` | | |
 
 Titles over 48 characters drop from 144px to 112px automatically.
@@ -231,7 +231,7 @@ Render with the `Short` composition (1080×1920, 30fps). See DESIGN.md §10 for 
   - 240px top
   - 144px right (like/comment column)
   - 480px bottom (caption, audio and nav)
-  - 72px left
+  - 144px left (mirrors the right inset, so centered content sits on the frame's center line)
   To check a spec, add `"guides": true`: it shades the UI zones red and outlines the safe box. Remove it before the final render.
 - **Adapts automatically:** every existing scene reflows for vertical. BulletBuild stacks, charts re-scale, and the type steps down.
   `OutroCard` becomes `ShortCTA`, because Shorts have no end screens.

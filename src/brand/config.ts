@@ -20,6 +20,13 @@ export const BRAND_ASSETS: {
   lockupAspect: number;
   /** Tagline lock-up width ÷ height. */
   lockupTaglineAspect: number;
+  /**
+   * Visible-ink box of each lock-up in artboard units ([x0, y0, x1, y1] on a 120-tall artboard).
+   * The art has uneven built-in padding (14 left, ~94 right), so layouts crop to the ink:
+   * centred logos are then truly centred and left-aligned ones sit on the margin.
+   */
+  lockupInk: [number, number, number, number];
+  lockupTaglineInk: [number, number, number, number];
   /** Horizontal lock-up with tagline (same artboard as lockupSrc) for dark / light. */
   lockupTaglineSrc: string | null;
   lockupTaglineLightSrc: string | null;
@@ -34,6 +41,8 @@ export const BRAND_ASSETS: {
   lockupLightSrc: 'brand/horizontal-light.svg',
   lockupAspect: 871 / 120,
   lockupTaglineAspect: 760 / 120,
+  lockupInk: [14, 14, 856.7, 106],
+  lockupTaglineInk: [14, 14, 666.5, 106],
   lockupTaglineSrc: 'brand/horizontal-tagline-dark.svg',
   lockupTaglineLightSrc: 'brand/horizontal-tagline-light.svg',
   stackedSrc: 'brand/stacked-dark.svg',

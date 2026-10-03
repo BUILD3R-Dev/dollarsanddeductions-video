@@ -18,7 +18,7 @@ export const LogoSheet: React.FC = () => (
           <Logo start={null} variant="horizontal" tagline size={150} />
           <Label>Horizontal with tagline · primary: title card, outro, Short end card</Label>
           <div style={{height: space(5)}} />
-          <Logo start={null} variant="horizontal" size={64} />
+          <Logo start={null} variant="horizontal" tagline={false} size={64} />
           <Label>Compact (no tagline) · only where the tagline would be under ~18px</Label>
         </div>
         <div style={{display: 'flex', alignItems: 'flex-end', gap: space(10)}}>
