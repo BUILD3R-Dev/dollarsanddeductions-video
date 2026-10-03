@@ -25,8 +25,8 @@ npx remotion render DemoShort out/short.mp4 # 28s Short / Reel (9:16)
 Render a new video from a JSON spec (no code changes needed):
 
 ```bash
-npx remotion render Episode out/home-office.mp4 --props=examples/episode-home-office.json   # 16:9, 1920×1080
-npx remotion render Short out/home-office-short.mp4 --props=examples/short-home-office.json # 9:16, 1080×1920
+npx remotion render Episode out/home-office.mp4 --props=videos/episode-home-office.json   # 16:9, 1920×1080
+npx remotion render Short out/home-office-short.mp4 --props=videos/short-home-office.json # 9:16, 1080×1920
 ```
 
 `Episode` and `Short` take the same JSON format, and every scene adapts to the frame.
@@ -277,6 +277,72 @@ The end card: the logo with tagline, a follow prompt, a "Full breakdown on YouTu
 | `fullVideoTitle` | string | | Shows the long-form card when set |
 | `url`, `disclaimer` | string | | site URL / site disclaimer wording |
 
+## Narration (per-scene voice)
+
+The channel voice is ElevenLabs **Justin Time - Elearning Narration** (`uFIXVu9mmnDZ7dTKCBTX`, model `eleven_multilingual_v2`).
+Narration is generated per scene, so a script change only re-spends the characters of the scenes that changed.
+
+### Files
+
+| File | Committed | What |
+|---|---|---|
+| `videos/<slug>.json` | yes | The video spec (scenes). Add `"narration": "<slug>"` |
+| `narration/<slug>.json` | yes | The narration manifest: what is said in each scene |
+| `public/audio/<slug>/NN.mp3` | **no** (gitignored) | Generated voice for scene NN (01, 02, …) |
+| `public/audio/<slug>/NN.json` | **no** | Optional ElevenLabs timestamps for that segment; turns on synced captions |
+
+### Manifest format (`narration/<slug>.json`)
+
+```json
+{
+  "video": "short-home-office",
+  "voice": {"provider": "elevenlabs", "name": "Justin Time - Elearning Narration",
+            "voiceId": "uFIXVu9mmnDZ7dTKCBTX", "model": "eleven_multilingual_v2"},
+  "segments": [
+    {"scene": 1, "type": "HookCard", "startSec": 0.2, "text": "Work from home? You could be missing out on fifteen hundred dollars a year."},
+    {"scene": 2, "type": "NumberCallout", "text": "The simplified home office deduction is five dollars per square foot, up to three hundred square feet."}
+  ]
+}
+```
+
+| Field | Notes |
+|---|---|
+| `video` | Must equal the file's slug |
+| `spec` | Optional; defaults to `videos/<slug>.json` |
+| `voice` | Voice and model for the generator. `settings` (optional) is passed through, e.g. ElevenLabs `voice_settings` |
+| `segments[].scene` | 1-based scene number in the spec. **Exactly one segment per scene.** Scene 3 → `03.mp3` |
+| `segments[].startSec` | Seconds from the start of that scene to the start of its audio. Default `0.3` |
+| `segments[].text` | Exactly what the voice says. Plain text, no `*emphasis*`. Write numbers the way they should be spoken ("fifteen hundred dollars") |
+| `segments[].type` | Optional; the scene's type. The validator checks it against the spec to catch misnumbering |
+| `segments[].note` | Optional direction for whoever generates the audio. Never spoken |
+
+### Workflow
+
+1. **An agent writes** `videos/<slug>.json` (scenes, with `"narration": "<slug>"`) and `narration/<slug>.json` (one segment per scene).
+2. **Validate:** `npm run narration:check -- <slug>` (or `--all`).
+   - Fails if a scene has no segment, a text is empty, a scene number or type doesn't match the spec, or `startSec` is past the scene's end.
+   - Warns about markup characters the voice would read aloud, and estimates which scenes the voice will run longer than.
+   - Prints each segment's character count and the total against the **90,000 characters/month** ElevenLabs quota.
+     Regenerating a segment spends its characters again.
+3. **Nyx generates the audio** on her side via the ElevenLabs API: one request per segment, using the manifest's `voice`.
+   She saves `NN.mp3`, plus the timestamps as `NN.json` if she uses the "with timestamps" endpoint.
+   **No API key ever lives in this repo.**
+4. **Files land** in `public/audio/<slug>/`. Re-run the validator: each scene should show `mp3 ✓`.
+5. **Render:** `npx remotion render Episode out/<slug>.mp4 --props=videos/<slug>.json` (or `Short` for 9:16).
+
+### What happens at render
+
+- Each `NN.mp3` plays at its scene's start + `startSec`.
+- **Scenes stretch to fit their narration.** If a segment (plus 0.5s of air) is longer than its scene, the scene gets longer, so the voice is never cut off or overlapping. The video length follows.
+  Set `"narration": {"slug": "<slug>", "fit": false}` to keep scene lengths fixed (you get a warning instead).
+- Segments not delivered yet are skipped with a warning, so you can preview visuals before the audio arrives.
+- If `NN.json` timestamps are present, captions appear automatically and stay in sync. Set `"captions": false` to turn them off.
+- Background music (`audio.music`) ducks under each narration segment.
+- `"narration": {"slug": "…", "volume": 0.9}` adjusts the narration level.
+
+Verified on a test render with four stand-in segments: every segment started exactly at scene start + `startSec` (measured to 10ms).
+Scenes stretched to the calculated lengths, and captions came up from a segment's timestamp file.
+
 ## Voiceover, music & captions
 
 Drop the files in `public/audio/` and reference them from the spec (paths are relative to `public/`):
@@ -343,7 +409,9 @@ src/
 brand/                  exported logo files (npm run brand)
 public/brand/           logo system SVGs (copied from the website repo)
 public/audio/           voiceover, music and caption timestamp files
-examples/               JSON episode specs for `--props`
+videos/                 video specs, one per video: videos/<slug>.json (pass with --props)
+narration/              narration manifests: narration/<slug>.json
+scripts/                validate-narration.mjs
 ```
 
 ## Design rules (keep them when extending)

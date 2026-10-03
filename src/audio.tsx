@@ -75,11 +75,13 @@ const speechEnvelope = (intervals: [number, number][], f: number) => {
   return env;
 };
 
-export const Soundtrack: React.FC<{audio: AudioSpec; cues?: FrameCue[]; durationInFrames: number}> = ({audio, cues, durationInFrames}) => {
+export const Soundtrack: React.FC<{audio: AudioSpec; cues?: FrameCue[]; speech?: [number, number][]; durationInFrames: number}> = ({audio, cues, speech, durationInFrames}) => {
   const {fps} = useVideoConfig();
   const {voiceover: vo, music} = audio;
 
-  const intervals: [number, number][] = (cues ?? []).flatMap((c) => (c.words?.length ? c.words.map((w) => [w.from, w.to] as [number, number]) : [[c.from, c.to] as [number, number]]));
+  // Speech timing for ducking: caption word timings when available, else narration segment spans.
+  const fromCues: [number, number][] = (cues ?? []).flatMap((c) => (c.words?.length ? c.words.map((w) => [w.from, w.to] as [number, number]) : [[c.from, c.to] as [number, number]]));
+  const intervals = fromCues.length ? fromCues : (speech ?? []);
 
   const musicVolume = (f: number) => {
     if (!music) return 0;

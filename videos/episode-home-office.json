@@ -1,0 +1,53 @@
+{
+  "narration": "episode-home-office",
+  "scenes": [
+    {
+      "type": "TitleCard",
+      "durationInFrames": 150,
+      "props": {
+        "kicker": "Episode 15 \u00b7 Deductions Deep-Dive",
+        "title": "The Home Office Deduction, *Done Right*",
+        "subtitle": "Simplified vs. regular method, with real numbers."
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "BarChart",
+      "durationInFrames": 210,
+      "props": {
+        "kicker": "300 of 2,400 sq ft \u00b7 $28,800/yr home costs",
+        "title": "Which method deducts *more?*",
+        "bars": [
+          {
+            "label": "Simplified",
+            "caption": "$5 \u00d7 300 sq ft",
+            "value": 1500,
+            "tone": "neutral"
+          },
+          {
+            "label": "Regular",
+            "caption": "12.5% of $28,800",
+            "value": 3600,
+            "tone": "saving"
+          }
+        ],
+        "difference": {
+          "label": "Extra deduction"
+        }
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "OutroCard",
+      "durationInFrames": 180,
+      "props": {
+        "nextTitle": "Section 179: Expense Your Equipment This Year"
+      }
+    }
+  ]
+}

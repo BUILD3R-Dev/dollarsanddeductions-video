@@ -1,0 +1,28 @@
+{
+  "video": "episode-home-office",
+  "voice": {
+    "provider": "elevenlabs",
+    "name": "Justin Time - Elearning Narration",
+    "voiceId": "uFIXVu9mmnDZ7dTKCBTX",
+    "model": "eleven_multilingual_v2"
+  },
+  "segments": [
+    {
+      "scene": 1,
+      "type": "TitleCard",
+      "startSec": 0.8,
+      "text": "The home office deduction, done right. There are two ways to claim it, and they can give you very different numbers."
+    },
+    {
+      "scene": 2,
+      "type": "BarChart",
+      "text": "Say your office is three hundred square feet of a twenty-four hundred square foot home. The simplified method gives you fifteen hundred dollars. The regular method, twelve and a half percent of twenty-eight thousand, eight hundred dollars in home costs, gives you thirty-six hundred.",
+      "note": "Pause briefly after 'fifteen hundred dollars'."
+    },
+    {
+      "scene": 3,
+      "type": "OutroCard",
+      "text": "Next up: Section 179, and how to expense your equipment this year. Thanks for watching."
+    }
+  ]
+}

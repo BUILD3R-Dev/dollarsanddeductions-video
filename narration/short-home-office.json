@@ -1,0 +1,32 @@
+{
+  "video": "short-home-office",
+  "voice": {
+    "provider": "elevenlabs",
+    "name": "Justin Time - Elearning Narration",
+    "voiceId": "uFIXVu9mmnDZ7dTKCBTX",
+    "model": "eleven_multilingual_v2"
+  },
+  "segments": [
+    {
+      "scene": 1,
+      "type": "HookCard",
+      "startSec": 0.2,
+      "text": "Work from home? You could be missing out on fifteen hundred dollars a year."
+    },
+    {
+      "scene": 2,
+      "type": "NumberCallout",
+      "text": "The simplified home office deduction is five dollars per square foot, up to three hundred square feet."
+    },
+    {
+      "scene": 3,
+      "type": "BulletBuild",
+      "text": "To qualify, the space has to be used regularly, only for business, and as your main place of business."
+    },
+    {
+      "scene": 4,
+      "type": "ShortCTA",
+      "text": "Follow for more plain-English tax wins. The full breakdown is on YouTube."
+    }
+  ]
+}
