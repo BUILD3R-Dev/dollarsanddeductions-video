@@ -1,0 +1,123 @@
+{
+  "video": "video-07",
+  "voice": {
+    "provider": "elevenlabs",
+    "name": "Kallen",
+    "voiceId": "Pi2Zqk51cRysbs4RoCCF",
+    "model": "eleven_v4"
+  },
+  "segments": [
+    {
+      "scene": 1,
+      "type": "KineticType",
+      "startSec": 0.4,
+      "text": "Two self-employed owners. Same one hundred thousand dollars of profit. Both want to put as much as they can into retirement this year. One can contribute about eighteen thousand six hundred dollars. The other can put in about forty-three thousand. The only difference is which retirement plan they opened. Today we'll compare the two most common plans for owner-only businesses, and work out where that gap comes from."
+    },
+    {
+      "scene": 2,
+      "type": "TitleCard",
+      "startSec": 0.8,
+      "text": "This is Dollars and Deductions. Today: the SEP IRA versus the solo four oh one k. How each one works, the twenty twenty-six limits, the math at a few profit levels, and the things beyond the limits that should factor in. As always, this is education, not tax or investment advice, so run your own numbers with a professional before you open anything."
+    },
+    {
+      "scene": 3,
+      "type": "KineticType",
+      "text": "First, why this matters. Back in our deductions episode, we called retirement contributions the deduction where the money stays yours. Traditional contributions to either plan are deductible this year, and they grow tax-deferred until you withdraw them in retirement, when they're taxed as income. So the plan you pick sets how much of that deduction you can actually use."
+    },
+    {
+      "scene": 4,
+      "type": "BulletBuild",
+      "text": "Let's start with the SEP IRA. SEP stands for simplified employee pension, and it lives up to the name. Only the business contributes. There's no employee contribution. The limit is twenty-five percent of pay, up to seventy-two thousand dollars for twenty twenty-six. And it's flexible on timing. You can open and fund a SEP as late as your tax filing deadline, including extensions."
+    },
+    {
+      "scene": 5,
+      "type": "KineticType",
+      "text": "One detail trips people up. If you're a sole proprietor or a single-member LLC, you don't get a paycheck, so pay is figured from your net profit, minus the deductible half of your self-employment tax. And because the contribution itself comes off that number, the math works out to about twenty percent of that adjusted profit, not twenty-five. That's the figure to use."
+    },
+    {
+      "scene": 6,
+      "type": "BulletBuild",
+      "text": "Now the solo four oh one k. It's a regular four oh one k for a business with no employees besides the owner, and possibly a spouse. The key difference is that you contribute twice. As the employee, you can defer up to twenty-four thousand five hundred dollars in twenty twenty-six. And as the employer, you can add the same roughly twenty percent a SEP allows. Together, they're capped at seventy-two thousand dollars."
+    },
+    {
+      "scene": 7,
+      "type": "NumberCallout",
+      "text": "There's one more piece. If you're fifty or older, a solo four oh one k lets you add a catch-up contribution of eight thousand dollars on top of that, and eleven thousand two hundred fifty if you're sixty through sixty-three. A SEP has no catch-up contributions at all."
+    },
+    {
+      "scene": 8,
+      "type": "NumberCallout",
+      "text": "Let's run the numbers. A sole proprietor, under fifty, no employees, with one hundred thousand dollars of net profit in twenty twenty-six."
+    },
+    {
+      "scene": 9,
+      "type": "KineticType",
+      "text": "Start with the SEP. Self-employment tax on one hundred thousand dollars is about fourteen thousand one hundred thirty. Half of it, about seven thousand sixty-five, comes off profit. That leaves about ninety-two thousand, nine hundred thirty-five. Twenty percent of that is about eighteen thousand, five hundred eighty-seven dollars. That's the most this owner can put in a SEP."
+    },
+    {
+      "scene": 10,
+      "type": "KineticType",
+      "text": "Now the solo four oh one k. The employer side is the same eighteen thousand, five hundred eighty-seven. But this owner can also defer twenty-four thousand five hundred as the employee. Together, that's about forty-three thousand, eighty-seven dollars."
+    },
+    {
+      "scene": 11,
+      "type": "BarChart",
+      "text": "Side by side: about eighteen thousand six hundred in the SEP, about forty-three thousand one hundred in the solo four oh one k. The gap is the twenty-four thousand five hundred dollar employee deferral, and at moderate profits, it's a big difference in how much you can shelter."
+    },
+    {
+      "scene": 12,
+      "type": "KineticType",
+      "text": "Keep one thing in mind. Room isn't an obligation. Forty-three thousand dollars out of a hundred thousand of profit is a lot to set aside, and you still owe income tax and self-employment tax on the year. In both plans, contributions are generally flexible from year to year. The solo four oh one k's advantage only matters if you actually have the cash to use it."
+    },
+    {
+      "scene": 13,
+      "type": "KineticType",
+      "text": "And the gap doesn't last forever. As profit rises, both plans run into the same seventy-two thousand dollar ceiling. In our setup, the solo four oh one k reaches it at roughly two hundred fifty thousand dollars of profit. The SEP reaches it at roughly three hundred seventy-five thousand. Above that, the limits are the same, unless you're old enough for catch-ups, which only the four oh one k allows."
+    },
+    {
+      "scene": 14,
+      "type": "KineticType",
+      "text": "If your business is taxed as an S corp, the math changes. Contributions are based on your W-2 salary, not your distributions. Take the reasonable salary from our first episode, sixty-eight thousand dollars. A SEP allows twenty-five percent of it, seventeen thousand. A solo four oh one k allows that seventeen thousand plus the twenty-four thousand five hundred deferral, forty-one thousand five hundred. This is the retirement piece of the S corp math we flagged back then."
+    },
+    {
+      "scene": 15,
+      "type": "BulletBuild",
+      "text": "The limits aren't the only difference. Paperwork: a SEP has almost none, while a solo four oh one k has to file Form fifty-five hundred E Z once plan assets pass two hundred fifty thousand dollars. Roth: many solo four oh one k plans let you make your employee deferrals as Roth contributions. Loans: a solo four oh one k can allow you to borrow from it, and a SEP can't. And setup timing, which deserves a closer look."
+    },
+    {
+      "scene": 16,
+      "type": "KineticType",
+      "text": "A quick word on that Roth option. Traditional contributions give you a deduction now, and you pay tax when you withdraw the money in retirement. Roth contributions work the other way. No deduction this year, but qualified withdrawals in retirement are tax-free. Which is better mostly comes down to whether you expect your tax rate to be higher now, or later. Some owners split the difference and do some of each."
+    },
+    {
+      "scene": 17,
+      "type": "KineticType",
+      "text": "A SEP can be opened and funded right up to your filing deadline, including extensions, which makes it the classic decide-it-in-April plan. A solo four oh one k has tighter rules, especially for the employee deferral, and those rules have changed in recent years. If you're considering one, look at it before the year ends, and confirm the current deadlines with your provider or tax professional."
+    },
+    {
+      "scene": 18,
+      "type": "BulletBuild",
+      "text": "Everything so far assumes no employees. That's important. With a SEP, if you contribute twenty percent for yourself, you generally have to contribute the same percentage of pay for every eligible employee. And a solo four oh one k only works while the only participants are you and your spouse. Once you hire eligible employees, it has to become a regular four oh one k, with more rules. If you plan to hire, factor that in now. And for businesses with a few employees, there's a third option, the SIMPLE IRA, with lower limits and a required employer contribution. That's a comparison for another day."
+    },
+    {
+      "scene": 19,
+      "type": "BulletBuild",
+      "text": "So who does each tend to fit? A solo four oh one k tends to fit owners at moderate profit levels who want to shelter as much as possible, and owners fifty and older who can use catch-ups. A SEP tends to fit owners who value simplicity, or who don't decide until tax time. And at very high profits, where both hit the cap, the choice comes down to those other features."
+    },
+    {
+      "scene": 20,
+      "type": "KineticType",
+      "text": "If you remember one thing from this video, make it this. For an owner-only business, the solo four oh one k almost always allows at least as much as a SEP, and often far more at moderate profits. The SEP wins on simplicity and timing. Which one saves you more depends on how much you can actually set aside, and when you decide."
+    },
+    {
+      "scene": 21,
+      "type": "KineticType",
+      "text": "There are more plain-English guides on dollarsanddeductions.com. And a reminder: everything in this video is for educational purposes only. It's not tax, legal, investment, or financial advice. These are twenty twenty-six limits, they change every year, and your situation is your own, so talk to a qualified professional before you open or fund a plan."
+    },
+    {
+      "scene": 22,
+      "type": "OutroCard",
+      "text": "Thanks for watching Dollars and Deductions. Next time: LLC taxes, explained. Subscribe so you don't miss it. Real business. Real answers."
+    }
+  ]
+}

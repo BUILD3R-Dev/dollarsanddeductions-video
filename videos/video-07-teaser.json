@@ -1,0 +1,90 @@
+{
+  "composition": "Short",
+  "narration": "video-07-teaser",
+  "captions": {
+    "src": "captions/video-07-teaser.srt"
+  },
+  "audio": {
+    "music": {
+      "src": "audio/music/video-01-bed.loop.wav",
+      "volume": 0.22,
+      "duckTo": 0.07
+    }
+  },
+  "scenes": [
+    {
+      "type": "HookCard",
+      "durationInFrames": 348,
+      "props": {
+        "sticker": "Retirement",
+        "text": "Same profit. *$24,500* more retirement room."
+      },
+      "transition": {
+        "style": "wipe",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "NumberCallout",
+      "durationInFrames": 303,
+      "props": {
+        "kicker": "SEP IRA, $100,000 profit",
+        "value": 18587,
+        "doubleRule": false,
+        "caption": "About 20% of adjusted profit"
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 20
+      }
+    },
+    {
+      "type": "BarChart",
+      "durationInFrames": 315,
+      "props": {
+        "kicker": "2026 maximums",
+        "title": "Two hats, more *room*",
+        "bars": [
+          {
+            "label": "SEP",
+            "caption": "Employer only",
+            "value": 18587,
+            "tone": "neutral"
+          },
+          {
+            "label": "Solo 401(k)",
+            "caption": "+ $24,500 deferral",
+            "value": 43087,
+            "tone": "saving"
+          }
+        ]
+      },
+      "transition": {
+        "style": "iris",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 303,
+      "props": {
+        "lines": [
+          "SEP:",
+          "*simpler*,",
+          "and it can wait."
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 20
+      }
+    },
+    {
+      "type": "ShortCTA",
+      "durationInFrames": 231,
+      "props": {
+        "fullVideoTitle": "SEP IRA vs Solo 401(k): Which Saves You More?"
+      }
+    }
+  ]
+}
