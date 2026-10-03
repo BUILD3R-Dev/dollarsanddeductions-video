@@ -2,9 +2,9 @@
   "video": "episode-home-office",
   "voice": {
     "provider": "elevenlabs",
-    "name": "Justin Time - Elearning Narration",
-    "voiceId": "uFIXVu9mmnDZ7dTKCBTX",
-    "model": "eleven_multilingual_v2"
+    "name": "Kallen",
+    "voiceId": "Pi2Zqk51cRysbs4RoCCF",
+    "model": "eleven_v4"
   },
   "segments": [
     {

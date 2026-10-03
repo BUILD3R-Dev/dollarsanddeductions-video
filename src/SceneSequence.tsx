@@ -31,6 +31,8 @@ export type SceneSpec = {
 }[SceneType];
 
 export type VideoSpec = {
+  /** Which composition renders this spec in `npm run final` (Short = 9:16). Default Episode. */
+  composition?: 'Episode' | 'Short';
   scenes: SceneSpec[];
   /** Corner logo bug. On by default in 16:9, off in 9:16 (platform UI covers the corners). `false` disables it. */
   bug?: false | BugOptions;

@@ -1,4 +1,5 @@
 {
+  "composition": "Episode",
   "narration": "video-01",
   "captions": {
     "src": "captions/video-01.srt"

@@ -13,8 +13,8 @@ const FPS = 30;
 const MONTHLY_QUOTA = 90_000; // ElevenLabs characters per month on the current plan
 const WORDS_PER_SEC = 2.5; // ~150 wpm, typical for the channel voice; used only for overrun estimates
 const DEFAULT_START_SEC = 0.3; // keep in sync with src/narration.ts
-const CHANNEL_VOICE_ID = 'uFIXVu9mmnDZ7dTKCBTX';
-const CHANNEL_MODEL = 'eleven_multilingual_v2';
+const CHANNEL_VOICE_ID = 'Pi2Zqk51cRysbs4RoCCF';
+const CHANNEL_MODEL = 'eleven_v4';
 
 // Scene default durations, read from the registry so this never drifts from the kit.
 const registrySrc = readFileSync(join(ROOT, 'src/scenes/index.ts'), 'utf8');

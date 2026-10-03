@@ -7,7 +7,7 @@ Video 1 · full narration script. Structure: cold open → mechanics → the sel
 | Format | 16:9 · 1920×1080 · main video |
 | Narration | 8,216 characters (ElevenLabs bills per character) |
 | Est. runtime | ~9.9 min at ~150 wpm (scenes stretch to the real audio) |
-| Voice | Justin Time - Elearning Narration · `uFIXVu9mmnDZ7dTKCBTX` · `eleven_multilingual_v2` |
+| Voice | Kallen · `Pi2Zqk51cRysbs4RoCCF` · `eleven_v4` |
 | Manifest | `narration/video-01.json` (generated from the same source; text is identical) |
 | Video spec | `videos/video-01.json` |
 

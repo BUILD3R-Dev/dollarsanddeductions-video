@@ -19,6 +19,7 @@ and no web images. Output is 1920×1080 @ 30 fps.
 npm install
 npx remotion studio                         # browse every scene + the demo
 npx remotion render Demo out/demo.mp4       # 60s sizzle reel (16:9)
+npm run final -- video-01 video-01-teaser   # release renders: validate, render, -14 LUFS
 npx remotion render DemoShort out/short.mp4 # 28s Short / Reel (9:16)
 ```
 
@@ -280,7 +281,7 @@ The end card: the logo with tagline, a follow prompt, a "Full breakdown on YouTu
 
 ## Narration (per-scene voice)
 
-The channel voice is ElevenLabs **Justin Time - Elearning Narration** (`uFIXVu9mmnDZ7dTKCBTX`, model `eleven_multilingual_v2`).
+The channel voice is ElevenLabs **Kallen** (`Pi2Zqk51cRysbs4RoCCF`, model `eleven_v4`).
 Narration is generated per scene, so a script change only re-spends the characters of the scenes that changed.
 
 ### Files
@@ -297,8 +298,8 @@ Narration is generated per scene, so a script change only re-spends the characte
 ```json
 {
   "video": "short-home-office",
-  "voice": {"provider": "elevenlabs", "name": "Justin Time - Elearning Narration",
-            "voiceId": "uFIXVu9mmnDZ7dTKCBTX", "model": "eleven_multilingual_v2"},
+  "voice": {"provider": "elevenlabs", "name": "Kallen",
+            "voiceId": "Pi2Zqk51cRysbs4RoCCF", "model": "eleven_v4"},
   "segments": [
     {"scene": 1, "type": "HookCard", "startSec": 0.2, "text": "Work from home? You could be missing out on fifteen hundred dollars a year."},
     {"scene": 2, "type": "NumberCallout", "text": "The simplified home office deduction is five dollars per square foot, up to three hundred square feet."}
@@ -328,7 +329,7 @@ Narration is generated per scene, so a script change only re-spends the characte
 | 5. Time the captions **to the fitted spec** | Nyx | `public/captions/<slug>.srt` |
 | 6. Deliver the music bed | Nyx / editor | `public/audio/music/<slug>-bed.mp3` |
 | 7. Validate again | anyone | `npm run narration:check -- <slug>`: every scene `mp3 ✓`, captions in sync, music ✓ |
-| 8. Render | anyone | `npx remotion render Episode out/<slug>.mp4 --props=videos/<slug>.json` (or `Short` for 9:16) |
+| 8. **Final render** | anyone | `npm run final -- <slug>`: validate → render → loudness-normalise → report. Never ship a plain `remotion render` output |
 
 More detail on each step:
 
@@ -348,7 +349,7 @@ More detail on each step:
 5. **Captions.** Sentence-level SRT, timed to the fitted spec. The same file is uploaded to YouTube as the subtitle track, so it has to match the final video exactly.
 6. **Music.** See *Music beds* below.
 7. **Re-validate.** The validator matches caption text to segments and fails if any segment's first caption is more than 0.25s from its voice.
-8. **Render** both the main video and the teaser.
+8. **Final render**, for both the main video and the teaser: `npm run final -- <slug> <slug>-teaser`. See *Loudness* below.
 
 ### Captions (standard for every video)
 
@@ -392,6 +393,21 @@ It measures the bar length and repeats the phrase every 4 bars, not every file l
 Generated clips usually end with a decaying last bar, so expect a gentle "phrase breath" at each repeat. For long videos, a longer bed (1–3 minutes) repeats less and sounds less looped.
 
 Ducking is timed from the caption cues. Until a music file is delivered, renders skip it with a warning, so you can preview without it; the validator lists it as not delivered.
+
+### Loudness (every final)
+
+Every final mix is normalised to **−14 LUFS integrated, true peak ≤ −1 dBTP** (EBU R128 measurement; YouTube's reference).
+`npm run final` does this automatically after rendering (`scripts/finalize-audio.mjs`). To normalise an existing file in place: `npm run finalize-audio -- out/<slug>.mp4`.
+
+How it works:
+1. **Measure** the rendered mix.
+2. **Gain through a look-ahead peak limiter.** ElevenLabs voice peaks sit about 19 dB above its average loudness, but −14 LUFS with a −1 dBTP ceiling only allows about 13 dB, so the loudest syllables get limited.
+   The limit is iterated so the loudness lands on target.
+3. **One fixed gain** (ffmpeg `loudnorm`, two-pass, linear mode) to land exactly on −14. The target is −1.5 dBTP internally, which leaves headroom for AAC encoding.
+4. **Independent check** with `ebur128`. If the delivered file is outside −14 ±0.5 LUFS or above −1.0 dBTP, it fails and the original is left untouched.
+
+The video stream is copied untouched; only the audio is re-encoded (AAC 192 kb/s, 48 kHz).
+This needs a full ffmpeg with `loudnorm`/`ebur128` (`/usr/bin/ffmpeg`, or set `FFMPEG`); Remotion's bundled ffmpeg doesn't include those filters.
 
 ### Audio-only checks
 

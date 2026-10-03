@@ -4,7 +4,7 @@ import json, math, re, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-VOICE = {"provider": "elevenlabs", "name": "Justin Time - Elearning Narration", "voiceId": "uFIXVu9mmnDZ7dTKCBTX", "model": "eleven_multilingual_v2"}
+VOICE = {"provider": "elevenlabs", "name": "Kallen", "voiceId": "Pi2Zqk51cRysbs4RoCCF", "model": "eleven_v4"}
 FPS = 30
 MUSIC_BED = 'audio/music/video-01-bed.loop.wav'
 WPS = 2.5
@@ -188,6 +188,7 @@ def build(slug, scenes, vertical):
             seg_items = sorted(seg.items(), key=lambda kv: seg_order.index(kv[0]) if kv[0] in seg_order else 9)
             seg.clear(); seg.update(seg_items)
     spec = {
+        "composition": "Short" if vertical else "Episode",
         "narration": slug,
         "captions": {"src": f"captions/{slug}.srt"},
         # Bed: Dustin's Suno phrase (video-01-bed.wav, 13s), made seamless and bar-aligned by

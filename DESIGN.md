@@ -433,6 +433,7 @@ Minimums stay the same as §3.3; a phone screen is about as wide as the 1080px f
 | Voiceover | Volume 1.0, the loudest thing in the mix. Starts 0.3–0.5s after the first frame (`startAt`) so the hook animation lands first |
 | Music bed | 0.22 in gaps, ducked to 0.07 under speech (timed from caption word timestamps). 1s fade-in, 2s fade-out. Calm, unobtrusive, no vocals |
 | Captions | Always on for Shorts; recommended for long-form. Word-level timestamps preferred. Captions follow the voiceover file automatically |
+| Loudness | Every final: −14 LUFS integrated, true peak ≤ −1 dBTP (`npm run final`). Never ship an un-normalised render |
 | Length | Scenes set the video length. Size scenes to cover the voiceover; the render warns if captions run past the end |
 
 ---

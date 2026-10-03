@@ -7,7 +7,7 @@ Hook → the single most surprising number (≈$15,000 gap on the same profit) �
 | Format | 9:16 · 1080×1920 · vertical teaser |
 | Narration | 812 characters (ElevenLabs bills per character) |
 | Est. runtime | ~1.0 min at ~150 wpm (scenes stretch to the real audio) |
-| Voice | Justin Time - Elearning Narration · `uFIXVu9mmnDZ7dTKCBTX` · `eleven_multilingual_v2` |
+| Voice | Kallen · `Pi2Zqk51cRysbs4RoCCF` · `eleven_v4` |
 | Manifest | `narration/video-01-teaser.json` (generated from the same source; text is identical) |
 | Video spec | `videos/video-01-teaser.json` |
 

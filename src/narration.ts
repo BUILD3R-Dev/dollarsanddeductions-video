@@ -40,9 +40,9 @@ export type NarrationManifest = {
 /** The channel voice. */
 export const CHANNEL_VOICE: NarrationVoice = {
   provider: 'elevenlabs',
-  name: 'Justin Time - Elearning Narration',
-  voiceId: 'uFIXVu9mmnDZ7dTKCBTX',
-  model: 'eleven_multilingual_v2',
+  name: 'Kallen',
+  voiceId: 'Pi2Zqk51cRysbs4RoCCF',
+  model: 'eleven_v4',
 };
 
 export const DEFAULT_START_SEC = 0.3;
