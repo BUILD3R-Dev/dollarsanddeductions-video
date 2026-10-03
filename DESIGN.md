@@ -325,6 +325,7 @@ Don't recolor the logo, stretch it, rotate it, retype the wordmark, or place it 
    - `logo-stacked.png`
    - `youtube-avatar.png` (800×800)
    - `youtube-watermark.png` (150×150)
+   - `youtube-banner.png` (2560×1440; all content inside the 1546×423 safe area)
    - `logo-sheet.png`
 4. Re-render `Demo` and check frames 120 (title), 545 (corner bug) and 1665 (outro).
 

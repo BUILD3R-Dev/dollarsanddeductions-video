@@ -479,6 +479,46 @@ A scene-level `CaptionTrack` overlay is still available for one-off captions.
 
 Measured on a test render: voiced words land within 5ms of their timestamps (one frame is 33ms), and the music ducks to about 40% under speech.
 
+## Thumbnails (one per video)
+
+The `Thumbnail` composition (1280×720, `src/brand/Thumbnail.tsx`) is a template: every text layer is a prop. Each video gets a `thumbnails/<slug>.json`:
+
+```json
+{
+  "topic": "S Corp vs LLC",
+  "figure": "$15,000",
+  "label": "tax gap",
+  "bars": [
+    {"label": "LLC", "tone": "cost", "height": 1},
+    {"label": "S corp", "tone": "saving", "height": 0.41}
+  ]
+}
+```
+
+Render it with `npm run thumbnail -- <slug>`, which writes `thumbnails/<slug>.png`.
+
+| Prop | Notes |
+|---|---|
+| `topic` | Mint tag above the figure. 2–4 words |
+| `figure` | The hero: `$15,000`, `20%`, `$1,500`. Auto-shrinks for long strings |
+| `label` | 1–3 words under the figure (mint, Public Sans 700, 92px) |
+| `bars` | Optional 2–3 comparison bars on the right, no numbers. `tone`: `cost` (red), `saving` (mint), `neutral`. `height` 0–1 relative. Omit them and the text spans the full width |
+| `doubleRule` | Red double rule under the figure (the brand's "total" mark). Default `true`; set `false` when the figure isn't a total |
+
+Rules the template enforces or assumes:
+- **3–5 words of text in total.**
+- **Readable at about 160px wide**, the mobile list size.
+- **Logo bug top-left**, because YouTube's duration badge covers the bottom-right.
+- **Brand colors only**, on the deep-pine background.
+- **Keep the copy consistent with the video and its website article**: same numbers, same claim.
+
+## Channel banner
+
+`brand/youtube-banner.png` (2560×1440) is rendered from the `Banner` composition (`src/brand/Banner.tsx`) by `npm run brand`.
+- **Where content goes:** everything sits in the 1546×423 center safe area that phones show: logo with tagline, URL and upload cadence.
+- **The rest:** the desktop strip and TV area beyond it carry only background and the ledger double rules, since desktop crop widths vary.
+- **Text props:** `url` and `cadence`. To check placement: `npx remotion still Banner out/banner-guides.png --props='{"guides":true}'`.
+
 ## Project layout
 
 ```
@@ -498,7 +538,8 @@ public/brand/           logo system SVGs (copied from the website repo)
 public/audio/           voiceover, music and caption timestamp files
 videos/                 video specs, one per video: videos/<slug>.json (pass with --props)
 narration/              narration manifests: narration/<slug>.json
-scripts/                validate-narration.mjs (npm run narration:check), narration-fit.mjs (npm run narration:fit)
+scripts/                validate-narration.mjs (npm run narration:check), narration-fit.mjs (npm run narration:fit), render-final.mjs (npm run final), finalize-audio.mjs, loop-music.py, render-thumbnail.mjs (npm run thumbnail)
+thumbnails/             <slug>.json props + rendered <slug>.png
 ```
 
 ## Design rules (keep them when extending)

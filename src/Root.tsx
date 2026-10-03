@@ -1,7 +1,9 @@
 import React from 'react';
 import {Composition, Folder} from 'remotion';
 import {AvatarAsset, LogoHorizontalAsset, LogoStackedAsset, LogoTaglineAsset, WatermarkAsset} from './brand/assets';
+import {Banner, BANNER} from './brand/Banner';
 import {LogoSheet} from './brand/LogoSheet';
+import {Thumbnail, ThumbnailProps} from './brand/Thumbnail';
 import {Demo, DEMO_DURATION, demoScenes} from './Demo';
 import {DemoShort, DEMO_SHORT_DURATION, demoShortScenes} from './DemoShort';
 import {prepareVideo, SceneSequence, sceneDuration, VideoSpec} from './SceneSequence';
@@ -50,6 +52,16 @@ export const RemotionRoot: React.FC = () => (
 
     <Folder name="Brand">
       <Composition id="LogoSheet" component={LogoSheet} durationInFrames={1} {...VIDEO} />
+      <Composition
+        id="Thumbnail"
+        component={Thumbnail}
+        durationInFrames={1}
+        fps={30}
+        width={1280}
+        height={720}
+        defaultProps={{topic: 'S Corp vs LLC', figure: '$15,000', label: 'tax gap', bars: [{label: 'LLC', tone: 'cost', height: 1}, {label: 'S corp', tone: 'saving', height: 0.41}]} satisfies ThumbnailProps}
+      />
+      <Composition id="Banner" component={Banner} durationInFrames={1} fps={30} width={BANNER.width} height={BANNER.height} defaultProps={{guides: false}} />
       <Composition id="LogoHorizontal" component={LogoHorizontalAsset} durationInFrames={1} fps={30} width={1440} height={320} defaultProps={{theme: 'dark' as const}} />
       <Composition id="LogoHorizontalLight" component={LogoHorizontalAsset} durationInFrames={1} fps={30} width={1440} height={320} defaultProps={{theme: 'light' as const}} />
       <Composition id="LogoTagline" component={LogoTaglineAsset} durationInFrames={1} fps={30} width={1440} height={320} defaultProps={{theme: 'dark' as const}} />

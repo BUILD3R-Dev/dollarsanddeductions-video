@@ -1,0 +1,9 @@
+{
+  "topic": "S Corp vs LLC",
+  "figure": "$15,000",
+  "label": "tax gap",
+  "bars": [
+    {"label": "LLC", "tone": "cost", "height": 1},
+    {"label": "S corp", "tone": "saving", "height": 0.41}
+  ]
+}
