@@ -121,7 +121,7 @@ MAIN = [
   "If you want to try this with your own numbers, there's a free calculator on dollarsanddeductions.com. It runs this same comparison with your profit, your salary, and your costs. And a reminder: everything in this video is for educational purposes only. It's not tax, legal, or financial advice. Tax rules change, and your situation is your own, so talk to a qualified tax professional before you make an election.",
   {"transition": {"style": "wipe"}}),
  ("Outro", "OutroCard",
-  {"nextTitle": "The QBI Deduction, Explained"},
+  {"nextTitle": "Small Business Tax Deductions: The 7 That Matter"},
   "Thanks for watching Dollars and Deductions. If this was useful, subscribe, and I'll see you in the next one.",
   {}),
 ]

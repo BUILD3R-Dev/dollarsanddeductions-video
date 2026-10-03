@@ -48,6 +48,9 @@ npm run brand
 
 Font loading needs network access the first time (Google Fonts).
 
+Remotion downloads its headless Chrome on first render. If that download fails (e.g. `remotion.media` is unreachable),
+set `REMOTION_BROWSER_EXECUTABLE=/usr/bin/google-chrome-stable` (or any local Chrome/Chromium) and `remotion.config.ts` uses it.
+
 ## How a video is described
 
 A video is an ordered list of `SceneSpec`s (`src/SceneSequence.tsx`). An agent only has to write this JSON:

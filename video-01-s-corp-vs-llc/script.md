@@ -140,7 +140,7 @@ Video 1 · full narration script. Structure: cold open → mechanics → the sel
 <sub>413 chars</sub>
 
 ### 22 · Outro  `OutroCard`
-*On screen:* Up next: The QBI Deduction, Explained
+*On screen:* Up next: Small Business Tax Deductions: The 7 That Matter
 
 > Thanks for watching Dollars and Deductions. If this was useful, subscribe, and I'll see you in the next one.
 <sub>108 chars</sub>
