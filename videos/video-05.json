@@ -1,0 +1,422 @@
+{
+  "composition": "Episode",
+  "narration": "video-05",
+  "captions": {
+    "src": "captions/video-05.srt"
+  },
+  "audio": {
+    "music": {
+      "src": "audio/music/video-01-bed.loop.wav",
+      "volume": 0.22,
+      "duckTo": 0.07
+    }
+  },
+  "scenes": [
+    {
+      "type": "KineticType",
+      "durationInFrames": 918,
+      "props": {
+        "lines": [
+          "A deduction",
+          "you don't have to *spend* for."
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "TitleCard",
+      "durationInFrames": 678,
+      "props": {
+        "kicker": "Episode 5 · QBI",
+        "title": "The QBI Deduction, *Explained*",
+        "subtitle": "Who gets it, how it's figured, and the limits that matter."
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 856,
+      "props": {
+        "kicker": "Section 199A",
+        "lines": [
+          "Up to *20%*",
+          "of qualified business income."
+        ],
+        "offsetY": -88
+      },
+      "transition": {
+        "style": "wipe"
+      },
+      "overlays": [
+        {
+          "type": "LowerThird",
+          "from": 90,
+          "durationInFrames": 300,
+          "props": {
+            "title": "QBI Deduction",
+            "subtitle": "Section 199A pass-through deduction"
+          }
+        }
+      ]
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 952,
+      "props": {
+        "kicker": "Why it exists",
+        "lines": [
+          "Corporations got 21%.",
+          "Pass-throughs got *this*."
+        ]
+      },
+      "transition": {
+        "style": "iris"
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 723,
+      "props": {
+        "kicker": "Who can claim it",
+        "title": "Pass-through owners",
+        "theme": "light",
+        "items": [
+          {
+            "text": "Sole proprietors",
+            "detail": "Including single-member LLCs"
+          },
+          {
+            "text": "Partners",
+            "detail": "Including multi-member LLCs"
+          },
+          {
+            "text": "S corp owners",
+            "detail": "On their share of the profit"
+          },
+          {
+            "text": "Not C corporations",
+            "detail": "They pay their own corporate tax"
+          }
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 783,
+      "props": {
+        "kicker": "On your personal return",
+        "lines": [
+          "Lowers *income tax*.",
+          "Not self-employment tax."
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 856,
+      "props": {
+        "kicker": "What changed for 2026",
+        "title": "Now permanent",
+        "items": [
+          {
+            "text": "No expiration date",
+            "detail": "It was set to end after 2025"
+          },
+          {
+            "text": "A $400 minimum",
+            "detail": "With at least $1,000 of active QBI"
+          },
+          {
+            "text": "Wider phase-in ranges",
+            "detail": "$75,000 single, $150,000 joint"
+          }
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 736,
+      "props": {
+        "kicker": "What counts as QBI",
+        "title": "Business profit, not everything",
+        "theme": "light",
+        "items": [
+          {
+            "text": "Counts: net business profit",
+            "detail": "From a U.S. trade or business"
+          },
+          {
+            "text": "Doesn't: your S corp salary",
+            "detail": "Wages aren't QBI"
+          },
+          {
+            "text": "Doesn't: guaranteed payments",
+            "detail": "Paid to partners for services"
+          },
+          {
+            "text": "Doesn't: investment income",
+            "detail": "Capital gains, dividends, interest"
+          }
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 796,
+      "props": {
+        "kicker": "Then, a few subtractions",
+        "title": "QBI is profit, minus",
+        "items": [
+          {
+            "text": "The deductible half of SE tax",
+            "detail": "From your personal return"
+          },
+          {
+            "text": "Self-employed health insurance",
+            "detail": "If you take that deduction"
+          },
+          {
+            "text": "Retirement contributions",
+            "detail": "Tied to the business"
+          }
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "NumberCallout",
+      "durationInFrames": 736,
+      "props": {
+        "kicker": "$100,000 of QBI × 20%",
+        "value": 20000,
+        "doubleRule": false,
+        "caption": "If the full 20% applies"
+      },
+      "transition": {
+        "style": "iris"
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 736,
+      "props": {
+        "kicker": "The cap",
+        "lines": [
+          "No more than 20%",
+          "of your *taxable income*."
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "NumberCallout",
+      "durationInFrames": 459,
+      "props": {
+        "kicker": "Net business profit",
+        "value": 80000,
+        "doubleRule": false,
+        "caption": "A single filer, no other income, 2026"
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 628,
+      "props": {
+        "kicker": "Step 1 · 20% of QBI",
+        "lines": [
+          "$80,000 − $5,652 = $74,348",
+          "× 20% = $14,870"
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 579,
+      "props": {
+        "kicker": "Step 2 · 20% of taxable income",
+        "lines": [
+          "$74,348 − $16,100 = $58,248",
+          "× 20% = $11,650"
+        ]
+      },
+      "transition": {
+        "style": "iris"
+      }
+    },
+    {
+      "type": "BarChart",
+      "durationInFrames": 579,
+      "props": {
+        "kicker": "$80,000 of profit, single filer",
+        "title": "The *smaller* number wins",
+        "bars": [
+          {
+            "label": "20% of QBI",
+            "caption": "Step 1",
+            "value": 14870,
+            "tone": "neutral"
+          },
+          {
+            "label": "20% of taxable income",
+            "caption": "Step 2: the cap",
+            "value": 11650,
+            "tone": "saving"
+          }
+        ],
+        "difference": {
+          "label": "Lost to the cap"
+        }
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "NumberCallout",
+      "durationInFrames": 688,
+      "props": {
+        "kicker": "2026 taxable income threshold, single",
+        "value": 201750,
+        "doubleRule": false,
+        "caption": "$403,500 if married filing jointly"
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 939,
+      "props": {
+        "kicker": "Above the threshold",
+        "title": "Two extra limits",
+        "theme": "light",
+        "items": [
+          {
+            "text": "A wage and property limit",
+            "detail": "50% of W-2 wages, or 25% plus 2.5% of property"
+          },
+          {
+            "text": "Phases in over $75,000",
+            "detail": "$150,000 if married filing jointly"
+          },
+          {
+            "text": "Service businesses phase out",
+            "detail": "To zero at the top of the range"
+          }
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 939,
+      "props": {
+        "kicker": "Specified service businesses",
+        "lines": [
+          "Above $276,750 single,",
+          "no deduction at all."
+        ],
+        "offsetY": -88
+      },
+      "transition": {
+        "style": "wipe"
+      },
+      "overlays": [
+        {
+          "type": "LowerThird",
+          "from": 90,
+          "durationInFrames": 300,
+          "props": {
+            "title": "SSTB",
+            "subtitle": "Specified service trade or business"
+          }
+        }
+      ]
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 928,
+      "props": {
+        "kicker": "Back to Episode 1",
+        "lines": [
+          "Your S corp salary",
+          "isn't *QBI*."
+        ]
+      },
+      "transition": {
+        "style": "iris"
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 879,
+      "props": {
+        "kicker": "If you remember one thing",
+        "lines": [
+          "Below the threshold, it's *simple*.",
+          "Above it, get help."
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 688,
+      "props": {
+        "kicker": "More plain-English guides",
+        "lines": [
+          "dollarsanddeductions.com"
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "OutroCard",
+      "durationInFrames": 315,
+      "props": {
+        "nextTitle": "Quarterly Estimated Taxes: The Complete Walkthrough"
+      }
+    }
+  ]
+}

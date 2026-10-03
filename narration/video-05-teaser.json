@@ -1,0 +1,37 @@
+{
+  "video": "video-05-teaser",
+  "voice": {
+    "provider": "elevenlabs",
+    "name": "Kallen",
+    "voiceId": "Pi2Zqk51cRysbs4RoCCF",
+    "model": "eleven_v4"
+  },
+  "segments": [
+    {
+      "scene": 1,
+      "type": "HookCard",
+      "startSec": 0.2,
+      "text": "Most deductions start with spending money. This one doesn't. If you own a pass-through business, you may be able to deduct up to twenty percent of your business income."
+    },
+    {
+      "scene": 2,
+      "type": "KineticType",
+      "text": "It's called the QBI deduction. But it's capped at twenty percent of your taxable income, so if most of your income is from the business, the cap usually decides."
+    },
+    {
+      "scene": 3,
+      "type": "BarChart",
+      "text": "On eighty thousand dollars of profit, twenty percent of QBI is about fourteen thousand, eight hundred seventy. The cap is about eleven thousand, six hundred fifty. The smaller one wins."
+    },
+    {
+      "scene": 4,
+      "type": "KineticType",
+      "text": "And above two hundred one thousand, seven hundred fifty dollars of taxable income for single filers, extra limits kick in."
+    },
+    {
+      "scene": 5,
+      "type": "ShortCTA",
+      "text": "The full walkthrough, step by step, is on the channel. Educational only, not tax advice."
+    }
+  ]
+}

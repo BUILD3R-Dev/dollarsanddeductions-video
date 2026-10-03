@@ -1,0 +1,123 @@
+{
+  "video": "video-05",
+  "voice": {
+    "provider": "elevenlabs",
+    "name": "Kallen",
+    "voiceId": "Pi2Zqk51cRysbs4RoCCF",
+    "model": "eleven_v4"
+  },
+  "segments": [
+    {
+      "scene": 1,
+      "type": "KineticType",
+      "startSec": 0.4,
+      "text": "Almost every business deduction starts with spending money. You buy the equipment, you pay for the mileage, you fund the retirement account. But there's one big deduction that doesn't work that way. If you own a pass-through business, you may be able to deduct up to twenty percent of your business income, just for earning it. It's called the qualified business income deduction, and a lot of owners don't really know how it's figured."
+    },
+    {
+      "scene": 2,
+      "type": "TitleCard",
+      "startSec": 0.8,
+      "text": "This is Dollars and Deductions. Today: the QBI deduction. Who gets it, how it's actually calculated, what changed for twenty twenty-six, and the limits that kick in at higher incomes. As always, this is education, not tax advice. The rules here have real complexity, so check your own numbers with a tax professional."
+    },
+    {
+      "scene": 3,
+      "type": "KineticType",
+      "text": "Here's the short version. The QBI deduction, from section one ninety-nine A of the tax code, lets owners of pass-through businesses deduct up to twenty percent of their qualified business income. Qualified business income, or QBI, is basically the net profit from your business, with a few adjustments we'll get to. Pass-through means the business's profit flows onto your personal return, instead of being taxed at the business level."
+    },
+    {
+      "scene": 4,
+      "type": "KineticType",
+      "text": "Why does this deduction exist? In twenty seventeen, Congress cut the corporate tax rate to a flat twenty-one percent. But most small businesses aren't C corporations. Their profit is taxed on the owners' personal returns, at personal rates, which can run well above twenty-one percent. The QBI deduction was created at the same time, to give pass-through owners a break of their own. It was meant to be temporary. We'll get to what changed in a moment."
+    },
+    {
+      "scene": 5,
+      "type": "BulletBuild",
+      "text": "So who can claim it? Sole proprietors, including single-member LLCs taxed the default way. Partners in a partnership, including most multi-member LLCs. And S corp shareholders, on their share of the company's profit. What's left out is the C corporation. It pays its own corporate income tax, so its owners don't get this deduction on the business's profit."
+    },
+    {
+      "scene": 6,
+      "type": "KineticType",
+      "text": "A few things about how it's taken. You claim it on your personal return. You don't have to itemize to get it, so it works alongside the standard deduction. It lowers your taxable income, which lowers your income tax. But it doesn't lower your self-employment tax. That's still figured on your full net earnings, the same way we covered in our first episode."
+    },
+    {
+      "scene": 7,
+      "type": "BulletBuild",
+      "text": "Some news for twenty twenty-six. This deduction was originally set to expire after twenty twenty-five. The tax law passed in twenty twenty-five made it permanent. It also added a minimum deduction of four hundred dollars, for owners who materially participate in a business with at least one thousand dollars of QBI. And it widened the income ranges where the limits for higher earners phase in. We'll get to those."
+    },
+    {
+      "scene": 8,
+      "type": "BulletBuild",
+      "text": "Now, what actually counts as QBI? The net profit from a trade or business in the United States. What doesn't count: wages, including the salary your own S corp pays you. Guaranteed payments a partnership pays you for your services. And investment income, like capital gains, dividends, and most interest. Those are taxed normally, without the twenty percent deduction."
+    },
+    {
+      "scene": 9,
+      "type": "BulletBuild",
+      "text": "And one more step. QBI is your business profit minus a few deductions that come from the business but are taken on your personal return. The deductible half of your self-employment tax. Your self-employed health insurance deduction, if you take it. And retirement contributions connected to the business, like a SEP IRA. That's why QBI usually comes out a bit lower than your profit."
+    },
+    {
+      "scene": 10,
+      "type": "NumberCallout",
+      "text": "Here's the simple version. If you have one hundred thousand dollars of QBI, and the full twenty percent applies, your deduction is twenty thousand dollars. In the twenty-two percent bracket, that's worth about forty-four hundred dollars of income tax. But notice the if. There's a cap, and for a lot of owners, it's the cap that decides the number."
+    },
+    {
+      "scene": 11,
+      "type": "KineticType",
+      "text": "The deduction can't be more than twenty percent of your taxable income, figured before the QBI deduction itself, and leaving out net capital gains. If most of your income comes from the business, your taxable income is lower than your QBI, because the standard deduction comes off first. So this cap often wins. Let's see it with real numbers."
+    },
+    {
+      "scene": 12,
+      "type": "NumberCallout",
+      "text": "Our example: a single filer with a sole proprietorship that nets eighty thousand dollars in twenty twenty-six. No other income, no health insurance or retirement deductions, and the standard deduction of sixteen thousand one hundred dollars."
+    },
+    {
+      "scene": 13,
+      "type": "KineticType",
+      "text": "Step one. Self-employment tax on eighty thousand dollars is about eleven thousand three hundred. Half of that, about fifty-six hundred fifty-two dollars, is deductible, and it comes off QBI. So QBI is about seventy-four thousand, three hundred forty-eight dollars. Twenty percent of that is about fourteen thousand, eight hundred seventy."
+    },
+    {
+      "scene": 14,
+      "type": "KineticType",
+      "text": "Step two, the cap. Taxable income before the QBI deduction is that same seventy-four thousand, three hundred forty-eight, minus the sixteen thousand one hundred dollar standard deduction. That's about fifty-eight thousand, two hundred forty-eight. Twenty percent of that is about eleven thousand, six hundred fifty dollars."
+    },
+    {
+      "scene": 15,
+      "type": "BarChart",
+      "text": "The deduction is the smaller of the two. So our owner deducts about eleven thousand, six hundred fifty dollars, not fourteen thousand, eight hundred seventy. Still a meaningful deduction for doing nothing but earning a profit. Just not the full twenty percent of the business income."
+    },
+    {
+      "scene": 16,
+      "type": "NumberCallout",
+      "text": "Everything so far is the simple version, and it applies as long as your taxable income is under a threshold. For twenty twenty-six, that's two hundred one thousand, seven hundred fifty dollars for single filers, and four hundred three thousand, five hundred for married couples filing jointly. Above it, two extra limits start to apply."
+    },
+    {
+      "scene": 17,
+      "type": "BulletBuild",
+      "text": "The first is a wage and property limit. The deduction can't be more than the greater of fifty percent of the W-2 wages the business pays, or twenty-five percent of those wages plus two and a half percent of the original cost of its business property. That limit phases in over the next seventy-five thousand dollars of taxable income, or one hundred fifty thousand if you're married filing jointly. The second limit is for service businesses."
+    },
+    {
+      "scene": 18,
+      "type": "KineticType",
+      "text": "The tax code calls them specified service trades or businesses. That includes fields like health, law, accounting, consulting, financial services, athletics, and the performing arts. Engineering and architecture are specifically left out of the list. Below the threshold, service businesses get the deduction like anyone else. But across the phase-in range it shrinks, and above two hundred seventy-six thousand, seven hundred fifty dollars for single filers, or five hundred fifty-three thousand, five hundred joint, it's gone."
+    },
+    {
+      "scene": 19,
+      "type": "KineticType",
+      "text": "This also connects back to our first episode. If you're an S corp owner, the reasonable salary you pay yourself isn't QBI. Only the profit left after that salary is. So the S corp election that lowers your payroll taxes can also shrink your QBI deduction. That doesn't mean pay yourself less. The salary has to be reasonable either way. It means the S corp math should always be run with the QBI deduction included."
+    },
+    {
+      "scene": 20,
+      "type": "KineticType",
+      "text": "If you remember one thing from this video, make it this. Below the threshold, the QBI deduction is fairly simple: twenty percent of your QBI, or twenty percent of your taxable income, whichever is smaller. It's claimed on Form eighty-nine ninety-five. Above the threshold, wages, property, and the type of business all come into play, on the longer Form eighty-nine ninety-five A. That's where professional help tends to earn its fee."
+    },
+    {
+      "scene": 21,
+      "type": "KineticType",
+      "text": "There are more plain-English guides on dollarsanddeductions.com. And a reminder: everything in this video is for educational purposes only. It's not tax, legal, or financial advice. The figures here are for twenty twenty-six, they change with inflation, and your situation is your own, so talk to a qualified tax professional before you rely on them."
+    },
+    {
+      "scene": 22,
+      "type": "OutroCard",
+      "text": "Thanks for watching Dollars and Deductions. Next time: quarterly estimated taxes, the complete walkthrough. Subscribe so you don't miss it. Real business. Real answers."
+    }
+  ]
+}
