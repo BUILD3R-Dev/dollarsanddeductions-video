@@ -129,7 +129,7 @@ Full-screen kinetic typography. Lines arrive on beats. Each word lifts out of a 
 | `mode` | `'stack' \| 'replace'` | | `stack` accumulates lines; `replace` shows one line at a time |
 | `align` | `'center' \| 'left'` | | |
 | `kicker` | string | | |
-| `beat` | number | | Frames between auto-timed lines (default spreads lines across the scene) |
+| `beat` | number | | Frames between auto-timed lines. Default 30 (1s) in `stack` mode, so a scene's lines build quickly and then hold; in `replace` mode lines are spread across the scene. Use `at` on a line to time it to a specific narration moment |
 | `offsetY` | number | | Shift the text block, e.g. `-88` to clear a LowerThird |
 
 ```json

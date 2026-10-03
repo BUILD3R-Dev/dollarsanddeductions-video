@@ -24,12 +24,15 @@ export type KineticTypeProps = {
   mode?: 'stack' | 'replace';
   align?: 'left' | 'center';
   kicker?: string;
-  /** Frames between auto-timed beats. */
+  /** Frames between auto-timed lines. Default: 30 (1s) in stack mode; spread across the scene in replace mode. */
   beat?: number;
   /** Shift the text block vertically (px), e.g. to leave room for a lower third. */
   offsetY?: number;
   theme?: ThemeMode;
 };
+
+/** Frames between stacked lines when no `beat`/`at` is given. */
+const STACK_BEAT = 30;
 
 const SIZES = {xl: typeScale.display, lg: typeScale.h1, md: typeScale.h2};
 const SIZES_VERTICAL = {xl: 128, lg: 100, md: 84};
@@ -127,7 +130,11 @@ export const KineticType: React.FC<KineticTypeProps> = ({
   const sizes = vertical ? SIZES_VERTICAL : SIZES;
   const first = kicker ? 18 : 10;
   const tail = mode === 'stack' ? 50 : 0;
-  const autoBeat = beat ?? Math.max(18, Math.floor((durationInFrames - first - tail) / lines.length));
+  // Stack: lines arrive in quick succession (~1s apart) and then hold together; narrated scenes
+  // can run 30–40s, and spreading lines across the whole scene leaves sentences hanging half-built.
+  // Replace: each line owns its own stretch of the scene, so it is spread evenly.
+  const spread = Math.max(18, Math.floor((durationInFrames - first - tail) / lines.length));
+  const autoBeat = beat ?? (mode === 'stack' ? Math.min(STACK_BEAT, spread) : spread);
   const norm = lines.map((l, i) => {
     const o = typeof l === 'string' ? {text: l} : l;
     return {text: o.text, at: o.at ?? first + i * autoBeat, size: sizes[o.size ?? autoSize(o.text, vertical)]};
