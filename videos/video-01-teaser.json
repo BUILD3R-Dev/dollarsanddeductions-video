@@ -1,0 +1,92 @@
+{
+  "narration": "video-01-teaser",
+  "scenes": [
+    {
+      "type": "HookCard",
+      "durationInFrames": 348,
+      "props": {
+        "sticker": "S corp vs LLC",
+        "text": "Same profit. About *$15,000* less tax."
+      },
+      "transition": {
+        "style": "wipe",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "NumberCallout",
+      "durationInFrames": 279,
+      "props": {
+        "kicker": "Default LLC: self-employment tax",
+        "value": 25433,
+        "doubleRule": false
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 20
+      }
+    },
+    {
+      "type": "BarChart",
+      "durationInFrames": 352,
+      "props": {
+        "kicker": "Payroll taxes, same profit",
+        "title": "S corp: tax on *salary* only",
+        "bars": [
+          {
+            "label": "LLC",
+            "caption": "on 92.35% of profit",
+            "value": 25433,
+            "tone": "cost"
+          },
+          {
+            "label": "S corp",
+            "caption": "on a $68k salary",
+            "value": 10404,
+            "tone": "saving"
+          }
+        ],
+        "difference": {
+          "label": "Gap"
+        }
+      },
+      "transition": {
+        "style": "iris",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 472,
+      "props": {
+        "kicker": "The fine print",
+        "title": "Not for everyone",
+        "items": [
+          {
+            "text": "Salary must be reasonable",
+            "detail": "What the work is actually worth"
+          },
+          {
+            "text": "It costs to run",
+            "detail": "Payroll and a business tax return"
+          },
+          {
+            "text": "After costs: about $12,000",
+            "detail": "In this example"
+          }
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 20
+      }
+    },
+    {
+      "type": "ShortCTA",
+      "durationInFrames": 339,
+      "props": {
+        "fullVideoTitle": "S Corp vs LLC: The $15,000 Tax Difference, Explained"
+      }
+    }
+  ]
+}

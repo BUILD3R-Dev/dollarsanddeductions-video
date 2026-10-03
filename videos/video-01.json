@@ -1,0 +1,419 @@
+{
+  "narration": "video-01",
+  "scenes": [
+    {
+      "type": "KineticType",
+      "durationInFrames": 882,
+      "props": {
+        "lines": [
+          "Same business.",
+          "Same $180,000 profit.",
+          "About $15,000 apart."
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "TitleCard",
+      "durationInFrames": 667,
+      "props": {
+        "kicker": "Episode 1 · S Corp vs LLC",
+        "title": "S Corp vs LLC: The *$15,000* Tax Difference, Explained",
+        "subtitle": "Where the number comes from, and who it actually fits."
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 1275,
+      "props": {
+        "kicker": "First, a common mix-up",
+        "lines": [
+          "LLC: a *legal* structure.",
+          "S corp: a *tax* status."
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 783,
+      "props": {
+        "kicker": "Default single-member LLC",
+        "title": "How the profit is taxed",
+        "theme": "light",
+        "items": [
+          {
+            "text": "Treated like a sole proprietorship",
+            "detail": "For federal income tax purposes"
+          },
+          {
+            "text": "Profit flows to your personal return",
+            "detail": "Reported on Schedule C"
+          },
+          {
+            "text": "Income tax on the profit",
+            "detail": "At your regular rates"
+          },
+          {
+            "text": "Self-employment tax on the profit",
+            "detail": "Social Security and Medicare"
+          }
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "NumberCallout",
+      "durationInFrames": 783,
+      "props": {
+        "kicker": "Self-employment tax rate",
+        "value": 15.3,
+        "decimals": 1,
+        "format": "percent",
+        "doubleRule": false,
+        "caption": "12.4% Social Security + 2.9% Medicare"
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 916,
+      "props": {
+        "kicker": "Two details that matter",
+        "lines": [
+          "Charged on *92.35%* of profit.",
+          "Social Security part is capped."
+        ]
+      },
+      "transition": {
+        "style": "iris"
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 1095,
+      "props": {
+        "kicker": "Taxed as an S corp",
+        "title": "Two kinds of pay",
+        "items": [
+          {
+            "text": "A salary, through payroll",
+            "detail": "Social Security and Medicare: 15.3% in total"
+          },
+          {
+            "text": "Distributions of remaining profit",
+            "detail": "Not wages, so no payroll taxes"
+          },
+          {
+            "text": "Income tax on all of it",
+            "detail": "Profit still passes through to you"
+          }
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 903,
+      "props": {
+        "lines": [
+          "Income tax: *same*.",
+          "Payroll tax: *different*."
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 1287,
+      "props": {
+        "kicker": "The catch",
+        "lines": [
+          "The IRS expects",
+          "a *reasonable salary.*"
+        ],
+        "offsetY": -88
+      },
+      "transition": {
+        "style": "wipe"
+      },
+      "overlays": [
+        {
+          "type": "LowerThird",
+          "from": 90,
+          "durationInFrames": 300,
+          "props": {
+            "title": "Reasonable Compensation",
+            "subtitle": "Pay yourself what the work is worth"
+          }
+        }
+      ]
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 267,
+      "props": {
+        "lines": [
+          "Let's run",
+          "the *numbers*."
+        ]
+      },
+      "transition": {
+        "style": "iris"
+      }
+    },
+    {
+      "type": "NumberCallout",
+      "durationInFrames": 327,
+      "props": {
+        "kicker": "Net business profit",
+        "value": 180000,
+        "doubleRule": false,
+        "caption": "One owner, one year, before paying themselves"
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 579,
+      "props": {
+        "kicker": "Default LLC",
+        "lines": [
+          "$180,000 × 92.35% = $166,230",
+          "× 15.3% = $25,433"
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 903,
+      "props": {
+        "kicker": "Taxed as an S corp",
+        "lines": [
+          "Salary: $68,000",
+          "× 15.3% = $10,404"
+        ]
+      },
+      "transition": {
+        "style": "iris"
+      }
+    },
+    {
+      "type": "BarChart",
+      "durationInFrames": 519,
+      "props": {
+        "kicker": "Payroll taxes on $180,000 of profit",
+        "title": "About *$15,000* apart",
+        "bars": [
+          {
+            "label": "Default LLC",
+            "caption": "15.3% on 92.35% of profit",
+            "value": 25433,
+            "tone": "cost"
+          },
+          {
+            "label": "S corp",
+            "caption": "15.3% on a $68,000 salary",
+            "value": 10404,
+            "tone": "saving"
+          }
+        ],
+        "difference": {
+          "label": "Difference"
+        }
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 1107,
+      "props": {
+        "kicker": "The honest part",
+        "title": "What an S corp costs",
+        "items": [
+          {
+            "text": "Payroll",
+            "detail": "Quarterly filings and year-end forms"
+          },
+          {
+            "text": "A business tax return",
+            "detail": "Form 1120-S, usually with a preparer"
+          },
+          {
+            "text": "Unemployment taxes",
+            "detail": "Federal and state, on your salary"
+          },
+          {
+            "text": "State fees or taxes",
+            "detail": "Some states add their own"
+          }
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "NumberCallout",
+      "durationInFrames": 303,
+      "props": {
+        "kicker": "After about $3,000 of costs",
+        "value": 12000,
+        "prefix": "~",
+        "caption": "Still real money. Just not the full fifteen."
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 1047,
+      "props": {
+        "kicker": "Payroll tax isn't the whole picture",
+        "title": "What else moves the number",
+        "theme": "light",
+        "items": [
+          {
+            "text": "The QBI deduction",
+            "detail": "Can shrink when profit is paid as salary"
+          },
+          {
+            "text": "Retirement contributions",
+            "detail": "Some limits depend on your salary"
+          },
+          {
+            "text": "The wage base",
+            "detail": "Caps the gap at higher profits"
+          }
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 1023,
+      "props": {
+        "kicker": "Who it tends to fit",
+        "title": "When it can make sense",
+        "items": [
+          {
+            "text": "Profit well above a reasonable salary",
+            "detail": "That gap is where the savings come from"
+          },
+          {
+            "text": "Steady profit year to year",
+            "detail": "So the costs pay off every year"
+          },
+          {
+            "text": "Willing to run payroll properly",
+            "detail": "And keep the paperwork clean"
+          },
+          {
+            "text": "In it for the long run",
+            "detail": "Setup costs need time to pay back"
+          }
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 1083,
+      "props": {
+        "kicker": "Who it usually doesn't fit",
+        "title": "When it often doesn't",
+        "theme": "light",
+        "items": [
+          {
+            "text": "Profit close to a reasonable salary",
+            "detail": "Little left to take as distributions"
+          },
+          {
+            "text": "New or uneven income",
+            "detail": "Payroll costs in lean years"
+          },
+          {
+            "text": "A small side business",
+            "detail": "Savings may not cover the costs"
+          },
+          {
+            "text": "You want the simplest setup",
+            "detail": "The default is far less paperwork"
+          }
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 975,
+      "props": {
+        "kicker": "If you remember one thing",
+        "lines": [
+          "How far is your profit",
+          "above a *reasonable salary*?"
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 856,
+      "props": {
+        "kicker": "Try it with your numbers",
+        "lines": [
+          "dollarsanddeductions.com"
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "OutroCard",
+      "durationInFrames": 255,
+      "props": {
+        "nextTitle": "The QBI Deduction, Explained"
+      }
+    }
+  ]
+}
