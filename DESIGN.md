@@ -445,3 +445,65 @@ Minimums stay the same as §3.3; a phone screen is about as wide as the 1080px f
 2. Otherwise edit this file, then the matching token. Scenes read tokens, so most changes need no scene edits.
 3. Re-render `Demo` and check the reference frames.
 4. For style iteration, add a **prop** with the current look as its default, so existing videos render the same.
+
+---
+
+## Kallen — channel character & voice
+
+**Kallen** is the face and voice of Dollars & Deductions. The name covers both:
+- **Voice:** ElevenLabs Kallen - Steady, Clear and Centered (), model .
+- **Face:** the AI-generated host in  — a relatable,
+  no-nonsense man in his 40s (dark hair, beard, black t-shirt). Curious. Skeptical.
+  Practical. Always looking for the smarter way.
+
+### Character card
+ is the source of truth for Kallen's look. It defines:
+- Core expressions: thinking, skeptical, confident, surprised, approving
+- Common poses: pointing (to camera), explaining, thinking, coffee/relatable, confident
+- Profile/side view + clean cutout (PNG) for compositing
+- Brand colors and usage notes (consistent look, high-contrast lighting, tight crops,
+  authentic expressions, solid/simple backgrounds, works with bold text)
+
+### Usage rules
+- Every thumbnail features Kallen — pick the expression/pose that matches the video's
+  hook. Crop tight for maximum impact.
+- Never mix Kallen with a different face in the same thumbnail or across the channel.
+  Consistency is the brand.
+- Kallen appears in thumbnails and channel art only — the videos themselves remain
+  motion-graphics (faceless format).
+- When generating new Kallen assets (ChatGPT/gpt-image-1), upload the character card
+  as reference and request the same man: 40s, dark brown hair with gray at temples,
+  short beard, black crew-neck t-shirt, same face.
+- Tagline: Taxes Should Be Simple. Channel sign-off: Real business. Real answers.
+
+---
+
+## Kallen — channel character & voice
+
+**Kallen** is the face and voice of Dollars & Deductions. The name covers both:
+- **Voice:** ElevenLabs "Kallen - Steady, Clear and Centered"
+  (voice ID Pi2Zqk51cRysbs4RoCCF), model eleven_v4.
+- **Face:** the AI-generated host in brand/kallen-character-card.png — a relatable,
+  no-nonsense man in his 40s (dark hair, beard, black t-shirt). Curious. Skeptical.
+  Practical. Always looking for the smarter way.
+
+### Character card
+brand/kallen-character-card.png is the source of truth for Kallen's look. It defines:
+- Core expressions: thinking, skeptical, confident, surprised, approving
+- Common poses: pointing (to camera), explaining, thinking, coffee/relatable, confident
+- Profile/side view + clean cutout (PNG) for compositing
+- Brand colors and usage notes (consistent look, high-contrast lighting, tight crops,
+  authentic expressions, solid/simple backgrounds, works with bold text)
+
+### Usage rules
+- Every thumbnail features Kallen — pick the expression/pose that matches the video's
+  hook. Crop tight for maximum impact.
+- Never mix Kallen with a different face in the same thumbnail or across the channel.
+  Consistency is the brand.
+- Kallen appears in thumbnails and channel art only — the videos themselves remain
+  motion-graphics (faceless format).
+- When generating new Kallen assets (ChatGPT/gpt-image-1), upload the character card
+  as reference and request the same man: 40s, dark brown hair with gray at temples,
+  short beard, black crew-neck t-shirt, same face.
+- Tagline: "Taxes Should Be Simple." Channel sign-off: "Real business. Real answers.
+  More freedom."
