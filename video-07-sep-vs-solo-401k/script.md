@@ -1,14 +1,14 @@
 # SEP IRA vs Solo 401(k): Which Saves You More?
 
-Video 7 · full narration script. Structure: cold open (same profit, $24,500 apart) → how each plan works, with 2026 limits → the $100,000 example → where they converge → S corp owners → paperwork, Roth, loans, timing → employees → who each fits → CTA + disclaimer.
+Video 7 · full narration script. Structure: cold open (same profit, $24,500 apart) → how each plan works, with 2026 limits → the $100,000 example → where they converge → the $40,000 side business, and the per-person deferral limit → S corp owners → paperwork, Roth, loans, timing → employees → who each fits → CTA + disclaimer.
 
 **Status: draft for Dustin's read. Not voiced.**
 
 | | |
 |---|---|
 | Format | 16:9 · 1920×1080 · main video |
-| Narration | 7,877 characters (ElevenLabs bills per character) |
-| Est. runtime | ~9.3 min at ~150 wpm (scenes stretch to the real audio) |
+| Narration | 8,512 characters (ElevenLabs bills per character) |
+| Est. runtime | ~10.1 min at ~150 wpm (scenes stretch to the real audio) |
 | Voice | Kallen · `Pi2Zqk51cRysbs4RoCCF` · `eleven_v4` |
 | Manifest | `narration/video-07.json` (generated from the same source; text is identical) |
 | Video spec | `videos/video-07.json` |
@@ -93,55 +93,61 @@ Video 7 · full narration script. Structure: cold open (same profit, $24,500 apa
 > And the gap doesn't last forever. As profit rises, both plans run into the same seventy-two thousand dollar ceiling. In our setup, the solo four oh one k reaches it at roughly two hundred fifty thousand dollars of profit. The SEP reaches it at roughly three hundred seventy-five thousand. Above that, the limits are the same, unless you're old enough for catch-ups, which only the four oh one k allows.
 <sub>402 chars</sub>
 
-### 14 · S corp owners  `KineticType`
+### 14 · Side business example  `KineticType`
+*On screen:* $40,000 side business, 2026 / SEP: $7,435 / Solo 401(k): $31,935
+
+> At the other end, smaller profits are where the gap matters most. Say you have a day job, plus a side business with forty thousand dollars of profit. A SEP allows about seven thousand four hundred. A solo four oh one k allows that, plus up to twenty-four thousand five hundred as the employee, about thirty-one thousand nine hundred. But here's the catch. The employee deferral limit is per person, not per plan. If you already defer into a four oh one k at your day job, that counts against the same twenty-four thousand five hundred. Defer ten thousand at work, and you have fourteen thousand five hundred left for the side business.
+<sub>635 chars</sub>
+
+### 15 · S corp owners  `KineticType`
 *On screen:* If you're an S corp owner / It's based on / your salary.
 
 > If your business is taxed as an S corp, the math changes. Contributions are based on your W-2 salary, not your distributions. Take the reasonable salary from our first episode, sixty-eight thousand dollars. A SEP allows twenty-five percent of it, seventeen thousand. A solo four oh one k allows that seventeen thousand plus the twenty-four thousand five hundred deferral, forty-one thousand five hundred. This is the retirement piece of the S corp math we flagged back then.
 <sub>474 chars</sub>
 
-### 15 · Beyond the limits  `BulletBuild`
+### 16 · Beyond the limits  `BulletBuild`
 *On screen:* Beyond the limits / What else differs / ☑ Paperwork / ☑ Roth option / ☑ Loans / ☑ Setup timing
 
 > The limits aren't the only difference. Paperwork: a SEP has almost none, while a solo four oh one k has to file Form fifty-five hundred E Z once plan assets pass two hundred fifty thousand dollars. Roth: many solo four oh one k plans let you make your employee deferrals as Roth contributions. Loans: a solo four oh one k can allow you to borrow from it, and a SEP can't. And setup timing, which deserves a closer look.
 <sub>419 chars</sub>
 
-### 16 · Roth or traditional  `KineticType`
+### 17 · Roth or traditional  `KineticType`
 *On screen:* If your plan offers Roth / Deduct now, or / tax-free later?
 
 > A quick word on that Roth option. Traditional contributions give you a deduction now, and you pay tax when you withdraw the money in retirement. Roth contributions work the other way. No deduction this year, but qualified withdrawals in retirement are tax-free. Which is better mostly comes down to whether you expect your tax rate to be higher now, or later. Some owners split the difference and do some of each.
 <sub>413 chars</sub>
 
-### 17 · Timing  `KineticType`
+### 18 · Timing  `KineticType`
 *On screen:* Setup timing / A SEP can wait. / A 401(k) needs planning.
 
 > A SEP can be opened and funded right up to your filing deadline, including extensions, which makes it the classic decide-it-in-April plan. A solo four oh one k has tighter rules, especially for the employee deferral, and those rules have changed in recent years. If you're considering one, look at it before the year ends, and confirm the current deadlines with your provider or tax professional.
 <sub>396 chars</sub>
 
-### 18 · Employees change everything  `BulletBuild`
+### 19 · Employees change everything  `BulletBuild`
 *On screen:* If you have employees / Employees change the math / ☑ SEP / ☑ Solo 401(k) / ☑ Hiring later?
 
 > Everything so far assumes no employees. That's important. With a SEP, if you contribute twenty percent for yourself, you generally have to contribute the same percentage of pay for every eligible employee. And a solo four oh one k only works while the only participants are you and your spouse. Once you hire eligible employees, it has to become a regular four oh one k, with more rules. If you plan to hire, factor that in now. And for businesses with a few employees, there's a third option, the SIMPLE IRA, with lower limits and a required employer contribution. That's a comparison for another day.
 <sub>602 chars</sub>
 
-### 19 · Who each tends to fit  `BulletBuild`
+### 20 · Who each tends to fit  `BulletBuild`
 *On screen:* Who each tends to fit / Matching the plan / ☑ Solo 401(k) / ☑ SEP IRA / ☑ Either
 
 > So who does each tend to fit? A solo four oh one k tends to fit owners at moderate profit levels who want to shelter as much as possible, and owners fifty and older who can use catch-ups. A SEP tends to fit owners who value simplicity, or who don't decide until tax time. And at very high profits, where both hit the cap, the choice comes down to those other features.
 <sub>368 chars</sub>
 
-### 20 · The real takeaway  `KineticType`
+### 21 · The real takeaway  `KineticType`
 *On screen:* If you remember one thing / Solo 401(k): more room. / SEP: more simplicity.
 
 > If you remember one thing from this video, make it this. For an owner-only business, the solo four oh one k almost always allows at least as much as a SEP, and often far more at moderate profits. The SEP wins on simplicity and timing. Which one saves you more depends on how much you can actually set aside, and when you decide.
 <sub>328 chars</sub>
 
-### 21 · Site + disclaimer  `KineticType`
+### 22 · Site + disclaimer  `KineticType`
 *On screen:* More plain-English guides / dollarsanddeductions.com
 
 > There are more plain-English guides on dollarsanddeductions.com. And a reminder: everything in this video is for educational purposes only. It's not tax, legal, investment, or financial advice. These are twenty twenty-six limits, they change every year, and your situation is your own, so talk to a qualified professional before you open or fund a plan.
 <sub>353 chars</sub>
 
-### 22 · Outro  `OutroCard`
+### 23 · Outro  `OutroCard`
 *On screen:* Up next: LLC Taxes Explained
 
 > Thanks for watching Dollars and Deductions. Next time: LLC taxes, explained. Subscribe so you don't miss it. Real business. Real answers.
@@ -164,6 +170,8 @@ There's no site article on this comparison; it agrees with the deductions guide 
 | Example, $100,000 | SE tax $14,129.55; half $7,064.77; base $92,935.23; × 20% = **$18,587.05**; + $24,500 = **$43,087.04**; gap $24,500 | Schedule SE; wage base $184,500 not reached |
 | Solo 401(k) reaches $72,000 | Base $237,500 (= $47,500 / 20%) → profit ≈ **$252,300** ("roughly $250,000") | SE tax with the 2026 wage base ($184,500) |
 | SEP reaches $72,000 | Base $360,000 → profit ≈ **$376,500** ("roughly $375,000") | Same |
+| Example, $40,000 side business | SE tax $5,651.82; half $2,825.91; base $37,174.09; × 20% = **$7,434.82**; + $24,500 = **$31,934.82**. Deferral fits: base − employer contribution = $29,739 ≥ $24,500 | Same method as the $100,000 example; deferrals can't exceed earned income (IRC §415(c)(1)(B)) |
+| Deferral limit is per person | $24,500 is shared across every 401(k) (and 403(b)) the person defers into, day job included; $24,500 − $10,000 = **$14,500** left | IRC §402(g)(1); Pub. 560. Employer contributions from unrelated employers have separate §415(c) limits (not discussed) |
 | S corp, $68,000 salary | SEP 25% = **$17,000**; Solo 401(k) $17,000 + $24,500 = **$41,500** | W-2 wages only; distributions aren't compensation. Salary from Video 1 (illustrative) |
 | Form 5500-EZ | Required once one-participant plan assets exceed $250,000 | Form 5500-EZ instructions |
 | Loans | 401(k) may permit; IRAs (incl. SEP) can't | IRC §72(p), §408(e) |
@@ -175,5 +183,5 @@ Deliberately general: Solo 401(k) establishment and deferral-election deadlines 
 
 - No CPA, advisor or professional titles are claimed. The disclaimer adds "investment" advice, since this video touches retirement accounts.
 - Segment 12 makes the point that more room isn't a recommendation to contribute it.
-- Segments 03 and 14 reference the deductions episode and "our first episode" (Videos 2 and 1).
-- Spoken disclaimer in segment 21, early educational note in segment 02, on-screen disclaimer on the outro card.
+- Segments 03 and 15 reference the deductions episode and "our first episode" (Videos 2 and 1).
+- Spoken disclaimer in segment 22, early educational note in segment 02, on-screen disclaimer on the outro card.

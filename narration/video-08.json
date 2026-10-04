@@ -57,65 +57,70 @@
     {
       "scene": 10,
       "type": "KineticType",
-      "text": "The partnership return itself pays no federal income tax. But don't let that make it feel optional. Filing it late triggers penalties that are charged per member, for every month it's late. And members who work in the business generally owe self-employment tax on their share. The rules for members who don't work in the business are less settled, so that's a question for a professional."
+      "text": "Here's how that works with numbers. Two members split the profit fifty-fifty. One works in the business full time and receives a guaranteed payment of fifty thousand dollars a year. The other doesn't work in it. The LLC earns one hundred fifty thousand before that payment. The guaranteed payment is deducted first, leaving one hundred thousand, split fifty thousand each. So the working member reports one hundred thousand, the payment plus their share, and the other member reports fifty thousand. And just like a single owner, each is taxed on their share, even if the LLC keeps the cash."
     },
     {
       "scene": 11,
       "type": "KineticType",
-      "text": "Now the elections. The first is S corporation status, which we covered in detail in episode one. An owner who works in the business takes a reasonable salary through payroll, which carries payroll taxes, and the rest of the profit can come out as distributions, without self-employment tax. It's still a pass-through, so income tax works much the same. The trade-off is the cost of payroll, a separate return, and keeping the salary genuinely reasonable."
+      "text": "The partnership return itself pays no federal income tax. But don't let that make it feel optional. Filing it late triggers penalties that are charged per member, for every month it's late. And members who work in the business generally owe self-employment tax on their share. The rules for members who don't work in the business are less settled, so that's a question for a professional."
     },
     {
       "scene": 12,
-      "type": "NumberCallout",
-      "text": "As a reminder of the scale, in episode one's example, one hundred eighty thousand dollars of profit with an illustrative sixty-eight thousand dollar salary cut payroll taxes by about fifteen thousand dollars a year, before roughly three thousand dollars of running costs. At lower profits, those costs can eat the savings."
+      "type": "KineticType",
+      "text": "Now the elections. The first is S corporation status, which we covered in detail in episode one. An owner who works in the business takes a reasonable salary through payroll, which carries payroll taxes, and the rest of the profit can come out as distributions, without self-employment tax. It's still a pass-through, so income tax works much the same. The trade-off is the cost of payroll, a separate return, and keeping the salary genuinely reasonable."
     },
     {
       "scene": 13,
       "type": "NumberCallout",
-      "text": "The second election is C corporation status. Now the business is no longer a pass-through. It pays its own federal income tax, at a flat twenty-one percent. That sounds low, but there's a catch. When the profit is paid out to the owners as dividends, it's taxed again, on their personal returns."
+      "text": "As a reminder of the scale, in episode one's example, one hundred eighty thousand dollars of profit with an illustrative sixty-eight thousand dollar salary cut payroll taxes by about fifteen thousand dollars a year, before roughly three thousand dollars of running costs. At lower profits, those costs can eat the savings."
     },
     {
       "scene": 14,
-      "type": "KineticType",
-      "text": "Here's how that plays out. A hundred thousand dollars of corporate profit pays twenty-one thousand in corporate tax, leaving seventy-nine thousand. Paid out as qualified dividends, at a fifteen percent rate, that's another eleven thousand eight hundred fifty. The owner keeps sixty-seven thousand one hundred fifty, and the combined tax is about thirty-three percent, before any state tax, or the extra three point eight percent that can apply at higher incomes."
+      "type": "NumberCallout",
+      "text": "The second election is C corporation status. Now the business is no longer a pass-through. It pays its own federal income tax, at a flat twenty-one percent. That sounds low, but there's a catch. When the profit is paid out to the owners as dividends, it's taxed again, on their personal returns."
     },
     {
       "scene": 15,
       "type": "KineticType",
-      "text": "That second layer is why C corp status is less common for owner-operated small businesses that pay out most of their profit. It tends to come up in more specific situations, like businesses planning to raise outside investment, or to keep most of their profit in the company to grow. It's a long-term decision, and one to model carefully with a professional."
+      "text": "Here's how that plays out. A hundred thousand dollars of corporate profit pays twenty-one thousand in corporate tax, leaving seventy-nine thousand. Paid out as qualified dividends, at a fifteen percent rate, that's another eleven thousand eight hundred fifty. The owner keeps sixty-seven thousand one hundred fifty, and the combined tax is about thirty-three percent, before any state tax, or the extra three point eight percent that can apply at higher incomes."
     },
     {
       "scene": 16,
       "type": "KineticType",
-      "text": "One more thing about elections: timing. For S corp status to apply to a whole calendar year, Form twenty-five fifty-three is generally due within two months and fifteen days of the start of that year, which works out to March fifteenth. Miss it, and the election usually starts the following year, although the IRS does offer relief for some late elections. And once you change your classification with Form eighty-eight thirty-two, you generally can't change it again for five years. These aren't decisions to make on a whim."
+      "text": "That second layer is why C corp status is less common for owner-operated small businesses that pay out most of their profit. It tends to come up in more specific situations, like businesses planning to raise outside investment, or to keep most of their profit in the company to grow. It's a long-term decision, and one to model carefully with a professional."
     },
     {
       "scene": 17,
       "type": "KineticType",
-      "text": "And all of this is federal. States add their own layer. Many charge LLCs an annual fee or report, some impose franchise or entity-level taxes, and a few tax S corps or LLCs specifically. Two LLCs with the same federal treatment can have very different state bills, so check your state's rules."
+      "text": "One more thing about elections: timing. For S corp status to apply to a whole calendar year, Form twenty-five fifty-three is generally due within two months and fifteen days of the start of that year, which works out to March fifteenth. Miss it, and the election usually starts the following year, although the IRS does offer relief for some late elections. And once you change your classification with Form eighty-eight thirty-two, you generally can't change it again for five years. These aren't decisions to make on a whim."
     },
     {
       "scene": 18,
-      "type": "BulletBuild",
-      "text": "Let's pull together the mistakes that cost owners money. Thinking that forming an LLC, by itself, saves tax. A single-member LLC taxed the default way pays the same federal tax as a sole proprietor. Mixing personal and business money, which makes your records and your deductions harder to defend. Skipping estimated payments, because nobody withholds from your profit. And treating owner draws as an expense, when they aren't deductible."
+      "type": "KineticType",
+      "text": "And all of this is federal. States add their own layer. Many charge LLCs an annual fee or report, some impose franchise or entity-level taxes, and a few tax S corps or LLCs specifically. Two LLCs with the same federal treatment can have very different state bills, so check your state's rules."
     },
     {
       "scene": 19,
       "type": "BulletBuild",
-      "text": "So how do owners choose? A few questions do most of the work. How far is your profit above a reasonable salary for the work you do? That's the S corp question. How many owners are there, and who actually works in the business? Do you plan to pay out most of the profit, or keep it in the company? That's where C corp status comes in. And which state are you in?"
+      "text": "Let's pull together the mistakes that cost owners money. Thinking that forming an LLC, by itself, saves tax. A single-member LLC taxed the default way pays the same federal tax as a sole proprietor. Mixing personal and business money, which makes your records and your deductions harder to defend. Skipping estimated payments, because nobody withholds from your profit. And treating owner draws as an expense, when they aren't deductible."
     },
     {
       "scene": 20,
-      "type": "KineticType",
-      "text": "If you remember one thing from this video, make it this. The LLC is the legal wrapper. It's about ownership and liability. The tax treatment is a separate decision, made through a default or an election. So the useful question is never just, should I form an LLC. It's how should my LLC be taxed, and when should that change."
+      "type": "BulletBuild",
+      "text": "So how do owners choose? A few questions do most of the work. How far is your profit above a reasonable salary for the work you do? That's the S corp question. How many owners are there, and who actually works in the business? Do you plan to pay out most of the profit, or keep it in the company? That's where C corp status comes in. And which state are you in?"
     },
     {
       "scene": 21,
       "type": "KineticType",
-      "text": "The S corp versus LLC guide on dollarsanddeductions.com has a free calculator for the payroll tax side of that question. And a reminder: everything in this video is for educational purposes only. It's not tax, legal, or financial advice. Tax rules and state laws vary, and your situation is your own, so talk to a qualified professional before you form an entity or make an election."
+      "text": "If you remember one thing from this video, make it this. The LLC is the legal wrapper. It's about ownership and liability. The tax treatment is a separate decision, made through a default or an election. So the useful question is never just, should I form an LLC. It's how should my LLC be taxed, and when should that change."
     },
     {
       "scene": 22,
+      "type": "KineticType",
+      "text": "The S corp versus LLC guide on dollarsanddeductions.com has a free calculator for the payroll tax side of that question. And a reminder: everything in this video is for educational purposes only. It's not tax, legal, or financial advice. Tax rules and state laws vary, and your situation is your own, so talk to a qualified professional before you form an entity or make an election."
+    },
+    {
+      "scene": 23,
       "type": "OutroCard",
       "text": "Thanks for watching Dollars and Deductions. If you want the full S corp math, our S corp versus LLC episode is the one to watch next. Subscribe for more. Real business. Real answers."
     }

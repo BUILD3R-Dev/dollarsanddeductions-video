@@ -240,6 +240,20 @@
     },
     {
       "type": "KineticType",
+      "durationInFrames": 1383,
+      "props": {
+        "kicker": "$40,000 side business, 2026",
+        "lines": [
+          "SEP: $7,435",
+          "Solo 401(k): *$31,935*"
+        ]
+      },
+      "transition": {
+        "style": "iris"
+      }
+    },
+    {
+      "type": "KineticType",
       "durationInFrames": 952,
       "props": {
         "kicker": "If you're an S corp owner",

@@ -185,6 +185,20 @@
     },
     {
       "type": "KineticType",
+      "durationInFrames": 1215,
+      "props": {
+        "kicker": "$150,000 of profit, two members, 50/50",
+        "lines": [
+          "Working member: *$100,000*",
+          "Other member: $50,000"
+        ]
+      },
+      "transition": {
+        "style": "iris"
+      }
+    },
+    {
+      "type": "KineticType",
       "durationInFrames": 819,
       "props": {
         "lines": [
