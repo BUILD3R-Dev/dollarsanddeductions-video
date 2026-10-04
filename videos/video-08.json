@@ -1,0 +1,396 @@
+{
+  "composition": "Episode",
+  "narration": "video-08",
+  "captions": {
+    "src": "captions/video-08.srt"
+  },
+  "audio": {
+    "music": {
+      "src": "audio/music/video-01-bed.loop.wav",
+      "volume": 0.22,
+      "duckTo": 0.07
+    }
+  },
+  "scenes": [
+    {
+      "type": "KineticType",
+      "durationInFrames": 894,
+      "props": {
+        "lines": [
+          "An LLC",
+          "isn't a *tax* category."
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "TitleCard",
+      "durationInFrames": 654,
+      "props": {
+        "kicker": "Episode 8 · LLC taxes",
+        "title": "LLC Taxes, *Explained*",
+        "subtitle": "Four ways an LLC can be taxed, and what each one means for you."
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 748,
+      "props": {
+        "kicker": "Two different systems",
+        "lines": [
+          "The state creates it.",
+          "The IRS decides how it's *taxed*."
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 748,
+      "props": {
+        "kicker": "How an LLC can be taxed",
+        "title": "Four possibilities",
+        "theme": "light",
+        "items": [
+          {
+            "text": "Disregarded entity",
+            "detail": "Default with one owner"
+          },
+          {
+            "text": "Partnership",
+            "detail": "Default with two or more owners"
+          },
+          {
+            "text": "S corporation",
+            "detail": "By election, on Form 2553"
+          },
+          {
+            "text": "C corporation",
+            "detail": "By election, on Form 8832"
+          }
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 856,
+      "props": {
+        "kicker": "One owner, by default",
+        "title": "Disregarded entity",
+        "items": [
+          {
+            "text": "Profit goes on Schedule C",
+            "detail": "Part of your personal return"
+          },
+          {
+            "text": "Income tax at your rates",
+            "detail": "Same as a sole proprietor"
+          },
+          {
+            "text": "Self-employment tax",
+            "detail": "15.3% on 92.35% of profit"
+          },
+          {
+            "text": "QBI deduction may apply",
+            "detail": "Up to 20% of business income"
+          }
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 556,
+      "props": {
+        "kicker": "$80,000 of profit, default single-member LLC",
+        "lines": [
+          "$80,000 × 92.35% × 15.3%",
+          "≈ $11,304"
+        ]
+      },
+      "transition": {
+        "style": "iris"
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 699,
+      "props": {
+        "lines": [
+          "Taxed on profit,",
+          "not on what you *withdraw*."
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 772,
+      "props": {
+        "lines": [
+          "Owner draws",
+          "aren't a *salary*."
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 808,
+      "props": {
+        "kicker": "Two or more owners",
+        "title": "Partnership",
+        "theme": "light",
+        "items": [
+          {
+            "text": "Form 1065",
+            "detail": "An information return, due March 15"
+          },
+          {
+            "text": "A K-1 for each member",
+            "detail": "Their share of the profit"
+          },
+          {
+            "text": "Members pay the tax",
+            "detail": "On their personal returns"
+          },
+          {
+            "text": "Guaranteed payments",
+            "detail": "For members' services"
+          }
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 819,
+      "props": {
+        "lines": [
+          "The partnership return",
+          "pays *no* tax."
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 928,
+      "props": {
+        "kicker": "Election one: S corporation",
+        "lines": [
+          "A reasonable *salary*,",
+          "then distributions."
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "NumberCallout",
+      "durationInFrames": 639,
+      "props": {
+        "kicker": "Episode 1: $180,000 profit, $68,000 salary",
+        "value": 15000,
+        "prefix": "~",
+        "doubleRule": false,
+        "caption": "Payroll tax difference, before ~$3,000 of costs"
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "NumberCallout",
+      "durationInFrames": 652,
+      "props": {
+        "kicker": "Election two: C corporation",
+        "value": 21,
+        "format": "percent",
+        "doubleRule": false,
+        "caption": "Flat federal corporate income tax rate"
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 879,
+      "props": {
+        "kicker": "$100,000 of profit, paid out as dividends",
+        "lines": [
+          "$100,000 − 21% = $79,000",
+          "− 15% dividend tax = $67,150"
+        ]
+      },
+      "transition": {
+        "style": "iris"
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 772,
+      "props": {
+        "lines": [
+          "Less common",
+          "for *owner-operators*."
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 1083,
+      "props": {
+        "kicker": "Elections have deadlines",
+        "lines": [
+          "S corp for this year?",
+          "File by *March 15*."
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 652,
+      "props": {
+        "lines": [
+          "Then there's",
+          "your *state*."
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 856,
+      "props": {
+        "kicker": "Costly mistakes",
+        "title": "Four to avoid",
+        "theme": "light",
+        "items": [
+          {
+            "text": "Thinking the LLC itself saves tax",
+            "detail": "By default, it's taxed like before"
+          },
+          {
+            "text": "Mixing business and personal",
+            "detail": "Separate accounts, always"
+          },
+          {
+            "text": "Skipping estimated payments",
+            "detail": "Nobody withholds from your profit"
+          },
+          {
+            "text": "Treating draws as an expense",
+            "detail": "They aren't deductible"
+          }
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 903,
+      "props": {
+        "kicker": "Choosing a tax treatment",
+        "title": "Questions that decide it",
+        "items": [
+          {
+            "text": "Profit vs a reasonable salary?",
+            "detail": "The S corp question"
+          },
+          {
+            "text": "How many owners? Who works?",
+            "detail": "Partnership rules apply"
+          },
+          {
+            "text": "Pay profit out, or keep it in?",
+            "detail": "The C corp question"
+          },
+          {
+            "text": "Which state?",
+            "detail": "Fees and entity taxes vary"
+          }
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 748,
+      "props": {
+        "kicker": "If you remember one thing",
+        "lines": [
+          "The LLC is the wrapper.",
+          "The election decides the *tax*."
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 819,
+      "props": {
+        "kicker": "Model the S corp question",
+        "lines": [
+          "dollarsanddeductions.com"
+        ]
+      },
+      "transition": {
+        "style": "wipe"
+      }
+    },
+    {
+      "type": "OutroCard",
+      "durationInFrames": 423,
+      "props": {
+        "nextLabel": "Watch next",
+        "nextTitle": "S Corp vs LLC: The $15,000 Tax Difference, Explained"
+      }
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "composition": "Short",
+  "narration": "video-08-teaser",
+  "captions": {
+    "src": "captions/video-08-teaser.srt"
+  },
+  "audio": {
+    "music": {
+      "src": "audio/music/video-01-bed.loop.wav",
+      "volume": 0.22,
+      "duckTo": 0.07
+    }
+  },
+  "scenes": [
+    {
+      "type": "HookCard",
+      "durationInFrames": 492,
+      "props": {
+        "sticker": "LLC taxes",
+        "text": "There's no such thing as *LLC taxes*."
+      },
+      "transition": {
+        "style": "wipe",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "BulletBuild",
+      "durationInFrames": 352,
+      "props": {
+        "kicker": "An LLC can be taxed as",
+        "title": "Four options",
+        "items": [
+          {
+            "text": "Disregarded entity",
+            "detail": "One owner, default"
+          },
+          {
+            "text": "Partnership",
+            "detail": "Two or more, default"
+          },
+          {
+            "text": "S corporation",
+            "detail": "By election"
+          },
+          {
+            "text": "C corporation",
+            "detail": "By election"
+          }
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 20
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 315,
+      "props": {
+        "lines": [
+          "One owner?",
+          "Taxed like a",
+          "*sole proprietor*."
+        ]
+      },
+      "transition": {
+        "style": "iris",
+        "durationInFrames": 24
+      }
+    },
+    {
+      "type": "KineticType",
+      "durationInFrames": 327,
+      "props": {
+        "lines": [
+          "Taxed on profit,",
+          "not on what",
+          "you *withdraw*."
+        ]
+      },
+      "transition": {
+        "style": "fade",
+        "durationInFrames": 20
+      }
+    },
+    {
+      "type": "ShortCTA",
+      "durationInFrames": 339,
+      "props": {
+        "fullVideoTitle": "LLC Taxes, Explained"
+      }
+    }
+  ]
+}

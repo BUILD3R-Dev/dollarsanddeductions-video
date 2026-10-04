@@ -1,0 +1,37 @@
+{
+  "video": "video-08-teaser",
+  "voice": {
+    "provider": "elevenlabs",
+    "name": "Kallen",
+    "voiceId": "Pi2Zqk51cRysbs4RoCCF",
+    "model": "eleven_v4"
+  },
+  "segments": [
+    {
+      "scene": 1,
+      "type": "HookCard",
+      "startSec": 0.2,
+      "text": "Here's something most LLC owners don't know. As far as the IRS is concerned, there's no such thing as LLC taxes. Your LLC is taxed one of four ways, and the default might not be the one you think."
+    },
+    {
+      "scene": 2,
+      "type": "BulletBuild",
+      "text": "An LLC is a legal structure. For taxes, it's treated one of four ways: as a disregarded entity, a partnership, an S corporation, or a C corporation."
+    },
+    {
+      "scene": 3,
+      "type": "KineticType",
+      "text": "With one owner, the default is to be taxed exactly like a sole proprietor. Forming the LLC doesn't change your federal tax at all."
+    },
+    {
+      "scene": 4,
+      "type": "KineticType",
+      "text": "And you're taxed on the profit, whether you take it out or leave it in the business account. Only an election changes how it's taxed."
+    },
+    {
+      "scene": 5,
+      "type": "ShortCTA",
+      "text": "All four, with the math, and how owners choose between them, are in the full video on the channel. Educational only, not tax or legal advice."
+    }
+  ]
+}
